@@ -29,6 +29,9 @@ Partial Class Form1
         Me.lblMenu = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
+        Me.tmOcultarMenu = New System.Windows.Forms.Timer(Me.components)
+        Me.tmMostrarMenu = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnDashboard = New System.Windows.Forms.Button()
         Me.btnInventario = New System.Windows.Forms.Button()
@@ -40,9 +43,6 @@ Partial Class Form1
         Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.btnMaximizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.tmOcultarMenu = New System.Windows.Forms.Timer(Me.components)
-        Me.tmMostrarMenu = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.panelCabecera.SuspendLayout()
         Me.panelMenu.SuspendLayout()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -124,6 +124,24 @@ Partial Class Form1
         Me.lblNombre.TabIndex = 6
         Me.lblNombre.Text = "Admin"
         Me.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'tmOcultarMenu
+        '
+        '
+        'tmMostrarMenu
+        '
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Inter Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(279, 23)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "SISTEMA DE RESTAURANTE"
         '
         'Button1
         '
@@ -309,24 +327,6 @@ Partial Class Form1
         Me.btnCerrar.Size = New System.Drawing.Size(40, 40)
         Me.btnCerrar.TabIndex = 0
         Me.btnCerrar.UseVisualStyleBackColor = True
-        '
-        'tmOcultarMenu
-        '
-        '
-        'tmMostrarMenu
-        '
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Inter Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(279, 23)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "SISTEMA DE RESTAURANTE"
         '
         'Form1
         '

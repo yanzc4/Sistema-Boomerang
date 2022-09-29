@@ -75,4 +75,26 @@ Public Class Form1
     Private Sub Label1_Click_1(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub AbrirFormEnPanel(ByVal Formhijo As Object)
+        If Me.panelContenedor.Controls.Count > 0 Then
+            Me.panelContenedor.Controls.RemoveAt(0)
+        End If
+        Dim fh As Form = TryCast(Formhijo, Form)
+            fh.TopLevel = False
+            fh.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+            fh.Dock = DockStyle.Fill
+            Me.panelContenedor.Controls.Add(fh)
+            Me.panelContenedor.Tag = fh
+            fh.Show()
+
+    End Sub
+
+    Private Sub btnVenta_Click(sender As Object, e As EventArgs) Handles btnVenta.Click
+        AbrirFormEnPanel(New frmVenta)
+    End Sub
+
+    Private Sub btnPedidos_Click(sender As Object, e As EventArgs) Handles btnPedidos.Click
+        AbrirFormEnPanel(New frmPedidos)
+    End Sub
 End Class
