@@ -24,14 +24,14 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.panelCabecera = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.panelMenu = New System.Windows.Forms.Panel()
-        Me.panelContenedor = New System.Windows.Forms.Panel()
-        Me.lblMenu = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblMenu = New System.Windows.Forms.Label()
+        Me.panelContenedor = New System.Windows.Forms.Panel()
         Me.tmOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.tmMostrarMenu = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnDashboard = New System.Windows.Forms.Button()
         Me.btnInventario = New System.Windows.Forms.Button()
@@ -50,7 +50,7 @@ Partial Class Form1
         '
         'panelCabecera
         '
-        Me.panelCabecera.BackColor = System.Drawing.Color.Tomato
+        Me.panelCabecera.BackColor = System.Drawing.Color.Black
         Me.panelCabecera.Controls.Add(Me.Label1)
         Me.panelCabecera.Controls.Add(Me.btnMaxiMini)
         Me.panelCabecera.Controls.Add(Me.btnMinimizar)
@@ -61,6 +61,18 @@ Partial Class Form1
         Me.panelCabecera.Name = "panelCabecera"
         Me.panelCabecera.Size = New System.Drawing.Size(1084, 40)
         Me.panelCabecera.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Inter Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(279, 23)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "SISTEMA DE RESTAURANTE"
         '
         'panelMenu
         '
@@ -81,38 +93,6 @@ Partial Class Form1
         Me.panelMenu.Size = New System.Drawing.Size(220, 501)
         Me.panelMenu.TabIndex = 1
         '
-        'panelContenedor
-        '
-        Me.panelContenedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelContenedor.Location = New System.Drawing.Point(220, 40)
-        Me.panelContenedor.Name = "panelContenedor"
-        Me.panelContenedor.Size = New System.Drawing.Size(864, 501)
-        Me.panelContenedor.TabIndex = 2
-        '
-        'lblMenu
-        '
-        Me.lblMenu.AutoSize = True
-        Me.lblMenu.BackColor = System.Drawing.Color.Transparent
-        Me.lblMenu.Font = New System.Drawing.Font("Inter Black", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMenu.ForeColor = System.Drawing.Color.Tomato
-        Me.lblMenu.Location = New System.Drawing.Point(12, 11)
-        Me.lblMenu.Name = "lblMenu"
-        Me.lblMenu.Size = New System.Drawing.Size(98, 35)
-        Me.lblMenu.TabIndex = 1
-        Me.lblMenu.Text = "Menu"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(76, 156)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 16)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Usuario:"
-        '
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
@@ -125,31 +105,51 @@ Partial Class Form1
         Me.lblNombre.Text = "Admin"
         Me.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(76, 156)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(66, 16)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Usuario:"
+        '
+        'lblMenu
+        '
+        Me.lblMenu.AutoSize = True
+        Me.lblMenu.BackColor = System.Drawing.Color.Transparent
+        Me.lblMenu.Font = New System.Drawing.Font("Inter Black", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMenu.ForeColor = System.Drawing.Color.Red
+        Me.lblMenu.Location = New System.Drawing.Point(12, 11)
+        Me.lblMenu.Name = "lblMenu"
+        Me.lblMenu.Size = New System.Drawing.Size(98, 35)
+        Me.lblMenu.TabIndex = 1
+        Me.lblMenu.Text = "Menu"
+        '
+        'panelContenedor
+        '
+        Me.panelContenedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelContenedor.Location = New System.Drawing.Point(220, 40)
+        Me.panelContenedor.Name = "panelContenedor"
+        Me.panelContenedor.Size = New System.Drawing.Size(864, 501)
+        Me.panelContenedor.TabIndex = 2
+        '
         'tmOcultarMenu
         '
         '
         'tmMostrarMenu
         '
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Inter Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(279, 23)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "SISTEMA DE RESTAURANTE"
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Black
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Inter Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
@@ -169,8 +169,8 @@ Partial Class Form1
         Me.btnDashboard.BackColor = System.Drawing.Color.Black
         Me.btnDashboard.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnDashboard.FlatAppearance.BorderSize = 0
-        Me.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato
-        Me.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato
+        Me.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDashboard.Font = New System.Drawing.Font("Inter Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDashboard.ForeColor = System.Drawing.Color.White
@@ -190,8 +190,8 @@ Partial Class Form1
         Me.btnInventario.BackColor = System.Drawing.Color.Black
         Me.btnInventario.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnInventario.FlatAppearance.BorderSize = 0
-        Me.btnInventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato
-        Me.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato
+        Me.btnInventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInventario.Font = New System.Drawing.Font("Inter Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnInventario.ForeColor = System.Drawing.Color.White
@@ -211,8 +211,8 @@ Partial Class Form1
         Me.btnPedidos.BackColor = System.Drawing.Color.Black
         Me.btnPedidos.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnPedidos.FlatAppearance.BorderSize = 0
-        Me.btnPedidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato
-        Me.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato
+        Me.btnPedidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPedidos.Font = New System.Drawing.Font("Inter Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPedidos.ForeColor = System.Drawing.Color.White
@@ -232,8 +232,8 @@ Partial Class Form1
         Me.btnVenta.BackColor = System.Drawing.Color.Black
         Me.btnVenta.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btnVenta.FlatAppearance.BorderSize = 0
-        Me.btnVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato
-        Me.btnVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato
+        Me.btnVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.btnVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnVenta.Font = New System.Drawing.Font("Inter Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVenta.ForeColor = System.Drawing.Color.White
@@ -321,7 +321,7 @@ Partial Class Form1
         Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Image = Global.Sistema_Boomerang.My.Resources.Resources.cerrar_verde
+        Me.btnCerrar.Image = Global.Sistema_Boomerang.My.Resources.Resources.cruzar
         Me.btnCerrar.Location = New System.Drawing.Point(1044, 0)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(40, 40)
