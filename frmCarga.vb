@@ -26,11 +26,6 @@ Public Class frmCarga
 
     End Sub
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Me.Hide()
-        frmLogin.Show()
-    End Sub
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         carga.Value += 1
         carga.Text = carga.Value.ToString
@@ -50,7 +45,12 @@ Public Class frmCarga
 
     Private Sub frmCarga_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         carga.Value = 0
-        Me.Opacity = 0
+
         Timer1.Start()
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Me.Hide()
+        frmLogin.Show()
     End Sub
 End Class

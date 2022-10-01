@@ -24,7 +24,6 @@ Public Class frmLogin
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         carga.Value = 0
-        Me.Opacity = 0
         Timer1.Start()
     End Sub
 
@@ -35,6 +34,7 @@ Public Class frmLogin
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()
+        frmCarga.Close()
     End Sub
 
     Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click

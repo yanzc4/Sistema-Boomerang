@@ -25,12 +25,13 @@ Partial Class frmCarga
         Me.components = New System.ComponentModel.Container()
         Me.panelCabecera = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnMinimizar = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnLogin = New System.Windows.Forms.Button()
         Me.carga = New CircularProgressBar.CircularProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label7 = New System.Windows.Forms.Label()
@@ -39,11 +40,16 @@ Partial Class frmCarga
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.btnLogin = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnSalir = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.panelCabecera.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnLogin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelCabecera
@@ -69,6 +75,34 @@ Partial Class frmCarga
         Me.Label1.Size = New System.Drawing.Size(232, 19)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "SISTEMA DE RESTAURANTE"
+        '
+        'btnMinimizar
+        '
+        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimizar.FlatAppearance.BorderSize = 0
+        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMinimizar.Image = Global.Sistema_Boomerang.My.Resources.Resources.triangulo
+        Me.btnMinimizar.Location = New System.Drawing.Point(780, 0)
+        Me.btnMinimizar.Name = "btnMinimizar"
+        Me.btnMinimizar.Size = New System.Drawing.Size(40, 40)
+        Me.btnMinimizar.TabIndex = 2
+        Me.btnMinimizar.UseVisualStyleBackColor = True
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Image = Global.Sistema_Boomerang.My.Resources.Resources.cruzar
+        Me.btnCerrar.Location = New System.Drawing.Point(824, 0)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(40, 40)
+        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -130,20 +164,6 @@ Partial Class frmCarga
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Ven y Disfruta-Boomerang"
         '
-        'btnLogin
-        '
-        Me.btnLogin.BackColor = System.Drawing.Color.Red
-        Me.btnLogin.FlatAppearance.BorderSize = 0
-        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.Font = New System.Drawing.Font("Inter", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(56, 220)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(216, 31)
-        Me.btnLogin.TabIndex = 10
-        Me.btnLogin.Text = "Ingresar"
-        Me.btnLogin.UseVisualStyleBackColor = False
-        '
         'carga
         '
         Me.carga.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
@@ -154,7 +174,7 @@ Partial Class frmCarga
         Me.carga.InnerColor = System.Drawing.Color.Transparent
         Me.carga.InnerMargin = 2
         Me.carga.InnerWidth = -1
-        Me.carga.Location = New System.Drawing.Point(57, 288)
+        Me.carga.Location = New System.Drawing.Point(57, 327)
         Me.carga.MarqueeAnimationSpeed = 2000
         Me.carga.Name = "carga"
         Me.carga.OuterColor = System.Drawing.Color.Black
@@ -185,7 +205,7 @@ Partial Class frmCarga
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(66, 401)
+        Me.Label7.Location = New System.Drawing.Point(66, 440)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(101, 19)
         Me.Label7.TabIndex = 12
@@ -266,33 +286,85 @@ Partial Class frmCarga
         Me.PictureBox1.TabIndex = 13
         Me.PictureBox1.TabStop = False
         '
-        'btnMinimizar
+        'btnLogin
         '
-        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimizar.FlatAppearance.BorderSize = 0
-        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.Image = Global.Sistema_Boomerang.My.Resources.Resources.triangulo
-        Me.btnMinimizar.Location = New System.Drawing.Point(780, 0)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(40, 40)
-        Me.btnMinimizar.TabIndex = 2
-        Me.btnMinimizar.UseVisualStyleBackColor = True
+        Me.btnLogin.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnLogin.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnLogin.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnLogin.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnLogin.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnLogin.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnLogin.Location = New System.Drawing.Point(56, 205)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(111, 24)
+        Me.btnLogin.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Yellow
+        Me.btnLogin.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnLogin.TabIndex = 18
+        Me.btnLogin.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.TextStyle.ForeColor = System.Drawing.Color.Black
+        Me.btnLogin.TextStyle.Text = "Ingresar"
+        Me.btnLogin.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnLogin.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
-        'btnCerrar
+        'btnSalir
         '
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Image = Global.Sistema_Boomerang.My.Resources.Resources.cruzar
-        Me.btnCerrar.Location = New System.Drawing.Point(824, 0)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(40, 40)
-        Me.btnCerrar.TabIndex = 0
-        Me.btnCerrar.UseVisualStyleBackColor = True
+        Me.btnSalir.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnSalir.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnSalir.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnSalir.BackgroundStyle.SolidColor = System.Drawing.Color.White
+        Me.btnSalir.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnSalir.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnSalir.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnSalir.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnSalir.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnSalir.Location = New System.Drawing.Point(173, 205)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(111, 24)
+        Me.btnSalir.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
+        Me.btnSalir.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnSalir.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnSalir.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
+        Me.btnSalir.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnSalir.TabIndex = 19
+        Me.btnSalir.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.TextStyle.ForeColor = System.Drawing.Color.Black
+        Me.btnSalir.TextStyle.Text = "Salir"
+        Me.btnSalir.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnSalir.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(53, 244)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(231, 15)
+        Me.Label10.TabIndex = 20
+        Me.Label10.Text = "Sistema de Restaurante Creado para la"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(53, 259)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(204, 15)
+        Me.Label11.TabIndex = 21
+        Me.Label11.Text = "Unidad Didactica de Programación"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(53, 274)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(68, 15)
+        Me.Label12.TabIndex = 22
+        Me.Label12.Text = "Distribuida"
         '
         'frmCarga
         '
@@ -300,6 +372,11 @@ Partial Class frmCarga
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(864, 501)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.PictureBox2)
@@ -307,7 +384,6 @@ Partial Class frmCarga
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.carga)
-        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -322,6 +398,8 @@ Partial Class frmCarga
         Me.panelCabecera.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnLogin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -336,7 +414,6 @@ Partial Class frmCarga
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents btnLogin As Button
     Friend WithEvents carga As CircularProgressBar.CircularProgressBar
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Label7 As Label
@@ -345,4 +422,9 @@ Partial Class frmCarga
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents btnLogin As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnSalir As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
 End Class
