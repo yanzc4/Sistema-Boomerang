@@ -54,8 +54,9 @@
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
-    <Reference Include="Klik.Windows.Forms.EntryLib.V2.2005">
-      <HintPath>E:\librerias vb.nte\Klik.Windows.Forms.EntryLib.V2.2005.dll</HintPath>
+    <Reference Include="Klik.Windows.Forms.EntryLib.V2.2005, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>disenos\Klik.Windows.Forms.EntryLib.V2.2005.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -214,9 +215,7 @@
   <ItemGroup>
     <None Include="Resources\configuraciones.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="disenos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\setupw.png" />
   </ItemGroup>
@@ -237,6 +236,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="disenos\Klik.Windows.Forms.EntryLib.V2.2005.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
