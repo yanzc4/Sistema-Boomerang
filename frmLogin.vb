@@ -47,6 +47,10 @@ Public Class frmLogin
 
     Private Sub btnIniciar_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click
         Me.Hide()
-        Form1.Show()
+        frmPrincipal.Show()
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+
     End Sub
 End Class
