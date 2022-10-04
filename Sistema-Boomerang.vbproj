@@ -93,6 +93,7 @@
   <ItemGroup>
     <Compile Include="datos\conexion.vb" />
     <Compile Include="datos\Fusuario.vb" />
+    <Compile Include="disenos\Redondear.vb" />
     <Compile Include="entidad\conexionDAO.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -105,6 +106,12 @@
       <DependentUpon>frmCarga.vb</DependentUpon>
     </Compile>
     <Compile Include="frmCarga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.vb">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.vb">
@@ -154,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarga.resx">
       <DependentUpon>frmCarga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -248,6 +258,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="disenos\Klik.Windows.Forms.EntryLib.V2.2005.dll" />
+    <None Include="Resources\grafico-de-barras.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

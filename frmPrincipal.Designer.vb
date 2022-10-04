@@ -29,24 +29,29 @@ Partial Class frmPrincipal
         Me.btnMaximizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnReportes = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnAjustes = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnDashboard = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnInventario = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnPedidos = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnVentas = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.lblMenu = New System.Windows.Forms.Label()
-        Me.btnSalir = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.panelContenedor = New System.Windows.Forms.Panel()
-        Me.ElButton1 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
-        Me.ElButton2 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
-        Me.ElButton3 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
-        Me.ElButton4 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
-        Me.ElButton5 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.panelCabecera.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.btnReportes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnAjustes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnDashboard, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnInventario, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnPedidos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ElButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ElButton2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ElButton3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ElButton4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ElButton5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelCabecera
@@ -135,12 +140,16 @@ Partial Class frmPrincipal
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.Controls.Add(Me.ElButton5)
-        Me.Panel1.Controls.Add(Me.ElButton4)
-        Me.Panel1.Controls.Add(Me.ElButton3)
-        Me.Panel1.Controls.Add(Me.ElButton2)
-        Me.Panel1.Controls.Add(Me.ElButton1)
-        Me.Panel1.Controls.Add(Me.btnSalir)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.CircularProgressBar1)
+        Me.Panel1.Controls.Add(Me.btnReportes)
+        Me.Panel1.Controls.Add(Me.btnAjustes)
+        Me.Panel1.Controls.Add(Me.btnDashboard)
+        Me.Panel1.Controls.Add(Me.btnInventario)
+        Me.Panel1.Controls.Add(Me.btnPedidos)
+        Me.Panel1.Controls.Add(Me.btnVentas)
         Me.Panel1.Controls.Add(Me.pbLogo)
         Me.Panel1.Controls.Add(Me.lblMenu)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
@@ -148,6 +157,192 @@ Partial Class frmPrincipal
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(246, 670)
         Me.Panel1.TabIndex = 2
+        '
+        'btnReportes
+        '
+        Me.btnReportes.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnReportes.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnReportes.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnReportes.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnReportes.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnReportes.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnReportes.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnReportes.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnReportes.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
+        Me.btnReportes.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReportes.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
+        Me.btnReportes.Location = New System.Drawing.Point(0, 445)
+        Me.btnReportes.Name = "btnReportes"
+        Me.btnReportes.Size = New System.Drawing.Size(246, 37)
+        Me.btnReportes.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnReportes.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnReportes.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
+        Me.btnReportes.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnReportes.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnReportes.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
+        Me.btnReportes.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnReportes.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnReportes.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnReportes.TabIndex = 47
+        Me.btnReportes.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReportes.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnReportes.TextStyle.Text = "          Reportes"
+        Me.btnReportes.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'btnAjustes
+        '
+        Me.btnAjustes.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnAjustes.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnAjustes.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnAjustes.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnAjustes.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnAjustes.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnAjustes.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnAjustes.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnAjustes.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.configuraciones
+        Me.btnAjustes.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAjustes.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
+        Me.btnAjustes.Location = New System.Drawing.Point(0, 392)
+        Me.btnAjustes.Name = "btnAjustes"
+        Me.btnAjustes.Size = New System.Drawing.Size(246, 37)
+        Me.btnAjustes.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnAjustes.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnAjustes.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
+        Me.btnAjustes.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnAjustes.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnAjustes.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
+        Me.btnAjustes.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnAjustes.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnAjustes.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnAjustes.TabIndex = 46
+        Me.btnAjustes.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAjustes.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnAjustes.TextStyle.Text = "          Ajustes"
+        Me.btnAjustes.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'btnDashboard
+        '
+        Me.btnDashboard.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnDashboard.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnDashboard.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnDashboard.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnDashboard.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnDashboard.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnDashboard.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnDashboard.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnDashboard.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.speedometer
+        Me.btnDashboard.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDashboard.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
+        Me.btnDashboard.Location = New System.Drawing.Point(0, 339)
+        Me.btnDashboard.Name = "btnDashboard"
+        Me.btnDashboard.Size = New System.Drawing.Size(246, 37)
+        Me.btnDashboard.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnDashboard.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnDashboard.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
+        Me.btnDashboard.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnDashboard.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnDashboard.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
+        Me.btnDashboard.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnDashboard.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnDashboard.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnDashboard.TabIndex = 45
+        Me.btnDashboard.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDashboard.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnDashboard.TextStyle.Text = "          Panel De Control"
+        Me.btnDashboard.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'btnInventario
+        '
+        Me.btnInventario.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnInventario.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnInventario.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnInventario.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnInventario.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnInventario.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnInventario.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnInventario.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnInventario.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.caja
+        Me.btnInventario.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnInventario.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
+        Me.btnInventario.Location = New System.Drawing.Point(0, 286)
+        Me.btnInventario.Name = "btnInventario"
+        Me.btnInventario.Size = New System.Drawing.Size(246, 37)
+        Me.btnInventario.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnInventario.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnInventario.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
+        Me.btnInventario.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnInventario.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnInventario.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
+        Me.btnInventario.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnInventario.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnInventario.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnInventario.TabIndex = 44
+        Me.btnInventario.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInventario.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnInventario.TextStyle.Text = "          Inventario"
+        Me.btnInventario.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'btnPedidos
+        '
+        Me.btnPedidos.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnPedidos.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnPedidos.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnPedidos.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnPedidos.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnPedidos.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnPedidos.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnPedidos.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnPedidos.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.motorbike
+        Me.btnPedidos.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPedidos.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
+        Me.btnPedidos.Location = New System.Drawing.Point(0, 233)
+        Me.btnPedidos.Name = "btnPedidos"
+        Me.btnPedidos.Size = New System.Drawing.Size(246, 37)
+        Me.btnPedidos.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnPedidos.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnPedidos.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
+        Me.btnPedidos.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnPedidos.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnPedidos.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
+        Me.btnPedidos.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnPedidos.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnPedidos.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnPedidos.TabIndex = 43
+        Me.btnPedidos.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPedidos.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnPedidos.TextStyle.Text = "          Pedidos"
+        Me.btnPedidos.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'btnVentas
+        '
+        Me.btnVentas.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnVentas.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnVentas.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnVentas.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnVentas.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnVentas.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnVentas.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnVentas.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnVentas.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
+        Me.btnVentas.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnVentas.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
+        Me.btnVentas.Location = New System.Drawing.Point(0, 180)
+        Me.btnVentas.Name = "btnVentas"
+        Me.btnVentas.Size = New System.Drawing.Size(246, 37)
+        Me.btnVentas.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnVentas.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnVentas.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
+        Me.btnVentas.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnVentas.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnVentas.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
+        Me.btnVentas.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnVentas.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
+        Me.btnVentas.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
+        Me.btnVentas.TabIndex = 42
+        Me.btnVentas.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVentas.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnVentas.TextStyle.Text = "          Ventas"
+        Me.btnVentas.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
         'pbLogo
         '
@@ -170,38 +365,6 @@ Partial Class frmPrincipal
         Me.lblMenu.TabIndex = 3
         Me.lblMenu.Text = "Menu"
         '
-        'btnSalir
-        '
-        Me.btnSalir.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnSalir.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.btnSalir.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.btnSalir.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.btnSalir.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.btnSalir.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSalir.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.btnSalir.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnSalir.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
-        Me.btnSalir.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnSalir.Location = New System.Drawing.Point(0, 180)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(246, 37)
-        Me.btnSalir.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.btnSalir.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
-        Me.btnSalir.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
-        Me.btnSalir.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.btnSalir.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.btnSalir.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
-        Me.btnSalir.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
-        Me.btnSalir.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.btnSalir.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
-        Me.btnSalir.TabIndex = 42
-        Me.btnSalir.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.btnSalir.TextStyle.Text = "Salir"
-        Me.btnSalir.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnSalir.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
-        '
         'panelContenedor
         '
         Me.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
@@ -210,165 +373,75 @@ Partial Class frmPrincipal
         Me.panelContenedor.Size = New System.Drawing.Size(1004, 670)
         Me.panelContenedor.TabIndex = 3
         '
-        'ElButton1
+        'PictureBox2
         '
-        Me.ElButton1.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton1.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElButton1.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton1.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElButton1.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElButton1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElButton1.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton1.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.ElButton1.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
-        Me.ElButton1.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ElButton1.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.ElButton1.Location = New System.Drawing.Point(0, 223)
-        Me.ElButton1.Name = "ElButton1"
-        Me.ElButton1.Size = New System.Drawing.Size(246, 37)
-        Me.ElButton1.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton1.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton1.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
-        Me.ElButton1.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton1.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.ElButton1.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
-        Me.ElButton1.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton1.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton1.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton1.TabIndex = 43
-        Me.ElButton1.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ElButton1.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.ElButton1.TextStyle.Text = "Salir"
-        Me.ElButton1.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton1.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.Sistema_Boomerang.My.Resources.Resources.perfil2
+        Me.PictureBox2.Location = New System.Drawing.Point(101, 542)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 49
+        Me.PictureBox2.TabStop = False
         '
-        'ElButton2
+        'CircularProgressBar1
         '
-        Me.ElButton2.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton2.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElButton2.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton2.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElButton2.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElButton2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElButton2.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton2.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.ElButton2.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
-        Me.ElButton2.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ElButton2.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.ElButton2.Location = New System.Drawing.Point(0, 266)
-        Me.ElButton2.Name = "ElButton2"
-        Me.ElButton2.Size = New System.Drawing.Size(246, 37)
-        Me.ElButton2.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton2.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton2.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
-        Me.ElButton2.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton2.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.ElButton2.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
-        Me.ElButton2.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton2.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton2.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton2.TabIndex = 44
-        Me.ElButton2.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ElButton2.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.ElButton2.TextStyle.Text = "Salir"
-        Me.ElButton2.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton2.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        Me.CircularProgressBar1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
+        Me.CircularProgressBar1.AnimationSpeed = 500
+        Me.CircularProgressBar1.BackColor = System.Drawing.Color.Transparent
+        Me.CircularProgressBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Bold)
+        Me.CircularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CircularProgressBar1.InnerColor = System.Drawing.Color.Black
+        Me.CircularProgressBar1.InnerMargin = 2
+        Me.CircularProgressBar1.InnerWidth = -1
+        Me.CircularProgressBar1.Location = New System.Drawing.Point(81, 520)
+        Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
+        Me.CircularProgressBar1.Name = "CircularProgressBar1"
+        Me.CircularProgressBar1.OuterColor = System.Drawing.Color.Black
+        Me.CircularProgressBar1.OuterMargin = -25
+        Me.CircularProgressBar1.OuterWidth = 26
+        Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.Red
+        Me.CircularProgressBar1.ProgressWidth = 5
+        Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 36.0!)
+        Me.CircularProgressBar1.Size = New System.Drawing.Size(80, 80)
+        Me.CircularProgressBar1.StartAngle = 270
+        Me.CircularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.CircularProgressBar1.SubscriptMargin = New System.Windows.Forms.Padding(10, -35, 0, 0)
+        Me.CircularProgressBar1.SubscriptText = ".23"
+        Me.CircularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.CircularProgressBar1.SuperscriptMargin = New System.Windows.Forms.Padding(10, 35, 0, 0)
+        Me.CircularProgressBar1.SuperscriptText = "°C"
+        Me.CircularProgressBar1.TabIndex = 48
+        Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(8, 8, 0, 0)
+        Me.CircularProgressBar1.Value = 100
         '
-        'ElButton3
+        'Label9
         '
-        Me.ElButton3.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton3.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElButton3.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton3.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElButton3.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElButton3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElButton3.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton3.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.ElButton3.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
-        Me.ElButton3.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ElButton3.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.ElButton3.Location = New System.Drawing.Point(0, 309)
-        Me.ElButton3.Name = "ElButton3"
-        Me.ElButton3.Size = New System.Drawing.Size(246, 37)
-        Me.ElButton3.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton3.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton3.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
-        Me.ElButton3.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton3.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.ElButton3.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
-        Me.ElButton3.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton3.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton3.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton3.TabIndex = 45
-        Me.ElButton3.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ElButton3.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.ElButton3.TextStyle.Text = "Salir"
-        Me.ElButton3.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton3.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Inter Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(70, 627)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(100, 19)
+        Me.Label9.TabIndex = 51
+        Me.Label9.Text = "Iniciar Sesion"
         '
-        'ElButton4
+        'Label8
         '
-        Me.ElButton4.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton4.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElButton4.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton4.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElButton4.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElButton4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElButton4.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton4.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.ElButton4.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
-        Me.ElButton4.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ElButton4.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.ElButton4.Location = New System.Drawing.Point(0, 352)
-        Me.ElButton4.Name = "ElButton4"
-        Me.ElButton4.Size = New System.Drawing.Size(246, 37)
-        Me.ElButton4.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton4.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton4.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
-        Me.ElButton4.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton4.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.ElButton4.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
-        Me.ElButton4.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton4.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton4.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton4.TabIndex = 46
-        Me.ElButton4.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ElButton4.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.ElButton4.TextStyle.Text = "Salir"
-        Me.ElButton4.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton4.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
-        '
-        'ElButton5
-        '
-        Me.ElButton5.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton5.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElButton5.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton5.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElButton5.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElButton5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElButton5.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton5.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.ElButton5.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
-        Me.ElButton5.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ElButton5.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.ElButton5.Location = New System.Drawing.Point(0, 395)
-        Me.ElButton5.Name = "ElButton5"
-        Me.ElButton5.Size = New System.Drawing.Size(246, 37)
-        Me.ElButton5.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton5.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton5.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
-        Me.ElButton5.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton5.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.ElButton5.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
-        Me.ElButton5.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton5.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.ElButton5.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
-        Me.ElButton5.TabIndex = 47
-        Me.ElButton5.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ElButton5.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.ElButton5.TextStyle.Text = "Salir"
-        Me.ElButton5.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton5.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(97, 608)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(47, 19)
+        Me.Label8.TabIndex = 50
+        Me.Label8.Text = "User"
         '
         'frmPrincipal
         '
@@ -387,13 +460,14 @@ Partial Class frmPrincipal
         Me.panelCabecera.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.btnReportes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnAjustes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnDashboard, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnInventario, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnPedidos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ElButton1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ElButton2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ElButton3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ElButton4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ElButton5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -407,11 +481,15 @@ Partial Class frmPrincipal
     Friend WithEvents Panel1 As Panel
     Friend WithEvents pbLogo As PictureBox
     Friend WithEvents lblMenu As Label
-    Friend WithEvents btnSalir As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnVentas As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents panelContenedor As Panel
-    Friend WithEvents ElButton5 As Klik.Windows.Forms.v1.EntryLib.ELButton
-    Friend WithEvents ElButton4 As Klik.Windows.Forms.v1.EntryLib.ELButton
-    Friend WithEvents ElButton3 As Klik.Windows.Forms.v1.EntryLib.ELButton
-    Friend WithEvents ElButton2 As Klik.Windows.Forms.v1.EntryLib.ELButton
-    Friend WithEvents ElButton1 As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnReportes As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnAjustes As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnDashboard As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnInventario As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnPedidos As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
 End Class

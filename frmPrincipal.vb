@@ -1,4 +1,5 @@
-﻿Public Class frmPrincipal
+﻿
+Public Class frmPrincipal
 
     Private Sub AbrirFormEnPanel(ByVal Formhijo As Object)
         If Me.panelContenedor.Controls.Count > 0 Then
@@ -23,10 +24,6 @@
         frmLogin.Close()
     End Sub
 
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        AbrirFormEnPanel(New frmVenta)
-    End Sub
-
     Private Sub btnMaximizar_Click(sender As Object, e As EventArgs) Handles btnMaximizar.Click
         btnMaximizar.Visible = False
         btnMaxiMini.Visible = True
@@ -37,5 +34,21 @@
         btnMaxiMini.Visible = False
         btnMaximizar.Visible = True
         Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
+        AbrirFormEnPanel(New frmVenta)
+    End Sub
+
+    Private Sub btnPedidos_Click(sender As Object, e As EventArgs) Handles btnPedidos.Click
+
+    End Sub
+
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        AbrirFormEnPanel(New frmDashboard)
     End Sub
 End Class
