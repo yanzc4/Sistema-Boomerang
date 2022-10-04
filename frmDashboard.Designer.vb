@@ -25,7 +25,8 @@ Partial Class frmDashboard
         Me.ElContainer1 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.btnSalir = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ElContainer5 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ElContainer4 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.ElContainer2 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
@@ -33,17 +34,15 @@ Partial Class frmDashboard
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer1.SuspendLayout()
-        CType(Me.ElContainer5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ElContainer5.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ElContainer1
@@ -54,7 +53,7 @@ Partial Class frmDashboard
         Me.ElContainer1.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElContainer1.BackgroundStyle.SolidColor = System.Drawing.Color.Black
         Me.ElContainer1.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.ElContainer1.Controls.Add(Me.ElContainer5)
+        Me.ElContainer1.Controls.Add(Me.Panel1)
         Me.ElContainer1.Controls.Add(Me.btnSalir)
         Me.ElContainer1.Controls.Add(Me.Label1)
         Me.ElContainer1.Cursor = System.Windows.Forms.Cursors.Default
@@ -80,9 +79,7 @@ Partial Class frmDashboard
         '
         'Label1
         '
-        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Inter Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
@@ -92,55 +89,59 @@ Partial Class frmDashboard
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Panel de Control"
         '
-        'ElContainer5
+        'Panel1
         '
-        Me.ElContainer5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ElContainer5.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElContainer5.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElContainer5.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElContainer5.Controls.Add(Me.PictureBox1)
-        Me.ElContainer5.Controls.Add(Me.ElContainer4)
-        Me.ElContainer5.Controls.Add(Me.ElContainer3)
-        Me.ElContainer5.Controls.Add(Me.ElContainer2)
-        Me.ElContainer5.Location = New System.Drawing.Point(21, 69)
-        Me.ElContainer5.Name = "ElContainer5"
-        Me.ElContainer5.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ElContainer5.Size = New System.Drawing.Size(935, 116)
-        Me.ElContainer5.TabIndex = 9
-        Me.ElContainer5.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.ElContainer4)
+        Me.Panel1.Controls.Add(Me.ElContainer3)
+        Me.Panel1.Controls.Add(Me.ElContainer2)
+        Me.Panel1.Location = New System.Drawing.Point(0, 71)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(973, 100)
+        Me.Panel1.TabIndex = 11
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox1.Image = Global.Sistema_Boomerang.My.Resources.Resources.Logo_empresa_removebg_preview
+        Me.PictureBox1.Location = New System.Drawing.Point(61, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(200, 100)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabStop = False
         '
         'ElContainer4
         '
-        Me.ElContainer4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ElContainer4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ElContainer4.BackgroundStyle.GradientEndColor = System.Drawing.Color.LawnGreen
         Me.ElContainer4.BackgroundStyle.GradientStartColor = System.Drawing.Color.Green
         Me.ElContainer4.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElContainer4.Location = New System.Drawing.Point(710, 26)
+        Me.ElContainer4.Location = New System.Drawing.Point(734, 20)
         Me.ElContainer4.Name = "ElContainer4"
         Me.ElContainer4.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ElContainer4.Size = New System.Drawing.Size(177, 64)
-        Me.ElContainer4.TabIndex = 11
+        Me.ElContainer4.TabIndex = 15
         Me.ElContainer4.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
         'ElContainer3
         '
-        Me.ElContainer3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ElContainer3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ElContainer3.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.ElContainer3.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.ElContainer3.BorderStyle.SolidColor = System.Drawing.Color.Black
         Me.ElContainer3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElContainer3.Location = New System.Drawing.Point(497, 26)
+        Me.ElContainer3.Location = New System.Drawing.Point(521, 20)
         Me.ElContainer3.Name = "ElContainer3"
         Me.ElContainer3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ElContainer3.Size = New System.Drawing.Size(177, 64)
-        Me.ElContainer3.TabIndex = 10
+        Me.ElContainer3.TabIndex = 14
         Me.ElContainer3.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
         'ElContainer2
         '
-        Me.ElContainer2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ElContainer2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ElContainer2.BackgroundStyle.GradientEndColor = System.Drawing.Color.LightSalmon
         Me.ElContainer2.BackgroundStyle.GradientStartColor = System.Drawing.Color.OrangeRed
         Me.ElContainer2.BorderStyle.SolidColor = System.Drawing.Color.Black
@@ -149,11 +150,11 @@ Partial Class frmDashboard
         Me.ElContainer2.Controls.Add(Me.Label4)
         Me.ElContainer2.Controls.Add(Me.Label2)
         Me.ElContainer2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElContainer2.Location = New System.Drawing.Point(284, 26)
+        Me.ElContainer2.Location = New System.Drawing.Point(308, 20)
         Me.ElContainer2.Name = "ElContainer2"
         Me.ElContainer2.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ElContainer2.Size = New System.Drawing.Size(177, 64)
-        Me.ElContainer2.TabIndex = 9
+        Me.ElContainer2.TabIndex = 13
         Me.ElContainer2.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
         'PictureBox2
@@ -201,18 +202,6 @@ Partial Class frmDashboard
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Ventas"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = Global.Sistema_Boomerang.My.Resources.Resources.Logo_empresa_removebg_preview
-        Me.PictureBox1.Location = New System.Drawing.Point(43, 9)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(200, 100)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 12
-        Me.PictureBox1.TabStop = False
-        '
         'frmDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -227,16 +216,15 @@ Partial Class frmDashboard
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer1.ResumeLayout(False)
         Me.ElContainer1.PerformLayout()
-        CType(Me.ElContainer5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ElContainer5.ResumeLayout(False)
-        Me.ElContainer5.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer2.ResumeLayout(False)
         Me.ElContainer2.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -244,7 +232,8 @@ Partial Class frmDashboard
     Friend WithEvents ElContainer1 As Klik.Windows.Forms.v1.EntryLib.ELContainer
     Friend WithEvents btnSalir As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents ElContainer5 As Klik.Windows.Forms.v1.EntryLib.ELContainer
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ElContainer4 As Klik.Windows.Forms.v1.EntryLib.ELContainer
     Friend WithEvents ElContainer3 As Klik.Windows.Forms.v1.EntryLib.ELContainer
     Friend WithEvents ElContainer2 As Klik.Windows.Forms.v1.EntryLib.ELContainer
@@ -252,5 +241,4 @@ Partial Class frmDashboard
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
 End Class
