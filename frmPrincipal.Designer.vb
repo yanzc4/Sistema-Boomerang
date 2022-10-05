@@ -29,6 +29,10 @@ Partial Class frmPrincipal
         Me.btnMaximizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
         Me.btnReportes = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnAjustes = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnDashboard = New Klik.Windows.Forms.v1.EntryLib.ELButton()
@@ -38,12 +42,9 @@ Partial Class frmPrincipal
         Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.lblMenu = New System.Windows.Forms.Label()
         Me.panelContenedor = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.panelCabecera.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnReportes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAjustes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnDashboard, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,7 +52,6 @@ Partial Class frmPrincipal
         CType(Me.btnPedidos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelCabecera
@@ -157,6 +157,76 @@ Partial Class frmPrincipal
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(246, 670)
         Me.Panel1.TabIndex = 2
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Inter Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(70, 627)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(100, 19)
+        Me.Label9.TabIndex = 51
+        Me.Label9.Text = "Iniciar Sesion"
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(97, 608)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(47, 19)
+        Me.Label8.TabIndex = 50
+        Me.Label8.Text = "User"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.Sistema_Boomerang.My.Resources.Resources.perfil2
+        Me.PictureBox2.Location = New System.Drawing.Point(101, 542)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(40, 37)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 49
+        Me.PictureBox2.TabStop = False
+        '
+        'CircularProgressBar1
+        '
+        Me.CircularProgressBar1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
+        Me.CircularProgressBar1.AnimationSpeed = 500
+        Me.CircularProgressBar1.BackColor = System.Drawing.Color.Transparent
+        Me.CircularProgressBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Bold)
+        Me.CircularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CircularProgressBar1.InnerColor = System.Drawing.Color.Black
+        Me.CircularProgressBar1.InnerMargin = 2
+        Me.CircularProgressBar1.InnerWidth = -1
+        Me.CircularProgressBar1.Location = New System.Drawing.Point(81, 520)
+        Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
+        Me.CircularProgressBar1.Name = "CircularProgressBar1"
+        Me.CircularProgressBar1.OuterColor = System.Drawing.Color.Black
+        Me.CircularProgressBar1.OuterMargin = -25
+        Me.CircularProgressBar1.OuterWidth = 26
+        Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(127, Byte), Integer))
+        Me.CircularProgressBar1.ProgressWidth = 5
+        Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 36.0!)
+        Me.CircularProgressBar1.Size = New System.Drawing.Size(80, 80)
+        Me.CircularProgressBar1.StartAngle = 270
+        Me.CircularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.CircularProgressBar1.SubscriptMargin = New System.Windows.Forms.Padding(10, -35, 0, 0)
+        Me.CircularProgressBar1.SubscriptText = ".23"
+        Me.CircularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.CircularProgressBar1.SuperscriptMargin = New System.Windows.Forms.Padding(10, 35, 0, 0)
+        Me.CircularProgressBar1.SuperscriptText = "°C"
+        Me.CircularProgressBar1.TabIndex = 48
+        Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(8, 8, 0, 0)
+        Me.CircularProgressBar1.Value = 100
         '
         'btnReportes
         '
@@ -358,7 +428,7 @@ Partial Class frmPrincipal
         Me.lblMenu.AutoSize = True
         Me.lblMenu.BackColor = System.Drawing.Color.Transparent
         Me.lblMenu.Font = New System.Drawing.Font("Inter Black", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMenu.ForeColor = System.Drawing.Color.Red
+        Me.lblMenu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblMenu.Location = New System.Drawing.Point(73, 23)
         Me.lblMenu.Name = "lblMenu"
         Me.lblMenu.Size = New System.Drawing.Size(98, 35)
@@ -372,76 +442,6 @@ Partial Class frmPrincipal
         Me.panelContenedor.Name = "panelContenedor"
         Me.panelContenedor.Size = New System.Drawing.Size(1004, 670)
         Me.panelContenedor.TabIndex = 3
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.Sistema_Boomerang.My.Resources.Resources.perfil2
-        Me.PictureBox2.Location = New System.Drawing.Point(101, 542)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(40, 37)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 49
-        Me.PictureBox2.TabStop = False
-        '
-        'CircularProgressBar1
-        '
-        Me.CircularProgressBar1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
-        Me.CircularProgressBar1.AnimationSpeed = 500
-        Me.CircularProgressBar1.BackColor = System.Drawing.Color.Transparent
-        Me.CircularProgressBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Bold)
-        Me.CircularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.CircularProgressBar1.InnerColor = System.Drawing.Color.Black
-        Me.CircularProgressBar1.InnerMargin = 2
-        Me.CircularProgressBar1.InnerWidth = -1
-        Me.CircularProgressBar1.Location = New System.Drawing.Point(81, 520)
-        Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
-        Me.CircularProgressBar1.Name = "CircularProgressBar1"
-        Me.CircularProgressBar1.OuterColor = System.Drawing.Color.Black
-        Me.CircularProgressBar1.OuterMargin = -25
-        Me.CircularProgressBar1.OuterWidth = 26
-        Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.Red
-        Me.CircularProgressBar1.ProgressWidth = 5
-        Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 36.0!)
-        Me.CircularProgressBar1.Size = New System.Drawing.Size(80, 80)
-        Me.CircularProgressBar1.StartAngle = 270
-        Me.CircularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.CircularProgressBar1.SubscriptMargin = New System.Windows.Forms.Padding(10, -35, 0, 0)
-        Me.CircularProgressBar1.SubscriptText = ".23"
-        Me.CircularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.CircularProgressBar1.SuperscriptMargin = New System.Windows.Forms.Padding(10, 35, 0, 0)
-        Me.CircularProgressBar1.SuperscriptText = "°C"
-        Me.CircularProgressBar1.TabIndex = 48
-        Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(8, 8, 0, 0)
-        Me.CircularProgressBar1.Value = 100
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Inter Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(70, 627)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(100, 19)
-        Me.Label9.TabIndex = 51
-        Me.Label9.Text = "Iniciar Sesion"
-        '
-        'Label8
-        '
-        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(97, 608)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(47, 19)
-        Me.Label8.TabIndex = 50
-        Me.Label8.Text = "User"
         '
         'frmPrincipal
         '
@@ -460,6 +460,7 @@ Partial Class frmPrincipal
         Me.panelCabecera.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnReportes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnAjustes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnDashboard, System.ComponentModel.ISupportInitialize).EndInit()
@@ -467,7 +468,6 @@ Partial Class frmPrincipal
         CType(Me.btnPedidos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

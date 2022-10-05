@@ -180,7 +180,7 @@ Partial Class frmCarga
         Me.carga.OuterColor = System.Drawing.Color.Black
         Me.carga.OuterMargin = -25
         Me.carga.OuterWidth = 26
-        Me.carga.ProgressColor = System.Drawing.Color.Red
+        Me.carga.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(127, Byte), Integer))
         Me.carga.ProgressWidth = 8
         Me.carga.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.carga.Size = New System.Drawing.Size(110, 110)
@@ -227,7 +227,7 @@ Partial Class frmCarga
         Me.CircularProgressBar1.OuterColor = System.Drawing.Color.Black
         Me.CircularProgressBar1.OuterMargin = -25
         Me.CircularProgressBar1.OuterWidth = 26
-        Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.Red
+        Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(127, Byte), Integer))
         Me.CircularProgressBar1.ProgressWidth = 5
         Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 36.0!)
         Me.CircularProgressBar1.Size = New System.Drawing.Size(90, 90)
@@ -288,8 +288,8 @@ Partial Class frmCarga
         '
         'btnLogin
         '
-        Me.btnLogin.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnLogin.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnLogin.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnLogin.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(127, Byte), Integer))
         Me.btnLogin.BorderStyle.SolidColor = System.Drawing.Color.Black
         Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnLogin.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
