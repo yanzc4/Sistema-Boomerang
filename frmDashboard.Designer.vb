@@ -22,6 +22,9 @@ Partial Class frmDashboard
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
@@ -45,8 +48,8 @@ Partial Class frmDashboard
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.ElContainer4 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -60,9 +63,8 @@ Partial Class frmDashboard
         CType(Me.ElContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer2.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ElContainer4.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ElContainer1
@@ -73,7 +75,8 @@ Partial Class frmDashboard
         Me.ElContainer1.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElContainer1.BackgroundStyle.SolidColor = System.Drawing.Color.Black
         Me.ElContainer1.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.ElContainer1.Controls.Add(Me.ElContainer4)
+        Me.ElContainer1.Controls.Add(Me.Chart2)
+        Me.ElContainer1.Controls.Add(Me.Chart1)
         Me.ElContainer1.Controls.Add(Me.Panel1)
         Me.ElContainer1.Controls.Add(Me.btnSalir)
         Me.ElContainer1.Controls.Add(Me.Label1)
@@ -322,49 +325,103 @@ Partial Class frmDashboard
         Me.Label10.TabIndex = 5
         Me.Label10.Text = "Ventas"
         '
-        'ElContainer4
-        '
-        Me.ElContainer4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ElContainer4.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElContainer4.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElContainer4.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElContainer4.Controls.Add(Me.Chart1)
-        Me.ElContainer4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElContainer4.Location = New System.Drawing.Point(21, 195)
-        Me.ElContainer4.Name = "ElContainer4"
-        Me.ElContainer4.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ElContainer4.Size = New System.Drawing.Size(449, 235)
-        Me.ElContainer4.TabIndex = 15
-        Me.ElContainer4.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
-        '
         'Chart1
         '
         Me.Chart1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Chart1.BackColor = System.Drawing.Color.Transparent
+        ChartArea2.AxisX.IsMarginVisible = False
+        ChartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White
+        ChartArea2.AxisX.LineColor = System.Drawing.Color.White
+        ChartArea2.AxisX.LineWidth = 0
+        ChartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.White
+        ChartArea2.AxisX.MajorGrid.LineWidth = 0
+        ChartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
+        ChartArea2.AxisX.MajorTickMark.Size = 3.0!
+        ChartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White
+        ChartArea2.AxisY.LabelStyle.Format = "$(0)"
+        ChartArea2.AxisY.LineColor = System.Drawing.Color.White
+        ChartArea2.AxisY.LineWidth = 0
+        ChartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
+        ChartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
+        ChartArea2.BackColor = System.Drawing.Color.Transparent
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
+        Legend2.BackColor = System.Drawing.Color.Transparent
+        Legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Legend2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Legend2.IsTextAutoFit = False
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
+        Me.Chart1.Location = New System.Drawing.Point(21, 197)
+        Me.Chart1.Name = "Chart1"
+        Series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight
+        Series2.BackSecondaryColor = System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(255, Byte), Integer))
+        Series2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(127, Byte), Integer))
+        Series2.BorderWidth = 3
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea
+        Series2.Color = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(127, Byte), Integer))
+        Series2.Legend = "Legend1"
+        Series2.MarkerBorderColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Series2.MarkerColor = System.Drawing.Color.White
+        Series2.MarkerImageTransparentColor = System.Drawing.Color.White
+        Series2.MarkerSize = 6
+        Series2.Name = "Ventas"
+        Me.Chart1.Series.Add(Series2)
+        Me.Chart1.Size = New System.Drawing.Size(576, 217)
+        Me.Chart1.TabIndex = 16
+        Me.Chart1.Text = "Chart1"
+        '
+        'Chart2
+        '
+        Me.Chart2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Chart2.BackColor = System.Drawing.Color.Transparent
+        ChartArea1.AxisX.IsMarginVisible = False
+        ChartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White
+        ChartArea1.AxisX.LineColor = System.Drawing.Color.White
+        ChartArea1.AxisX.LineWidth = 0
+        ChartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White
+        ChartArea1.AxisX.MajorGrid.LineWidth = 0
+        ChartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
+        ChartArea1.AxisX.MajorTickMark.Size = 3.0!
+        ChartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White
+        ChartArea1.AxisY.LabelStyle.Format = "$(0)"
+        ChartArea1.AxisY.LineColor = System.Drawing.Color.White
+        ChartArea1.AxisY.LineWidth = 0
+        ChartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
+        ChartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
         ChartArea1.BackColor = System.Drawing.Color.Transparent
         ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Me.Chart2.ChartAreas.Add(ChartArea1)
+        Legend1.Alignment = System.Drawing.StringAlignment.Center
         Legend1.BackColor = System.Drawing.Color.Transparent
+        Legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom
+        Legend1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Legend1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Legend1.IsTextAutoFit = False
         Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(6, 9)
-        Me.Chart1.Name = "Chart1"
+        Legend1.TitleBackColor = System.Drawing.Color.Transparent
+        Legend1.TitleForeColor = System.Drawing.Color.Empty
+        Me.Chart2.Legends.Add(Legend1)
+        Me.Chart2.Location = New System.Drawing.Point(584, 219)
+        Me.Chart2.Name = "Chart2"
         Series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight
-        Series1.BackSecondaryColor = System.Drawing.Color.Gray
+        Series1.BackSecondaryColor = System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(255, Byte), Integer))
+        Series1.BorderWidth = 3
         Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea
-        Series1.Color = System.Drawing.Color.Black
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
+        Series1.Color = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(127, Byte), Integer))
         Series1.Legend = "Legend1"
-        Series1.MarkerBorderColor = System.Drawing.Color.Yellow
+        Series1.MarkerBorderColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Series1.MarkerColor = System.Drawing.Color.White
         Series1.MarkerImageTransparentColor = System.Drawing.Color.White
         Series1.MarkerSize = 6
-        Series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(437, 217)
-        Me.Chart1.TabIndex = 14
-        Me.Chart1.Text = "Chart1"
+        Series1.Name = "Ventas"
+        Me.Chart2.Series.Add(Series1)
+        Me.Chart2.Size = New System.Drawing.Size(357, 217)
+        Me.Chart2.TabIndex = 17
+        Me.Chart2.Text = "Chart2"
         '
         'frmDashboard
         '
@@ -395,9 +452,8 @@ Partial Class frmDashboard
         Me.ElContainer2.ResumeLayout(False)
         Me.ElContainer2.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ElContainer4.ResumeLayout(False)
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -422,6 +478,6 @@ Partial Class frmDashboard
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents ElContainer4 As Klik.Windows.Forms.v1.EntryLib.ELContainer
+    Friend WithEvents Chart2 As DataVisualization.Charting.Chart
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
 End Class
