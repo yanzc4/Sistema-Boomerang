@@ -180,7 +180,7 @@ Partial Class frmCarga
         Me.carga.OuterColor = System.Drawing.Color.Black
         Me.carga.OuterMargin = -25
         Me.carga.OuterWidth = 26
-        Me.carga.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(127, Byte), Integer))
+        Me.carga.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.carga.ProgressWidth = 8
         Me.carga.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.carga.Size = New System.Drawing.Size(110, 110)
@@ -227,7 +227,7 @@ Partial Class frmCarga
         Me.CircularProgressBar1.OuterColor = System.Drawing.Color.Black
         Me.CircularProgressBar1.OuterMargin = -25
         Me.CircularProgressBar1.OuterWidth = 26
-        Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(127, Byte), Integer))
+        Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.CircularProgressBar1.ProgressWidth = 5
         Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 36.0!)
         Me.CircularProgressBar1.Size = New System.Drawing.Size(90, 90)
@@ -288,21 +288,23 @@ Partial Class frmCarga
         '
         'btnLogin
         '
-        Me.btnLogin.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnLogin.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(127, Byte), Integer))
+        Me.btnLogin.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnLogin.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.btnLogin.BorderStyle.SolidColor = System.Drawing.Color.Black
         Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnLogin.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.btnLogin.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnLogin.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnLogin.Location = New System.Drawing.Point(56, 205)
+        Me.btnLogin.Location = New System.Drawing.Point(56, 209)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(111, 24)
-        Me.btnLogin.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Yellow
+        Me.btnLogin.Size = New System.Drawing.Size(111, 28)
+        Me.btnLogin.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnLogin.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btnLogin.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnLogin.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
         Me.btnLogin.TabIndex = 18
         Me.btnLogin.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.TextStyle.ForeColor = System.Drawing.Color.Black
+        Me.btnLogin.TextStyle.ForeColor = System.Drawing.Color.White
         Me.btnLogin.TextStyle.Text = "Ingresar"
         Me.btnLogin.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnLogin.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
@@ -318,9 +320,9 @@ Partial Class frmCarga
         Me.btnSalir.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.btnSalir.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnSalir.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnSalir.Location = New System.Drawing.Point(173, 205)
+        Me.btnSalir.Location = New System.Drawing.Point(173, 209)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(111, 24)
+        Me.btnSalir.Size = New System.Drawing.Size(111, 28)
         Me.btnSalir.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
         Me.btnSalir.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
         Me.btnSalir.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
@@ -338,7 +340,7 @@ Partial Class frmCarga
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(53, 244)
+        Me.Label10.Location = New System.Drawing.Point(53, 252)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(231, 15)
         Me.Label10.TabIndex = 20
@@ -349,7 +351,7 @@ Partial Class frmCarga
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(53, 259)
+        Me.Label11.Location = New System.Drawing.Point(53, 267)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(204, 15)
         Me.Label11.TabIndex = 21
@@ -360,7 +362,7 @@ Partial Class frmCarga
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(53, 274)
+        Me.Label12.Location = New System.Drawing.Point(53, 282)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(68, 15)
         Me.Label12.TabIndex = 22

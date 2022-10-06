@@ -45,10 +45,14 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub btnPedidos_Click(sender As Object, e As EventArgs) Handles btnPedidos.Click
-
+        AbrirFormEnPanel(New frmPedidos)
     End Sub
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
         AbrirFormEnPanel(New frmDashboard)
+    End Sub
+
+    Private Sub btnInventario_Click(sender As Object, e As EventArgs) Handles btnInventario.Click
+        AbrirFormEnPanel(New frmInventario)
     End Sub
 End Class
