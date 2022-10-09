@@ -55,4 +55,8 @@ Public Class frmPrincipal
     Private Sub btnInventario_Click(sender As Object, e As EventArgs) Handles btnInventario.Click
         AbrirFormEnPanel(New frmInventario)
     End Sub
+
+    Private Sub btnAjustes_Click(sender As Object, e As EventArgs) Handles btnAjustes.Click
+        AbrirFormEnPanel(New frmAjustes)
+    End Sub
 End Class
