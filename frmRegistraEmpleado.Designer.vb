@@ -23,17 +23,17 @@ Partial Class frmRegistraEmpleado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.panelCabecera = New System.Windows.Forms.Panel()
-        Me.ElContainer5 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.ElDivider1 = New Klik.Windows.Forms.v1.EntryLib.ELDivider()
         Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ElDivider1 = New Klik.Windows.Forms.v1.EntryLib.ELDivider()
+        Me.ElContainer5 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.txtNombre = New Sistema_Boomerang.PowerTextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.ElContainer4 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.PowerTextBox3 = New Sistema_Boomerang.PowerTextBox()
+        Me.txtCodN = New Sistema_Boomerang.PowerTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.rdbAdministrador = New System.Windows.Forms.RadioButton()
         Me.rbtEmpleado = New System.Windows.Forms.RadioButton()
+        Me.rdbAdministrador = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -41,15 +41,20 @@ Partial Class frmRegistraEmpleado
         Me.txtApellidos = New Sistema_Boomerang.PowerTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ElContainer2 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.txtUsuarioN = New Sistema_Boomerang.PowerTextBox()
+        Me.txtCelular = New Sistema_Boomerang.PowerTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.txtPassN = New Sistema_Boomerang.PowerTextBox()
+        Me.txtUsuarioN = New Sistema_Boomerang.PowerTextBox()
         Me.btnRegistrar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ElContainer6 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.txtPassN = New Sistema_Boomerang.PowerTextBox()
+        Me.txtNivel = New System.Windows.Forms.TextBox()
+        Me.btnNuevo = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.panelCabecera.SuspendLayout()
+        CType(Me.ElDivider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer5.SuspendLayout()
-        CType(Me.ElDivider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -60,6 +65,9 @@ Partial Class frmRegistraEmpleado
         CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer3.SuspendLayout()
         CType(Me.btnRegistrar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ElContainer6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ElContainer6.SuspendLayout()
+        CType(Me.btnNuevo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelCabecera
@@ -74,22 +82,15 @@ Partial Class frmRegistraEmpleado
         Me.panelCabecera.Size = New System.Drawing.Size(348, 40)
         Me.panelCabecera.TabIndex = 19
         '
-        'ElContainer5
+        'ElDivider1
         '
-        Me.ElContainer5.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ElContainer5.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElContainer5.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElContainer5.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElContainer5.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElContainer5.BorderStyle.SolidColor = System.Drawing.Color.White
-        Me.ElContainer5.Controls.Add(Me.txtNombre)
-        Me.ElContainer5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElContainer5.Location = New System.Drawing.Point(54, 207)
-        Me.ElContainer5.Name = "ElContainer5"
-        Me.ElContainer5.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ElContainer5.Size = New System.Drawing.Size(241, 34)
-        Me.ElContainer5.TabIndex = 46
-        Me.ElContainer5.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        Me.ElDivider1.LineColor = System.Drawing.Color.Black
+        Me.ElDivider1.Location = New System.Drawing.Point(12, 9)
+        Me.ElDivider1.Name = "ElDivider1"
+        Me.ElDivider1.Size = New System.Drawing.Size(187, 23)
+        Me.ElDivider1.TabIndex = 3
+        Me.ElDivider1.TransparentStyle.BackColor = System.Drawing.Color.Black
+        Me.ElDivider1.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
         'btnMinimizar
         '
@@ -120,27 +121,22 @@ Partial Class frmRegistraEmpleado
         Me.btnCerrar.TabIndex = 0
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
-        'Label1
+        'ElContainer5
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Inter", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(80, 62)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(185, 25)
-        Me.Label1.TabIndex = 47
-        Me.Label1.Text = "Nuevo Empleado"
-        '
-        'ElDivider1
-        '
-        Me.ElDivider1.LineColor = System.Drawing.Color.Black
-        Me.ElDivider1.Location = New System.Drawing.Point(12, 9)
-        Me.ElDivider1.Name = "ElDivider1"
-        Me.ElDivider1.Size = New System.Drawing.Size(187, 23)
-        Me.ElDivider1.TabIndex = 3
-        Me.ElDivider1.TransparentStyle.BackColor = System.Drawing.Color.Black
-        Me.ElDivider1.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        Me.ElContainer5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ElContainer5.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.ElContainer5.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.ElContainer5.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.ElContainer5.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.ElContainer5.BorderStyle.SolidColor = System.Drawing.Color.White
+        Me.ElContainer5.Controls.Add(Me.txtNombre)
+        Me.ElContainer5.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ElContainer5.Location = New System.Drawing.Point(54, 207)
+        Me.ElContainer5.Name = "ElContainer5"
+        Me.ElContainer5.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ElContainer5.Size = New System.Drawing.Size(241, 34)
+        Me.ElContainer5.TabIndex = 46
+        Me.ElContainer5.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
         'txtNombre
         '
@@ -153,6 +149,18 @@ Partial Class frmRegistraEmpleado
         Me.txtNombre.Size = New System.Drawing.Size(226, 20)
         Me.txtNombre.TabIndex = 1
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Inter", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(80, 62)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(185, 25)
+        Me.Label1.TabIndex = 47
+        Me.Label1.Text = "Nuevo Empleado"
+        '
         'ElContainer4
         '
         Me.ElContainer4.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -161,7 +169,7 @@ Partial Class frmRegistraEmpleado
         Me.ElContainer4.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElContainer4.BackgroundStyle.SolidColor = System.Drawing.Color.Black
         Me.ElContainer4.BorderStyle.SolidColor = System.Drawing.Color.White
-        Me.ElContainer4.Controls.Add(Me.PowerTextBox3)
+        Me.ElContainer4.Controls.Add(Me.txtCodN)
         Me.ElContainer4.Cursor = System.Windows.Forms.Cursors.Default
         Me.ElContainer4.Location = New System.Drawing.Point(54, 135)
         Me.ElContainer4.Name = "ElContainer4"
@@ -170,16 +178,16 @@ Partial Class frmRegistraEmpleado
         Me.ElContainer4.TabIndex = 51
         Me.ElContainer4.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
-        'PowerTextBox3
+        'txtCodN
         '
-        Me.PowerTextBox3.BackColor = System.Drawing.Color.Black
-        Me.PowerTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.PowerTextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.PowerTextBox3.ForeColor = System.Drawing.Color.White
-        Me.PowerTextBox3.Location = New System.Drawing.Point(8, 7)
-        Me.PowerTextBox3.Name = "PowerTextBox3"
-        Me.PowerTextBox3.Size = New System.Drawing.Size(79, 20)
-        Me.PowerTextBox3.TabIndex = 1
+        Me.txtCodN.BackColor = System.Drawing.Color.Black
+        Me.txtCodN.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCodN.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtCodN.ForeColor = System.Drawing.Color.White
+        Me.txtCodN.Location = New System.Drawing.Point(8, 7)
+        Me.txtCodN.Name = "txtCodN"
+        Me.txtCodN.Size = New System.Drawing.Size(79, 20)
+        Me.txtCodN.TabIndex = 1
         '
         'GroupBox1
         '
@@ -194,18 +202,6 @@ Partial Class frmRegistraEmpleado
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Rol"
         '
-        'rdbAdministrador
-        '
-        Me.rdbAdministrador.AutoSize = True
-        Me.rdbAdministrador.Font = New System.Drawing.Font("Roboto Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdbAdministrador.Location = New System.Drawing.Point(7, 16)
-        Me.rdbAdministrador.Name = "rdbAdministrador"
-        Me.rdbAdministrador.Size = New System.Drawing.Size(102, 18)
-        Me.rdbAdministrador.TabIndex = 0
-        Me.rdbAdministrador.TabStop = True
-        Me.rdbAdministrador.Text = "Administrador"
-        Me.rdbAdministrador.UseVisualStyleBackColor = True
-        '
         'rbtEmpleado
         '
         Me.rbtEmpleado.AutoSize = True
@@ -217,6 +213,18 @@ Partial Class frmRegistraEmpleado
         Me.rbtEmpleado.TabStop = True
         Me.rbtEmpleado.Text = "Empleado"
         Me.rbtEmpleado.UseVisualStyleBackColor = True
+        '
+        'rdbAdministrador
+        '
+        Me.rdbAdministrador.AutoSize = True
+        Me.rdbAdministrador.Font = New System.Drawing.Font("Roboto Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbAdministrador.Location = New System.Drawing.Point(7, 16)
+        Me.rdbAdministrador.Name = "rdbAdministrador"
+        Me.rdbAdministrador.Size = New System.Drawing.Size(102, 18)
+        Me.rdbAdministrador.TabIndex = 0
+        Me.rdbAdministrador.TabStop = True
+        Me.rdbAdministrador.Text = "Administrador"
+        Me.rdbAdministrador.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -290,9 +298,9 @@ Partial Class frmRegistraEmpleado
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(51, 318)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(48, 14)
+        Me.Label5.Size = New System.Drawing.Size(44, 14)
         Me.Label5.TabIndex = 58
-        Me.Label5.Text = "Usuario"
+        Me.Label5.Text = "Celular"
         '
         'ElContainer2
         '
@@ -302,7 +310,7 @@ Partial Class frmRegistraEmpleado
         Me.ElContainer2.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElContainer2.BackgroundStyle.SolidColor = System.Drawing.Color.Black
         Me.ElContainer2.BorderStyle.SolidColor = System.Drawing.Color.White
-        Me.ElContainer2.Controls.Add(Me.txtUsuarioN)
+        Me.ElContainer2.Controls.Add(Me.txtCelular)
         Me.ElContainer2.Cursor = System.Windows.Forms.Cursors.Default
         Me.ElContainer2.Location = New System.Drawing.Point(54, 335)
         Me.ElContainer2.Name = "ElContainer2"
@@ -310,6 +318,46 @@ Partial Class frmRegistraEmpleado
         Me.ElContainer2.Size = New System.Drawing.Size(241, 34)
         Me.ElContainer2.TabIndex = 57
         Me.ElContainer2.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'txtCelular
+        '
+        Me.txtCelular.BackColor = System.Drawing.Color.Black
+        Me.txtCelular.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCelular.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtCelular.ForeColor = System.Drawing.Color.White
+        Me.txtCelular.Location = New System.Drawing.Point(8, 7)
+        Me.txtCelular.Name = "txtCelular"
+        Me.txtCelular.Size = New System.Drawing.Size(226, 20)
+        Me.txtCelular.TabIndex = 1
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Roboto Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(51, 383)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(48, 14)
+        Me.Label6.TabIndex = 60
+        Me.Label6.Text = "Usuario"
+        '
+        'ElContainer3
+        '
+        Me.ElContainer3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ElContainer3.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.ElContainer3.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.ElContainer3.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.ElContainer3.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.ElContainer3.BorderStyle.SolidColor = System.Drawing.Color.White
+        Me.ElContainer3.Controls.Add(Me.txtUsuarioN)
+        Me.ElContainer3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ElContainer3.Location = New System.Drawing.Point(54, 400)
+        Me.ElContainer3.Name = "ElContainer3"
+        Me.ElContainer3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ElContainer3.Size = New System.Drawing.Size(241, 34)
+        Me.ElContainer3.TabIndex = 59
+        Me.ElContainer3.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
         'txtUsuarioN
         '
@@ -322,34 +370,57 @@ Partial Class frmRegistraEmpleado
         Me.txtUsuarioN.Size = New System.Drawing.Size(226, 20)
         Me.txtUsuarioN.TabIndex = 1
         '
-        'Label6
+        'btnRegistrar
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Roboto Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(51, 383)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(68, 14)
-        Me.Label6.TabIndex = 60
-        Me.Label6.Text = "Contraseña"
+        Me.btnRegistrar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnRegistrar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnRegistrar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnRegistrar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnRegistrar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnRegistrar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnRegistrar.Location = New System.Drawing.Point(54, 516)
+        Me.btnRegistrar.Name = "btnRegistrar"
+        Me.btnRegistrar.Size = New System.Drawing.Size(117, 34)
+        Me.btnRegistrar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnRegistrar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnRegistrar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnRegistrar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnRegistrar.TabIndex = 61
+        Me.btnRegistrar.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrar.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnRegistrar.TextStyle.Text = "Registrar"
+        Me.btnRegistrar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnRegistrar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
-        'ElContainer3
+        'Label7
         '
-        Me.ElContainer3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ElContainer3.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElContainer3.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElContainer3.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElContainer3.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElContainer3.BorderStyle.SolidColor = System.Drawing.Color.White
-        Me.ElContainer3.Controls.Add(Me.txtPassN)
-        Me.ElContainer3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElContainer3.Location = New System.Drawing.Point(54, 400)
-        Me.ElContainer3.Name = "ElContainer3"
-        Me.ElContainer3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ElContainer3.Size = New System.Drawing.Size(241, 34)
-        Me.ElContainer3.TabIndex = 59
-        Me.ElContainer3.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Roboto Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(51, 447)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(68, 14)
+        Me.Label7.TabIndex = 63
+        Me.Label7.Text = "Contraseña"
+        '
+        'ElContainer6
+        '
+        Me.ElContainer6.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ElContainer6.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.ElContainer6.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.ElContainer6.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.ElContainer6.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.ElContainer6.BorderStyle.SolidColor = System.Drawing.Color.White
+        Me.ElContainer6.Controls.Add(Me.txtPassN)
+        Me.ElContainer6.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ElContainer6.Location = New System.Drawing.Point(54, 464)
+        Me.ElContainer6.Name = "ElContainer6"
+        Me.ElContainer6.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ElContainer6.Size = New System.Drawing.Size(241, 34)
+        Me.ElContainer6.TabIndex = 62
+        Me.ElContainer6.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
         'txtPassN
         '
@@ -362,35 +433,47 @@ Partial Class frmRegistraEmpleado
         Me.txtPassN.Size = New System.Drawing.Size(226, 20)
         Me.txtPassN.TabIndex = 1
         '
-        'btnRegistrar
+        'txtNivel
         '
-        Me.btnRegistrar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnRegistrar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.btnRegistrar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnRegistrar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.btnRegistrar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnRegistrar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnRegistrar.Location = New System.Drawing.Point(54, 457)
-        Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(241, 34)
-        Me.btnRegistrar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnRegistrar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnRegistrar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.btnRegistrar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
-        Me.btnRegistrar.TabIndex = 61
-        Me.btnRegistrar.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.btnRegistrar.TextStyle.Text = "Registrar"
-        Me.btnRegistrar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnRegistrar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        Me.txtNivel.Location = New System.Drawing.Point(173, 438)
+        Me.txtNivel.Name = "txtNivel"
+        Me.txtNivel.Size = New System.Drawing.Size(122, 20)
+        Me.txtNivel.TabIndex = 64
+        Me.txtNivel.Visible = False
+        '
+        'btnNuevo
+        '
+        Me.btnNuevo.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnNuevo.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnNuevo.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnNuevo.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnNuevo.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnNuevo.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnNuevo.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnNuevo.Location = New System.Drawing.Point(178, 516)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(117, 34)
+        Me.btnNuevo.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnNuevo.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnNuevo.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnNuevo.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnNuevo.TabIndex = 65
+        Me.btnNuevo.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnNuevo.TextStyle.Text = "Nuevo"
+        Me.btnNuevo.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnNuevo.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
         'frmRegistraEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(348, 522)
+        Me.ClientSize = New System.Drawing.Size(348, 568)
+        Me.Controls.Add(Me.btnNuevo)
+        Me.Controls.Add(Me.txtNivel)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.ElContainer6)
         Me.Controls.Add(Me.btnRegistrar)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ElContainer3)
@@ -410,10 +493,10 @@ Partial Class frmRegistraEmpleado
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmRegistraEmpleado"
         Me.panelCabecera.ResumeLayout(False)
+        CType(Me.ElDivider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElContainer5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer5.ResumeLayout(False)
         Me.ElContainer5.PerformLayout()
-        CType(Me.ElDivider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer4.ResumeLayout(False)
         Me.ElContainer4.PerformLayout()
@@ -429,6 +512,10 @@ Partial Class frmRegistraEmpleado
         Me.ElContainer3.ResumeLayout(False)
         Me.ElContainer3.PerformLayout()
         CType(Me.btnRegistrar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ElContainer6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ElContainer6.ResumeLayout(False)
+        Me.ElContainer6.PerformLayout()
+        CType(Me.btnNuevo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -442,7 +529,7 @@ Partial Class frmRegistraEmpleado
     Friend WithEvents ElDivider1 As Klik.Windows.Forms.v1.EntryLib.ELDivider
     Friend WithEvents Label1 As Label
     Friend WithEvents ElContainer4 As Klik.Windows.Forms.v1.EntryLib.ELContainer
-    Friend WithEvents PowerTextBox3 As PowerTextBox
+    Friend WithEvents txtCodN As PowerTextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents rbtEmpleado As RadioButton
     Friend WithEvents rdbAdministrador As RadioButton
@@ -453,9 +540,14 @@ Partial Class frmRegistraEmpleado
     Friend WithEvents txtApellidos As PowerTextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents ElContainer2 As Klik.Windows.Forms.v1.EntryLib.ELContainer
-    Friend WithEvents txtUsuarioN As PowerTextBox
+    Friend WithEvents txtCelular As PowerTextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents ElContainer3 As Klik.Windows.Forms.v1.EntryLib.ELContainer
-    Friend WithEvents txtPassN As PowerTextBox
+    Friend WithEvents txtUsuarioN As PowerTextBox
     Friend WithEvents btnRegistrar As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents Label7 As Label
+    Friend WithEvents ElContainer6 As Klik.Windows.Forms.v1.EntryLib.ELContainer
+    Friend WithEvents txtPassN As PowerTextBox
+    Friend WithEvents txtNivel As TextBox
+    Friend WithEvents btnNuevo As Klik.Windows.Forms.v1.EntryLib.ELButton
 End Class
