@@ -32,6 +32,14 @@ Public Class frmRegistraEmpleado
         cmd.ExecuteNonQuery()
         MsgBox("Usuario Agregado")
     End Function
+    Function listarusuario()
+        cn.Open()
+        Dim da As New SqlDataAdapter("execute _listarusuarios", cn)
+        Dim ds As New DataSet
+        da.Fill(ds, "Empleado")
+        dgvEmpleado.DataSource = ds.Tables("Empleado")
+        cn.Close()
+    End Function
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()
@@ -47,6 +55,7 @@ Public Class frmRegistraEmpleado
     End Sub
 
     Private Sub frmRegistraEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        listarusuario()
         'para redondear
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 20, 20))
     End Sub
@@ -88,5 +97,6 @@ Public Class frmRegistraEmpleado
         Finally
             If Not IsDBNull(cn) Then cn.Close()
         End Try
+        listarusuario()
     End Sub
 End Class

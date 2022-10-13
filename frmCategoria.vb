@@ -35,8 +35,16 @@ Public Class frmCategoria
         cmd.ExecuteNonQuery()
         MsgBox("Categoria Agregada")
     End Function
-
+    Function listarcategoria()
+        cn.Open()
+        Dim da As New SqlDataAdapter("execute _listarcategoria", cn)
+        Dim ds As New DataSet
+        da.Fill(ds, "Categoria")
+        dgvCategoria.DataSource = ds.Tables("Categoria")
+        cn.Close()
+    End Function
     Private Sub frmCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        listarcategoria()
         'para redondear
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 20, 20))
     End Sub
@@ -50,22 +58,18 @@ Public Class frmCategoria
         Me.Close()
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub btnAgregar_Click_1(sender As Object, e As EventArgs) Handles btnAgregar.Click
+    Private Sub btnAgregar_Click_2(sender As Object, e As EventArgs) Handles btnAgregar.Click
         OpenFileDialog1.Filter = "Formato JPG|*.jpg|Formato PNG|*.png|Formato bitmaps|*.bmp"
         If OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK Then
             Me.imgCategoria.Image = Image.FromFile(Me.OpenFileDialog1.FileName)
         End If
     End Sub
 
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+    Private Sub btnEliminar_Click_1(sender As Object, e As EventArgs) Handles btnEliminar.Click
         imgCategoria.Image = Nothing
     End Sub
 
-    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+    Private Sub btnRegistrar_Click_1(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         Try
             cn.Open()
             crearcategoria()
@@ -74,5 +78,13 @@ Public Class frmCategoria
         Finally
             If Not IsDBNull(cn) Then cn.Close()
         End Try
+        listarcategoria()
+    End Sub
+
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        txtDescripcion.Clear()
+        txtId.Clear()
+        txtNombre.Clear()
+        imgCategoria.Image = Nothing
     End Sub
 End Class
