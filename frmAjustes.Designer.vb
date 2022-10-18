@@ -23,14 +23,16 @@ Partial Class frmAjustes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ElContainer1 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.panelContenedor1 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.btnNuevoCate = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnNuevoEmp = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnSalir = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnNuevoCate = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer1.SuspendLayout()
-        CType(Me.btnNuevoEmp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.panelContenedor1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnNuevoCate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnNuevoEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ElContainer1
@@ -41,6 +43,7 @@ Partial Class frmAjustes
         Me.ElContainer1.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElContainer1.BackgroundStyle.SolidColor = System.Drawing.Color.Black
         Me.ElContainer1.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer1.Controls.Add(Me.panelContenedor1)
         Me.ElContainer1.Controls.Add(Me.btnNuevoCate)
         Me.ElContainer1.Controls.Add(Me.btnNuevoEmp)
         Me.ElContainer1.Controls.Add(Me.btnSalir)
@@ -53,6 +56,45 @@ Partial Class frmAjustes
         Me.ElContainer1.TabIndex = 1
         Me.ElContainer1.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
+        'panelContenedor1
+        '
+        Me.panelContenedor1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelContenedor1.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.panelContenedor1.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.panelContenedor1.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.panelContenedor1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.panelContenedor1.Location = New System.Drawing.Point(47, 133)
+        Me.panelContenedor1.Name = "panelContenedor1"
+        Me.panelContenedor1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.panelContenedor1.Size = New System.Drawing.Size(886, 490)
+        Me.panelContenedor1.TabIndex = 50
+        Me.panelContenedor1.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'btnNuevoCate
+        '
+        Me.btnNuevoCate.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnNuevoCate.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnNuevoCate.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnNuevoCate.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnNuevoCate.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnNuevoCate.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnNuevoCate.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnNuevoCate.Location = New System.Drawing.Point(203, 77)
+        Me.btnNuevoCate.Name = "btnNuevoCate"
+        Me.btnNuevoCate.Size = New System.Drawing.Size(150, 39)
+        Me.btnNuevoCate.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnNuevoCate.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnNuevoCate.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnNuevoCate.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnNuevoCate.TabIndex = 48
+        Me.btnNuevoCate.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevoCate.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnNuevoCate.TextStyle.Text = "Nueva Categoria"
+        Me.btnNuevoCate.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnNuevoCate.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
         'btnNuevoEmp
         '
         Me.btnNuevoEmp.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -62,7 +104,7 @@ Partial Class frmAjustes
         Me.btnNuevoEmp.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.btnNuevoEmp.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnNuevoEmp.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnNuevoEmp.Location = New System.Drawing.Point(53, 92)
+        Me.btnNuevoEmp.Location = New System.Drawing.Point(47, 77)
         Me.btnNuevoEmp.Name = "btnNuevoEmp"
         Me.btnNuevoEmp.Size = New System.Drawing.Size(150, 39)
         Me.btnNuevoEmp.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -101,29 +143,6 @@ Partial Class frmAjustes
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Ajustes Del Sistema"
         '
-        'btnNuevoCate
-        '
-        Me.btnNuevoCate.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnNuevoCate.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.btnNuevoCate.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.btnNuevoCate.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnNuevoCate.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.btnNuevoCate.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnNuevoCate.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnNuevoCate.Location = New System.Drawing.Point(228, 92)
-        Me.btnNuevoCate.Name = "btnNuevoCate"
-        Me.btnNuevoCate.Size = New System.Drawing.Size(150, 39)
-        Me.btnNuevoCate.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnNuevoCate.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnNuevoCate.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.btnNuevoCate.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
-        Me.btnNuevoCate.TabIndex = 48
-        Me.btnNuevoCate.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevoCate.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.btnNuevoCate.TextStyle.Text = "Nueva Categoria"
-        Me.btnNuevoCate.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnNuevoCate.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
-        '
         'frmAjustes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -138,8 +157,9 @@ Partial Class frmAjustes
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer1.ResumeLayout(False)
         Me.ElContainer1.PerformLayout()
-        CType(Me.btnNuevoEmp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.panelContenedor1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnNuevoCate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnNuevoEmp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -149,4 +169,5 @@ Partial Class frmAjustes
     Friend WithEvents Label1 As Label
     Friend WithEvents btnNuevoEmp As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents btnNuevoCate As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents panelContenedor1 As Klik.Windows.Forms.v1.EntryLib.ELContainer
 End Class
