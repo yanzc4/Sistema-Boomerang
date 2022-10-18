@@ -58,18 +58,25 @@ Public Class frmCategoria
         Me.Close()
     End Sub
 
-    Private Sub btnAgregar_Click_2(sender As Object, e As EventArgs) Handles btnAgregar.Click
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        imgCategoria.Image = Nothing
+    End Sub
+
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        txtDescripcion.Clear()
+        txtId.Clear()
+        txtNombre.Clear()
+        imgCategoria.Image = Nothing
+    End Sub
+
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         OpenFileDialog1.Filter = "Formato JPG|*.jpg|Formato PNG|*.png|Formato bitmaps|*.bmp"
         If OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK Then
             Me.imgCategoria.Image = Image.FromFile(Me.OpenFileDialog1.FileName)
         End If
     End Sub
 
-    Private Sub btnEliminar_Click_1(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        imgCategoria.Image = Nothing
-    End Sub
-
-    Private Sub btnRegistrar_Click_1(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         Try
             cn.Open()
             crearcategoria()
@@ -79,12 +86,5 @@ Public Class frmCategoria
             If Not IsDBNull(cn) Then cn.Close()
         End Try
         listarcategoria()
-    End Sub
-
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        txtDescripcion.Clear()
-        txtId.Clear()
-        txtNombre.Clear()
-        imgCategoria.Image = Nothing
     End Sub
 End Class
