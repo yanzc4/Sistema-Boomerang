@@ -53,16 +53,16 @@ Partial Class frmLogin
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.ElContainer2 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ElContainer4 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.txtPass = New Sistema_Boomerang.PowerTextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.txtUsuario = New Sistema_Boomerang.PowerTextBox()
         Me.btnClose = New System.Windows.Forms.PictureBox()
         Me.btnIniciar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.ElContainer4 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.txtPass = New Sistema_Boomerang.PowerTextBox()
-        Me.txtUsuario = New Sistema_Boomerang.PowerTextBox()
         Me.panelCabecera.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,13 +75,13 @@ Partial Class frmLogin
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer2.SuspendLayout()
+        CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ElContainer4.SuspendLayout()
+        CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ElContainer3.SuspendLayout()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnIniciar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ElContainer3.SuspendLayout()
-        CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ElContainer4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Timer1
@@ -481,7 +481,7 @@ Partial Class frmLogin
         Me.Label21.BackColor = System.Drawing.Color.Transparent
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(18, 259)
+        Me.Label21.Location = New System.Drawing.Point(19, 259)
         Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(194, 29)
@@ -494,7 +494,7 @@ Partial Class frmLogin
         Me.Label20.BackColor = System.Drawing.Color.Transparent
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.Black
-        Me.Label20.Location = New System.Drawing.Point(16, 61)
+        Me.Label20.Location = New System.Drawing.Point(16, 62)
         Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(155, 36)
@@ -534,6 +534,95 @@ Partial Class frmLogin
         Me.ElContainer2.Size = New System.Drawing.Size(308, 337)
         Me.ElContainer2.TabIndex = 1
         Me.ElContainer2.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(33, 200)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(69, 18)
+        Me.Label11.TabIndex = 113
+        Me.Label11.Text = "Contraña"
+        '
+        'ElContainer4
+        '
+        Me.ElContainer4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ElContainer4.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.ElContainer4.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.ElContainer4.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.ElContainer4.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.ElContainer4.BorderStyle.SolidColor = System.Drawing.Color.White
+        Me.ElContainer4.Controls.Add(Me.txtPass)
+        Me.ElContainer4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ElContainer4.Location = New System.Drawing.Point(37, 219)
+        Me.ElContainer4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ElContainer4.Name = "ElContainer4"
+        Me.ElContainer4.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ElContainer4.Size = New System.Drawing.Size(232, 42)
+        Me.ElContainer4.TabIndex = 112
+        Me.ElContainer4.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'txtPass
+        '
+        Me.txtPass.BackColor = System.Drawing.Color.Black
+        Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtPass.ForeColor = System.Drawing.Color.White
+        Me.txtPass.Location = New System.Drawing.Point(11, 9)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPass.Size = New System.Drawing.Size(213, 25)
+        Me.txtPass.TabIndex = 1
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(33, 129)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(60, 18)
+        Me.Label10.TabIndex = 111
+        Me.Label10.Text = "Usuario"
+        '
+        'ElContainer3
+        '
+        Me.ElContainer3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ElContainer3.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.ElContainer3.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.ElContainer3.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.ElContainer3.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.ElContainer3.BorderStyle.SolidColor = System.Drawing.Color.White
+        Me.ElContainer3.Controls.Add(Me.txtUsuario)
+        Me.ElContainer3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ElContainer3.Location = New System.Drawing.Point(37, 149)
+        Me.ElContainer3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ElContainer3.Name = "ElContainer3"
+        Me.ElContainer3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ElContainer3.Size = New System.Drawing.Size(232, 42)
+        Me.ElContainer3.TabIndex = 110
+        Me.ElContainer3.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'txtUsuario
+        '
+        Me.txtUsuario.BackColor = System.Drawing.Color.Black
+        Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtUsuario.ForeColor = System.Drawing.Color.White
+        Me.txtUsuario.Location = New System.Drawing.Point(11, 9)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(213, 25)
+        Me.txtUsuario.TabIndex = 1
         '
         'btnClose
         '
@@ -587,100 +676,12 @@ Partial Class frmLogin
         Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.White
-        Me.Label22.Location = New System.Drawing.Point(18, 11)
+        Me.Label22.Location = New System.Drawing.Point(19, 11)
         Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(65, 25)
         Me.Label22.TabIndex = 23
         Me.Label22.Text = "Login"
-        '
-        'Label10
-        '
-        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(33, 129)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(60, 18)
-        Me.Label10.TabIndex = 111
-        Me.Label10.Text = "Usuario"
-        '
-        'ElContainer3
-        '
-        Me.ElContainer3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ElContainer3.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElContainer3.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElContainer3.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElContainer3.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElContainer3.BorderStyle.SolidColor = System.Drawing.Color.White
-        Me.ElContainer3.Controls.Add(Me.txtUsuario)
-        Me.ElContainer3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElContainer3.Location = New System.Drawing.Point(37, 149)
-        Me.ElContainer3.Margin = New System.Windows.Forms.Padding(4)
-        Me.ElContainer3.Name = "ElContainer3"
-        Me.ElContainer3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ElContainer3.Size = New System.Drawing.Size(232, 42)
-        Me.ElContainer3.TabIndex = 110
-        Me.ElContainer3.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(33, 199)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(60, 18)
-        Me.Label11.TabIndex = 113
-        Me.Label11.Text = "Usuario"
-        '
-        'ElContainer4
-        '
-        Me.ElContainer4.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ElContainer4.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElContainer4.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElContainer4.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElContainer4.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.ElContainer4.BorderStyle.SolidColor = System.Drawing.Color.White
-        Me.ElContainer4.Controls.Add(Me.txtPass)
-        Me.ElContainer4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElContainer4.Location = New System.Drawing.Point(37, 219)
-        Me.ElContainer4.Margin = New System.Windows.Forms.Padding(4)
-        Me.ElContainer4.Name = "ElContainer4"
-        Me.ElContainer4.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ElContainer4.Size = New System.Drawing.Size(232, 42)
-        Me.ElContainer4.TabIndex = 112
-        Me.ElContainer4.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
-        '
-        'txtPass
-        '
-        Me.txtPass.BackColor = System.Drawing.Color.Black
-        Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.txtPass.ForeColor = System.Drawing.Color.White
-        Me.txtPass.Location = New System.Drawing.Point(11, 9)
-        Me.txtPass.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(213, 25)
-        Me.txtPass.TabIndex = 1
-        '
-        'txtUsuario
-        '
-        Me.txtUsuario.BackColor = System.Drawing.Color.Black
-        Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.txtUsuario.ForeColor = System.Drawing.Color.White
-        Me.txtUsuario.Location = New System.Drawing.Point(11, 9)
-        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(213, 25)
-        Me.txtUsuario.TabIndex = 1
         '
         'frmLogin
         '
@@ -727,15 +728,15 @@ Partial Class frmLogin
         CType(Me.ElContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer2.ResumeLayout(False)
         Me.ElContainer2.PerformLayout()
-        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnIniciar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ElContainer3.ResumeLayout(False)
-        Me.ElContainer3.PerformLayout()
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer4.ResumeLayout(False)
         Me.ElContainer4.PerformLayout()
+        CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ElContainer3.ResumeLayout(False)
+        Me.ElContainer3.PerformLayout()
+        CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnIniciar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
