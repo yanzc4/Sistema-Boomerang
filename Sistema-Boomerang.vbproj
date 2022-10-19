@@ -112,7 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="datos\conexion.vb" />
-    <Compile Include="datos\Fusuario.vb" />
     <Compile Include="disenos\PowerTextBox.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -318,20 +317,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="disenos\Klik.Windows.Forms.EntryLib.V2.2005.dll" />
-    <Content Include="SqlServerTypes\Loader.cs" />
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\close-cross.png" />
     <None Include="Resources\buscar.png" />
     <None Include="Resources\grafico-de-barras.png" />

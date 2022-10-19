@@ -55,12 +55,14 @@ Partial Class frmLogin
         Me.ElContainer2 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.btnClose = New System.Windows.Forms.PictureBox()
         Me.btnIniciar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.txtPass = New System.Windows.Forms.TextBox()
-        Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ElContainer4 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.txtPass = New Sistema_Boomerang.PowerTextBox()
+        Me.txtUsuario = New Sistema_Boomerang.PowerTextBox()
         Me.panelCabecera.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,6 +78,10 @@ Partial Class frmLogin
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnIniciar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ElContainer3.SuspendLayout()
+        CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ElContainer4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Timer1
@@ -85,11 +91,12 @@ Partial Class frmLogin
         '
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Inter Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(656, 434)
+        Me.Label9.Location = New System.Drawing.Point(875, 534)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(100, 19)
+        Me.Label9.Size = New System.Drawing.Size(122, 24)
         Me.Label9.TabIndex = 31
         Me.Label9.Text = "Iniciar Sesion"
         '
@@ -97,11 +104,12 @@ Partial Class frmLogin
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(682, 415)
+        Me.Label8.Location = New System.Drawing.Point(909, 511)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(47, 19)
+        Me.Label8.Size = New System.Drawing.Size(57, 25)
         Me.Label8.TabIndex = 30
         Me.Label8.Text = "User"
         '
@@ -115,7 +123,8 @@ Partial Class frmLogin
         Me.CircularProgressBar1.InnerColor = System.Drawing.Color.Black
         Me.CircularProgressBar1.InnerMargin = 2
         Me.CircularProgressBar1.InnerWidth = -1
-        Me.CircularProgressBar1.Location = New System.Drawing.Point(762, 387)
+        Me.CircularProgressBar1.Location = New System.Drawing.Point(1016, 476)
+        Me.CircularProgressBar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
         Me.CircularProgressBar1.Name = "CircularProgressBar1"
         Me.CircularProgressBar1.OuterColor = System.Drawing.Color.Black
@@ -124,7 +133,7 @@ Partial Class frmLogin
         Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.CircularProgressBar1.ProgressWidth = 5
         Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 36.0!)
-        Me.CircularProgressBar1.Size = New System.Drawing.Size(90, 90)
+        Me.CircularProgressBar1.Size = New System.Drawing.Size(120, 111)
         Me.CircularProgressBar1.StartAngle = 270
         Me.CircularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.CircularProgressBar1.SubscriptMargin = New System.Windows.Forms.Padding(10, -35, 0, 0)
@@ -144,19 +153,21 @@ Partial Class frmLogin
         Me.panelCabecera.Controls.Add(Me.btnCerrar)
         Me.panelCabecera.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelCabecera.Location = New System.Drawing.Point(0, 0)
+        Me.panelCabecera.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelCabecera.Name = "panelCabecera"
-        Me.panelCabecera.Size = New System.Drawing.Size(864, 40)
+        Me.panelCabecera.Size = New System.Drawing.Size(1152, 49)
         Me.panelCabecera.TabIndex = 18
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(3, 11)
+        Me.Label1.Location = New System.Drawing.Point(4, 14)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(232, 19)
+        Me.Label1.Size = New System.Drawing.Size(309, 25)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "SISTEMA DE RESTAURANTE"
         '
@@ -168,9 +179,10 @@ Partial Class frmLogin
         Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMinimizar.Image = Global.Sistema_Boomerang.My.Resources.Resources.triangulo
-        Me.btnMinimizar.Location = New System.Drawing.Point(780, 0)
+        Me.btnMinimizar.Location = New System.Drawing.Point(1040, 0)
+        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(40, 40)
+        Me.btnMinimizar.Size = New System.Drawing.Size(53, 49)
         Me.btnMinimizar.TabIndex = 2
         Me.btnMinimizar.UseVisualStyleBackColor = True
         '
@@ -182,9 +194,10 @@ Partial Class frmLogin
         Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.Image = Global.Sistema_Boomerang.My.Resources.Resources.cruzar
-        Me.btnCerrar.Location = New System.Drawing.Point(824, 0)
+        Me.btnCerrar.Location = New System.Drawing.Point(1099, 0)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(40, 40)
+        Me.btnCerrar.Size = New System.Drawing.Size(53, 49)
         Me.btnCerrar.TabIndex = 0
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -192,9 +205,10 @@ Partial Class frmLogin
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = Global.Sistema_Boomerang.My.Resources.Resources.perfil2
-        Me.PictureBox2.Location = New System.Drawing.Point(782, 409)
+        Me.PictureBox2.Location = New System.Drawing.Point(1043, 503)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(50, 47)
+        Me.PictureBox2.Size = New System.Drawing.Size(67, 58)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 29
         Me.PictureBox2.TabStop = False
@@ -202,42 +216,46 @@ Partial Class frmLogin
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Sistema_Boomerang.My.Resources.Resources.setupw
-        Me.PictureBox1.Location = New System.Drawing.Point(329, 365)
+        Me.PictureBox1.Location = New System.Drawing.Point(439, 449)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(302, 127)
+        Me.PictureBox1.Size = New System.Drawing.Size(403, 156)
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(53, 282)
+        Me.Label2.Location = New System.Drawing.Point(71, 347)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 15)
+        Me.Label2.Size = New System.Drawing.Size(101, 20)
         Me.Label2.TabIndex = 44
         Me.Label2.Text = "Distribuida"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(53, 267)
+        Me.Label3.Location = New System.Drawing.Point(71, 329)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(204, 15)
+        Me.Label3.Size = New System.Drawing.Size(301, 20)
         Me.Label3.TabIndex = 43
         Me.Label3.Text = "Unidad Didactica de Programación"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(53, 252)
+        Me.Label4.Location = New System.Drawing.Point(71, 310)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(231, 15)
+        Me.Label4.Size = New System.Drawing.Size(341, 20)
         Me.Label4.TabIndex = 42
         Me.Label4.Text = "Sistema de Restaurante Creado para la"
         '
@@ -252,16 +270,17 @@ Partial Class frmLogin
         Me.btnSalir.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.btnSalir.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnSalir.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnSalir.Location = New System.Drawing.Point(173, 209)
+        Me.btnSalir.Location = New System.Drawing.Point(231, 257)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(111, 28)
+        Me.btnSalir.Size = New System.Drawing.Size(148, 34)
         Me.btnSalir.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.Red
         Me.btnSalir.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
         Me.btnSalir.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
         Me.btnSalir.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
         Me.btnSalir.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.White
         Me.btnSalir.TabIndex = 41
-        Me.btnSalir.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.TextStyle.ForeColor = System.Drawing.Color.Black
         Me.btnSalir.TextStyle.Text = "Salir"
         Me.btnSalir.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -276,14 +295,15 @@ Partial Class frmLogin
         Me.btnLogin.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.btnLogin.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnLogin.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnLogin.Location = New System.Drawing.Point(56, 209)
+        Me.btnLogin.Location = New System.Drawing.Point(75, 257)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(111, 28)
+        Me.btnLogin.Size = New System.Drawing.Size(148, 34)
         Me.btnLogin.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btnLogin.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
         Me.btnLogin.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
         Me.btnLogin.TabIndex = 40
-        Me.btnLogin.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.TextStyle.ForeColor = System.Drawing.Color.White
         Me.btnLogin.TextStyle.Text = "Ingresar"
         Me.btnLogin.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -293,11 +313,12 @@ Partial Class frmLogin
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(66, 440)
+        Me.Label7.Location = New System.Drawing.Point(88, 542)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(101, 19)
+        Me.Label7.Size = New System.Drawing.Size(125, 25)
         Me.Label7.TabIndex = 39
         Me.Label7.Text = "Cargando..."
         '
@@ -311,7 +332,8 @@ Partial Class frmLogin
         Me.carga.InnerColor = System.Drawing.Color.Transparent
         Me.carga.InnerMargin = 2
         Me.carga.InnerWidth = -1
-        Me.carga.Location = New System.Drawing.Point(57, 327)
+        Me.carga.Location = New System.Drawing.Point(76, 402)
+        Me.carga.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.carga.MarqueeAnimationSpeed = 2000
         Me.carga.Name = "carga"
         Me.carga.OuterColor = System.Drawing.Color.Black
@@ -320,7 +342,7 @@ Partial Class frmLogin
         Me.carga.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.carga.ProgressWidth = 8
         Me.carga.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.carga.Size = New System.Drawing.Size(110, 110)
+        Me.carga.Size = New System.Drawing.Size(147, 135)
         Me.carga.StartAngle = 270
         Me.carga.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         Me.carga.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
@@ -337,11 +359,12 @@ Partial Class frmLogin
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(52, 177)
+        Me.Label6.Location = New System.Drawing.Point(69, 218)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(220, 19)
+        Me.Label6.Size = New System.Drawing.Size(266, 25)
         Me.Label6.TabIndex = 37
         Me.Label6.Text = "Ven y Disfruta-Boomerang"
         '
@@ -349,11 +372,12 @@ Partial Class frmLogin
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(52, 158)
+        Me.Label5.Location = New System.Drawing.Point(69, 194)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(86, 19)
+        Me.Label5.Size = New System.Drawing.Size(109, 25)
         Me.Label5.TabIndex = 36
         Me.Label5.Text = "A la Carta"
         '
@@ -361,11 +385,12 @@ Partial Class frmLogin
         '
         Me.Label16.AutoSize = True
         Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(52, 139)
+        Me.Label16.Location = New System.Drawing.Point(69, 171)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(131, 19)
+        Me.Label16.Size = New System.Drawing.Size(165, 25)
         Me.Label16.TabIndex = 35
         Me.Label16.Text = "Venta de Platos"
         '
@@ -373,11 +398,12 @@ Partial Class frmLogin
         '
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.Transparent
-        Me.Label17.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(52, 120)
+        Me.Label17.Location = New System.Drawing.Point(69, 148)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(207, 19)
+        Me.Label17.Size = New System.Drawing.Size(249, 25)
         Me.Label17.TabIndex = 34
         Me.Label17.Text = "Restaurante Bommerang"
         '
@@ -385,11 +411,12 @@ Partial Class frmLogin
         '
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(52, 98)
+        Me.Label18.Location = New System.Drawing.Point(69, 121)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(191, 19)
+        Me.Label18.Size = New System.Drawing.Size(239, 25)
         Me.Label18.TabIndex = 33
         Me.Label18.Text = "Sistema Creado para el"
         '
@@ -406,18 +433,20 @@ Partial Class frmLogin
         Me.ElContainer1.Controls.Add(Me.Label20)
         Me.ElContainer1.Controls.Add(Me.Label19)
         Me.ElContainer1.Controls.Add(Me.ElContainer2)
-        Me.ElContainer1.Location = New System.Drawing.Point(329, 85)
+        Me.ElContainer1.Location = New System.Drawing.Point(439, 105)
+        Me.ElContainer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ElContainer1.Name = "ElContainer1"
         Me.ElContainer1.Office2007Scheme = Klik.Windows.Forms.v1.Common.Office2007Schemes.ClassicBlue
         Me.ElContainer1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ElContainer1.Size = New System.Drawing.Size(459, 274)
+        Me.ElContainer1.Size = New System.Drawing.Size(612, 337)
         Me.ElContainer1.TabIndex = 45
         Me.ElContainer1.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
         'PictureBox7
         '
         Me.PictureBox7.Image = Global.Sistema_Boomerang.My.Resources.Resources.logotipo_de_gmail
-        Me.PictureBox7.Location = New System.Drawing.Point(97, 235)
+        Me.PictureBox7.Location = New System.Drawing.Point(128, 288)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(24, 24)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -427,7 +456,8 @@ Partial Class frmLogin
         'PictureBox8
         '
         Me.PictureBox8.Image = Global.Sistema_Boomerang.My.Resources.Resources.instagram
-        Me.PictureBox8.Location = New System.Drawing.Point(58, 235)
+        Me.PictureBox8.Location = New System.Drawing.Point(76, 288)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(24, 24)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -437,7 +467,8 @@ Partial Class frmLogin
         'PictureBox9
         '
         Me.PictureBox9.Image = Global.Sistema_Boomerang.My.Resources.Resources.facebook
-        Me.PictureBox9.Location = New System.Drawing.Point(19, 235)
+        Me.PictureBox9.Location = New System.Drawing.Point(24, 288)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(24, 24)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -448,11 +479,12 @@ Partial Class frmLogin
         '
         Me.Label21.AutoSize = True
         Me.Label21.BackColor = System.Drawing.Color.Transparent
-        Me.Label21.Font = New System.Drawing.Font("Inter Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(14, 211)
+        Me.Label21.Location = New System.Drawing.Point(18, 259)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(157, 23)
+        Me.Label21.Size = New System.Drawing.Size(194, 29)
         Me.Label21.TabIndex = 37
         Me.Label21.Text = "Hola Trabajador!"
         '
@@ -460,11 +492,12 @@ Partial Class frmLogin
         '
         Me.Label20.AutoSize = True
         Me.Label20.BackColor = System.Drawing.Color.Transparent
-        Me.Label20.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.Black
-        Me.Label20.Location = New System.Drawing.Point(13, 50)
+        Me.Label20.Location = New System.Drawing.Point(16, 61)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(126, 29)
+        Me.Label20.Size = New System.Drawing.Size(155, 36)
         Me.Label20.TabIndex = 36
         Me.Label20.Text = "De Nuevo"
         '
@@ -472,11 +505,12 @@ Partial Class frmLogin
         '
         Me.Label19.AutoSize = True
         Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.Font = New System.Drawing.Font("Inter Black", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.Black
-        Me.Label19.Location = New System.Drawing.Point(12, 15)
+        Me.Label19.Location = New System.Drawing.Point(15, 17)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(189, 35)
+        Me.Label19.Size = New System.Drawing.Size(225, 42)
         Me.Label19.TabIndex = 35
         Me.Label19.Text = "Bienvenido!"
         '
@@ -485,27 +519,29 @@ Partial Class frmLogin
         Me.ElContainer2.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElContainer2.BackgroundStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.ElContainer2.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer2.Controls.Add(Me.Label11)
+        Me.ElContainer2.Controls.Add(Me.ElContainer4)
+        Me.ElContainer2.Controls.Add(Me.Label10)
+        Me.ElContainer2.Controls.Add(Me.ElContainer3)
         Me.ElContainer2.Controls.Add(Me.btnClose)
         Me.ElContainer2.Controls.Add(Me.btnIniciar)
-        Me.ElContainer2.Controls.Add(Me.Label23)
-        Me.ElContainer2.Controls.Add(Me.Label24)
-        Me.ElContainer2.Controls.Add(Me.txtPass)
-        Me.ElContainer2.Controls.Add(Me.txtUsuario)
         Me.ElContainer2.Controls.Add(Me.PictureBox10)
         Me.ElContainer2.Controls.Add(Me.Label22)
-        Me.ElContainer2.Location = New System.Drawing.Point(228, 0)
+        Me.ElContainer2.Location = New System.Drawing.Point(304, 0)
+        Me.ElContainer2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ElContainer2.Name = "ElContainer2"
         Me.ElContainer2.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ElContainer2.Size = New System.Drawing.Size(231, 274)
+        Me.ElContainer2.Size = New System.Drawing.Size(308, 337)
         Me.ElContainer2.TabIndex = 1
         Me.ElContainer2.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
         'btnClose
         '
         Me.btnClose.Image = Global.Sistema_Boomerang.My.Resources.Resources.eliminar_simbolo
-        Me.btnClose.Location = New System.Drawing.Point(200, 6)
+        Me.btnClose.Location = New System.Drawing.Point(267, 7)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(24, 24)
+        Me.btnClose.Size = New System.Drawing.Size(32, 30)
         Me.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnClose.TabIndex = 47
         Me.btnClose.TabStop = False
@@ -519,75 +555,28 @@ Partial Class frmLogin
         Me.btnIniciar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.btnIniciar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnIniciar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnIniciar.Location = New System.Drawing.Point(60, 225)
+        Me.btnIniciar.Location = New System.Drawing.Point(80, 277)
+        Me.btnIniciar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnIniciar.Name = "btnIniciar"
-        Me.btnIniciar.Size = New System.Drawing.Size(111, 28)
-        Me.btnIniciar.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnIniciar.Size = New System.Drawing.Size(148, 34)
         Me.btnIniciar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btnIniciar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btnIniciar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
         Me.btnIniciar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
         Me.btnIniciar.TabIndex = 46
-        Me.btnIniciar.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIniciar.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIniciar.TextStyle.ForeColor = System.Drawing.Color.White
         Me.btnIniciar.TextStyle.Text = "Ingresar"
         Me.btnIniciar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnIniciar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.BackColor = System.Drawing.Color.Transparent
-        Me.Label23.Font = New System.Drawing.Font("Inter Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(27, 159)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(80, 16)
-        Me.Label23.TabIndex = 45
-        Me.Label23.Text = "Contraseña"
-        Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.BackColor = System.Drawing.Color.Transparent
-        Me.Label24.Font = New System.Drawing.Font("Inter Light", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.ForeColor = System.Drawing.Color.White
-        Me.Label24.Location = New System.Drawing.Point(27, 103)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(56, 16)
-        Me.Label24.TabIndex = 44
-        Me.Label24.Text = "Usuario"
-        '
-        'txtPass
-        '
-        Me.txtPass.BackColor = System.Drawing.Color.Black
-        Me.txtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.ForeColor = System.Drawing.Color.White
-        Me.txtPass.Location = New System.Drawing.Point(30, 178)
-        Me.txtPass.Name = "txtPass"
-        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass.Size = New System.Drawing.Size(173, 29)
-        Me.txtPass.TabIndex = 43
-        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtUsuario
-        '
-        Me.txtUsuario.BackColor = System.Drawing.Color.Black
-        Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsuario.ForeColor = System.Drawing.Color.White
-        Me.txtUsuario.Location = New System.Drawing.Point(30, 122)
-        Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(173, 29)
-        Me.txtUsuario.TabIndex = 42
-        Me.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'PictureBox10
         '
         Me.PictureBox10.Image = Global.Sistema_Boomerang.My.Resources.Resources.Logo_empresa_removebg_preview
-        Me.PictureBox10.Location = New System.Drawing.Point(28, 35)
+        Me.PictureBox10.Location = New System.Drawing.Point(37, 43)
+        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(173, 70)
+        Me.PictureBox10.Size = New System.Drawing.Size(231, 86)
         Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox10.TabIndex = 24
         Me.PictureBox10.TabStop = False
@@ -596,20 +585,109 @@ Partial Class frmLogin
         '
         Me.Label22.AutoSize = True
         Me.Label22.BackColor = System.Drawing.Color.Transparent
-        Me.Label22.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.White
-        Me.Label22.Location = New System.Drawing.Point(14, 10)
+        Me.Label22.Location = New System.Drawing.Point(18, 11)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(52, 19)
+        Me.Label22.Size = New System.Drawing.Size(65, 25)
         Me.Label22.TabIndex = 23
         Me.Label22.Text = "Login"
         '
+        'Label10
+        '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(33, 129)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(60, 18)
+        Me.Label10.TabIndex = 111
+        Me.Label10.Text = "Usuario"
+        '
+        'ElContainer3
+        '
+        Me.ElContainer3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ElContainer3.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.ElContainer3.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.ElContainer3.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.ElContainer3.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.ElContainer3.BorderStyle.SolidColor = System.Drawing.Color.White
+        Me.ElContainer3.Controls.Add(Me.txtUsuario)
+        Me.ElContainer3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ElContainer3.Location = New System.Drawing.Point(37, 149)
+        Me.ElContainer3.Margin = New System.Windows.Forms.Padding(4)
+        Me.ElContainer3.Name = "ElContainer3"
+        Me.ElContainer3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ElContainer3.Size = New System.Drawing.Size(232, 42)
+        Me.ElContainer3.TabIndex = 110
+        Me.ElContainer3.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(33, 199)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(60, 18)
+        Me.Label11.TabIndex = 113
+        Me.Label11.Text = "Usuario"
+        '
+        'ElContainer4
+        '
+        Me.ElContainer4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ElContainer4.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.ElContainer4.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.ElContainer4.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.ElContainer4.BackgroundStyle.SolidColor = System.Drawing.Color.Black
+        Me.ElContainer4.BorderStyle.SolidColor = System.Drawing.Color.White
+        Me.ElContainer4.Controls.Add(Me.txtPass)
+        Me.ElContainer4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ElContainer4.Location = New System.Drawing.Point(37, 219)
+        Me.ElContainer4.Margin = New System.Windows.Forms.Padding(4)
+        Me.ElContainer4.Name = "ElContainer4"
+        Me.ElContainer4.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ElContainer4.Size = New System.Drawing.Size(232, 42)
+        Me.ElContainer4.TabIndex = 112
+        Me.ElContainer4.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'txtPass
+        '
+        Me.txtPass.BackColor = System.Drawing.Color.Black
+        Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtPass.ForeColor = System.Drawing.Color.White
+        Me.txtPass.Location = New System.Drawing.Point(11, 9)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.Size = New System.Drawing.Size(213, 25)
+        Me.txtPass.TabIndex = 1
+        '
+        'txtUsuario
+        '
+        Me.txtUsuario.BackColor = System.Drawing.Color.Black
+        Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtUsuario.ForeColor = System.Drawing.Color.White
+        Me.txtUsuario.Location = New System.Drawing.Point(11, 9)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(213, 25)
+        Me.txtUsuario.TabIndex = 1
+        '
         'frmLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(864, 501)
+        Me.ClientSize = New System.Drawing.Size(1152, 617)
         Me.Controls.Add(Me.ElContainer1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
@@ -630,6 +708,7 @@ Partial Class frmLogin
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.panelCabecera)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmLogin"
@@ -651,6 +730,12 @@ Partial Class frmLogin
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnIniciar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ElContainer3.ResumeLayout(False)
+        Me.ElContainer3.PerformLayout()
+        CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ElContainer4.ResumeLayout(False)
+        Me.ElContainer4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -687,10 +772,12 @@ Partial Class frmLogin
     Friend WithEvents ElContainer2 As Klik.Windows.Forms.v1.EntryLib.ELContainer
     Friend WithEvents btnClose As PictureBox
     Friend WithEvents btnIniciar As Klik.Windows.Forms.v1.EntryLib.ELButton
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents txtPass As TextBox
-    Friend WithEvents txtUsuario As TextBox
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label22 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents ElContainer4 As Klik.Windows.Forms.v1.EntryLib.ELContainer
+    Friend WithEvents txtPass As PowerTextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ElContainer3 As Klik.Windows.Forms.v1.EntryLib.ELContainer
+    Friend WithEvents txtUsuario As PowerTextBox
 End Class

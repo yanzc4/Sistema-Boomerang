@@ -29,7 +29,7 @@ Public Class frmLogin
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         carga.Value = 0
         Timer1.Start()
-
+        abrir()
         'para redondear
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 20, 20))
     End Sub
@@ -53,8 +53,25 @@ Public Class frmLogin
     End Sub
 
     Private Sub btnIniciar_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click
-        Me.Hide()
-        frmPrincipal.Show()
+
+        Try
+            If usuarioRegistrado(txtUsuario.Text) = True Then
+                Dim contra As String = contrasena(txtUsuario.Text)
+                If contra.Equals(txtPass.Text) = True Then
+                    Dim a As New frmPrincipal
+                    a.Show()
+                    Me.Hide()
+                Else
+                    MsgBox("Contraseña Invalida", MsgBoxStyle.Critical)
+
+                End If
+            Else
+                MsgBox("El usuario no esta registrado")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+
     End Sub
 
 
