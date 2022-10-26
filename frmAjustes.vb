@@ -18,7 +18,7 @@
     End Sub
 
     Private Sub btnNuevoCate_Click(sender As Object, e As EventArgs) Handles btnNuevoCate.Click
-        frmCategoria.ShowDialog()
+        AbrirFormEnPanel(frmPlatos)
     End Sub
 
 End Class

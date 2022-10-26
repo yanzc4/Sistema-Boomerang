@@ -166,6 +166,12 @@
     <Compile Include="frmPedidos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPlatos.Designer.vb">
+      <DependentUpon>frmPlatos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlatos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPedidos.resx">
       <DependentUpon>frmPedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlatos.resx">
+      <DependentUpon>frmPlatos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>

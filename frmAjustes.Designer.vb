@@ -91,7 +91,7 @@ Partial Class frmAjustes
         Me.btnNuevoCate.TabIndex = 48
         Me.btnNuevoCate.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevoCate.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.btnNuevoCate.TextStyle.Text = "Nueva Categoria"
+        Me.btnNuevoCate.TextStyle.Text = "Registrar Menu"
         Me.btnNuevoCate.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnNuevoCate.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '

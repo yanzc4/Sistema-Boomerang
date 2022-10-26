@@ -22,15 +22,7 @@ Public Class frmCategoria
         Dim cmd As New SqlCommand
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "_agregarcategoria"
-        cmd.Parameters.Add("@id", SqlDbType.Int).Value = txtId.Text.Trim
-
-        'para guardar imagenes
-        Dim ms As New MemoryStream
-        Me.imgCategoria.Image.Save(ms,Me.imgCategoria.Image.RawFormat)
-        cmd.Parameters.Add("@f_cate", SqlDbType.Image).Value = ms.GetBuffer
-
         cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = txtNombre.Text.Trim
-        cmd.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = txtDescripcion.Text.Trim
         cmd.Connection = cn
         cmd.ExecuteNonQuery()
         MsgBox("Categoria Agregada")
@@ -58,23 +50,10 @@ Public Class frmCategoria
         Me.Close()
     End Sub
 
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        imgCategoria.Image = Nothing
-    End Sub
-
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        txtDescripcion.Clear()
-        txtId.Clear()
         txtNombre.Clear()
-        imgCategoria.Image = Nothing
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        OpenFileDialog1.Filter = "Formato JPG|*.jpg|Formato PNG|*.png|Formato bitmaps|*.bmp"
-        If OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            Me.imgCategoria.Image = Image.FromFile(Me.OpenFileDialog1.FileName)
-        End If
-    End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         Try
@@ -87,4 +66,5 @@ Public Class frmCategoria
         End Try
         listarcategoria()
     End Sub
+
 End Class
