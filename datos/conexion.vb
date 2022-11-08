@@ -5,6 +5,9 @@ Module conexion
     Public enunciado As SqlCommand
     Public respuesta As SqlDataReader
     Public nombreEmpleado As String = ""
+    Public idEmpleado As String = ""
+    Public fechaServidor As String = ""
+    Public idVenta As String = ""
 
     Sub abrir()
         Try
@@ -22,7 +25,7 @@ Module conexion
             If respuesta.Read Then
                 resultado = True
                 nombreEmpleado = respuesta.Item("nombre")
-
+                idEmpleado = respuesta.Item("cod_user")
             End If
             respuesta.Close()
         Catch ex As Exception
@@ -64,5 +67,18 @@ Module conexion
         End Try
         Return resultado
     End Function
+
+    Public Sub fecha1()
+        Try
+            enunciado = New SqlCommand("select convert(date,getdate()) fecha", conexion)
+            respuesta = enunciado.ExecuteReader
+            If respuesta.Read Then
+                fechaServidor = respuesta.Item("fecha")
+            End If
+            respuesta.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+    End Sub
 
 End Module
