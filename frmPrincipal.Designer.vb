@@ -25,7 +25,7 @@ Partial Class frmPrincipal
         Me.panelCabecera = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblEmpleado = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
         Me.btnReportes = New Klik.Windows.Forms.v1.EntryLib.ELButton()
@@ -83,7 +83,7 @@ Partial Class frmPrincipal
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.lblEmpleado)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.CircularProgressBar1)
@@ -101,18 +101,18 @@ Partial Class frmPrincipal
         Me.Panel1.Size = New System.Drawing.Size(246, 670)
         Me.Panel1.TabIndex = 2
         '
-        'Label9
+        'lblEmpleado
         '
-        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Inter Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(70, 627)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(100, 19)
-        Me.Label9.TabIndex = 51
-        Me.Label9.Text = "Iniciar Sesion"
+        Me.lblEmpleado.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblEmpleado.BackColor = System.Drawing.Color.Transparent
+        Me.lblEmpleado.Font = New System.Drawing.Font("Inter Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmpleado.ForeColor = System.Drawing.Color.White
+        Me.lblEmpleado.Location = New System.Drawing.Point(70, 627)
+        Me.lblEmpleado.Name = "lblEmpleado"
+        Me.lblEmpleado.Size = New System.Drawing.Size(100, 19)
+        Me.lblEmpleado.TabIndex = 51
+        Me.lblEmpleado.Text = "Iniciar Sesion"
+        Me.lblEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label8
         '
@@ -496,6 +496,6 @@ Partial Class frmPrincipal
     Friend WithEvents btnPedidos As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar
-    Friend WithEvents Label9 As Label
+    Friend WithEvents lblEmpleado As Label
     Friend WithEvents Label8 As Label
 End Class

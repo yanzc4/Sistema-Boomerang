@@ -58,11 +58,16 @@ Public Class frmLogin
             If usuarioRegistrado(txtUsuario.Text) = True Then
                 Dim contra As String = contrasena(txtUsuario.Text)
                 If contra.Equals(txtPass.Text) = True Then
-                    Dim a As New frmPrincipal
-                    a.Show()
                     Me.Hide()
+                    If consultarTipoUsuario(txtUsuario.Text) = "Administrador" Then
+                        Dim a As New frmPrincipal
+                        a.Show()
+                    ElseIf consultarTipoUsuario(txtUsuario.Text) = "Empleado" Then
+                        Dim a As New Form1
+                        a.Show()
+                    End If
                 Else
-                    MsgBox("Contraseña Invalida", MsgBoxStyle.Critical)
+                        MsgBox("Contraseña Invalida", MsgBoxStyle.Critical)
 
                 End If
             Else

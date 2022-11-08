@@ -4,6 +4,7 @@ Module conexion
     Public conexion As SqlConnection
     Public enunciado As SqlCommand
     Public respuesta As SqlDataReader
+    Public nombreEmpleado As String = ""
 
     Sub abrir()
         Try
@@ -13,7 +14,6 @@ Module conexion
             MsgBox("Error " + ex.ToString)
         End Try
     End Sub
-
     Function usuarioRegistrado(ByVal nombreUsuario As String) As Boolean
         Dim resultado As Boolean = False
         Try
@@ -21,6 +21,7 @@ Module conexion
             respuesta = enunciado.ExecuteReader
             If respuesta.Read Then
                 resultado = True
+                nombreEmpleado = respuesta.Item("nombre")
 
             End If
             respuesta.Close()
@@ -46,4 +47,22 @@ Module conexion
         End Try
         Return resultado
     End Function
+
+    Function consultarTipoUsuario(ByVal nombreUsuario As String) As String
+        Dim resultado As String = ""
+        Try
+            enunciado = New SqlCommand("select nivel from usuarios where users='" & nombreUsuario & "'", conexion)
+            respuesta = enunciado.ExecuteReader
+
+            If respuesta.Read Then
+                resultado = respuesta.Item("nivel")
+            End If
+            respuesta.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Return resultado
+    End Function
+
 End Module
