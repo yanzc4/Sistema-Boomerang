@@ -45,6 +45,10 @@ Public Class frmVenta
         Poblar()
         listarDetalle()
         lblID_venta.Text = idVenta.ToString
+        mostrarTotal(idVenta)
+        lbldsc.Text = dscDetalle.ToString
+        lblTotal.Text = totalDetalle.ToString
+        lblFecha.Text = fechaTotalDetalle.ToString
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
@@ -52,8 +56,12 @@ Public Class frmVenta
     End Sub
 
     Private Sub dgvProductos_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProductos.CellEnter
-        idPlato = dgvProductos.Item(0, e.RowIndex).Value
-        precio = dgvProductos.Item(3, e.RowIndex).Value
+        Try
+            idPlato = dgvProductos.Item(0, e.RowIndex).Value
+            precio = dgvProductos.Item(3, e.RowIndex).Value
+        Catch ex As Exception
+            MsgBox("Error Campo Vacio --> Selecciona otro campo")
+        End Try
     End Sub
 
     Private Sub ElButton1_Click(sender As Object, e As EventArgs) Handles ElButton1.Click
@@ -71,10 +79,14 @@ Public Class frmVenta
             cn.Open()
             nuevoDetalle()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("Selecciona primero la venta")
         Finally
             If Not IsDBNull(cn) Then cn.Close()
         End Try
+        mostrarTotal(idVenta)
+        lbldsc.Text = dscDetalle.ToString
+        lblTotal.Text = totalDetalle.ToString
+        lblFecha.Text = fechaTotalDetalle.ToString
         listarDetalle()
     End Sub
 End Class

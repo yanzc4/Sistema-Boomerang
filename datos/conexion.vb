@@ -8,6 +8,9 @@ Module conexion
     Public idEmpleado As String = ""
     Public fechaServidor As String = ""
     Public idVenta As String = ""
+    Public dscDetalle As String = ""
+    Public totalDetalle As String = ""
+    Public fechaTotalDetalle As String = ""
 
     Sub abrir()
         Try
@@ -78,6 +81,20 @@ Module conexion
             respuesta.Close()
         Catch ex As Exception
             MsgBox(ex.ToString)
+        End Try
+    End Sub
+    Public Sub mostrarTotal(ByVal codDetalleVenta As String)
+        Try
+            enunciado = New SqlCommand("execute _totalventa " & codDetalleVenta & "", conexion)
+            respuesta = enunciado.ExecuteReader
+            If respuesta.Read Then
+                dscDetalle = respuesta.Item("dsc")
+                totalDetalle = respuesta.Item("total")
+                fechaTotalDetalle = respuesta.Item("fecha")
+            End If
+            respuesta.Close()
+        Catch ex As Exception
+            MsgBox("Error...Selecciona primero la venta")
         End Try
     End Sub
 

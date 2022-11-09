@@ -22,9 +22,9 @@ Partial Class frmPedidos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ElContainer1 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
@@ -49,6 +49,10 @@ Partial Class frmPedidos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ElContainer8 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.ElButton2 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnGuardar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.lblCodigo = New System.Windows.Forms.Label()
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer1.SuspendLayout()
         CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,6 +72,9 @@ Partial Class frmPedidos
         Me.ElContainer5.SuspendLayout()
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer4.SuspendLayout()
+        CType(Me.ElContainer8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ElButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ElContainer1
@@ -78,6 +85,7 @@ Partial Class frmPedidos
         Me.ElContainer1.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElContainer1.BackgroundStyle.SolidColor = System.Drawing.Color.Black
         Me.ElContainer1.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer1.Controls.Add(Me.ElContainer8)
         Me.ElContainer1.Controls.Add(Me.TextBox1)
         Me.ElContainer1.Controls.Add(Me.ElContainer3)
         Me.ElContainer1.Controls.Add(Me.ElContainer2)
@@ -93,10 +101,11 @@ Partial Class frmPedidos
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(396, 533)
+        Me.TextBox1.Location = New System.Drawing.Point(707, 526)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 127
+        Me.TextBox1.Visible = False
         '
         'ElContainer3
         '
@@ -108,6 +117,7 @@ Partial Class frmPedidos
         Me.ElContainer3.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(129, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.ElContainer3.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.ElContainer3.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer3.Controls.Add(Me.ElButton2)
         Me.ElContainer3.Controls.Add(Me.btnBuscar)
         Me.ElContainer3.Controls.Add(Me.ElContainer7)
         Me.ElContainer3.Controls.Add(Me.ElButton1)
@@ -117,7 +127,7 @@ Partial Class frmPedidos
         Me.ElContainer3.Location = New System.Drawing.Point(17, 66)
         Me.ElContainer3.Name = "ElContainer3"
         Me.ElContainer3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ElContainer3.Size = New System.Drawing.Size(548, 379)
+        Me.ElContainer3.Size = New System.Drawing.Size(617, 326)
         Me.ElContainer3.TabIndex = 125
         Me.ElContainer3.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
@@ -135,7 +145,7 @@ Partial Class frmPedidos
         Me.btnBuscar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.btnBuscar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnBuscar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnBuscar.Location = New System.Drawing.Point(300, 12)
+        Me.btnBuscar.Location = New System.Drawing.Point(311, 12)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(43, 34)
         Me.btnBuscar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -158,7 +168,7 @@ Partial Class frmPedidos
         Me.ElContainer7.BorderStyle.SolidColor = System.Drawing.Color.White
         Me.ElContainer7.Controls.Add(Me.txtBuscar)
         Me.ElContainer7.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElContainer7.Location = New System.Drawing.Point(20, 12)
+        Me.ElContainer7.Location = New System.Drawing.Point(26, 12)
         Me.ElContainer7.Name = "ElContainer7"
         Me.ElContainer7.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.ElContainer7.Size = New System.Drawing.Size(274, 34)
@@ -189,17 +199,17 @@ Partial Class frmPedidos
         Me.ElButton1.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElButton1.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.ElButton1.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton1.Location = New System.Drawing.Point(462, 112)
+        Me.ElButton1.Location = New System.Drawing.Point(483, 98)
         Me.ElButton1.Name = "ElButton1"
-        Me.ElButton1.Size = New System.Drawing.Size(43, 34)
+        Me.ElButton1.Size = New System.Drawing.Size(116, 34)
         Me.ElButton1.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.ElButton1.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.ElButton1.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
         Me.ElButton1.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
         Me.ElButton1.TabIndex = 128
-        Me.ElButton1.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ElButton1.TextStyle.ForeColor = System.Drawing.Color.Black
-        Me.ElButton1.TextStyle.Text = "ver"
+        Me.ElButton1.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ElButton1.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.ElButton1.TextStyle.Text = "Pedidos"
         Me.ElButton1.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.ElButton1.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
@@ -211,40 +221,40 @@ Partial Class frmPedidos
         Me.dgvVentas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.dgvVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.dgvVentas.ColumnHeadersHeight = 30
         Me.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvVentas.EnableHeadersVisualStyles = False
         Me.dgvVentas.GridColor = System.Drawing.Color.Yellow
-        Me.dgvVentas.Location = New System.Drawing.Point(20, 112)
+        Me.dgvVentas.Location = New System.Drawing.Point(26, 98)
         Me.dgvVentas.Name = "dgvVentas"
         Me.dgvVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.dgvVentas.RowHeadersVisible = False
         Me.dgvVentas.RowHeadersWidth = 51
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgvVentas.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvVentas.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvVentas.Size = New System.Drawing.Size(436, 248)
+        Me.dgvVentas.Size = New System.Drawing.Size(436, 215)
         Me.dgvVentas.TabIndex = 127
         '
         'Label2
@@ -253,7 +263,7 @@ Partial Class frmPedidos
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(16, 76)
+        Me.Label2.Location = New System.Drawing.Point(22, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(130, 23)
         Me.Label2.TabIndex = 125
@@ -269,6 +279,8 @@ Partial Class frmPedidos
         Me.ElContainer2.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(129, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.ElContainer2.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.ElContainer2.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer2.Controls.Add(Me.lblCodigo)
+        Me.ElContainer2.Controls.Add(Me.btnGuardar)
         Me.ElContainer2.Controls.Add(Me.btnNuevo)
         Me.ElContainer2.Controls.Add(Me.btnRegistrar)
         Me.ElContainer2.Controls.Add(Me.Label6)
@@ -487,6 +499,88 @@ Partial Class frmPedidos
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Registro de ventas"
         '
+        'ElContainer8
+        '
+        Me.ElContainer8.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ElContainer8.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(129, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.ElContainer8.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.ElContainer8.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.ElContainer8.BackgroundStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer8.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(129, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.ElContainer8.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.ElContainer8.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer8.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ElContainer8.Location = New System.Drawing.Point(17, 411)
+        Me.ElContainer8.Name = "ElContainer8"
+        Me.ElContainer8.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ElContainer8.Size = New System.Drawing.Size(548, 218)
+        Me.ElContainer8.TabIndex = 129
+        Me.ElContainer8.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'ElButton2
+        '
+        Me.ElButton2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ElButton2.BackgroundImageStyle.FilterColor = System.Drawing.Color.Black
+        Me.ElButton2.BackgroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ElButton2.BackgroundImageStyle.ImageSize = New System.Drawing.Size(24, 24)
+        Me.ElButton2.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.ElButton2.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.ElButton2.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElButton2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ElButton2.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.ElButton2.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.ElButton2.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ElButton2.Location = New System.Drawing.Point(483, 155)
+        Me.ElButton2.Name = "ElButton2"
+        Me.ElButton2.Size = New System.Drawing.Size(116, 34)
+        Me.ElButton2.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.ElButton2.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.ElButton2.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.ElButton2.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.ElButton2.TabIndex = 132
+        Me.ElButton2.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ElButton2.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.ElButton2.TextStyle.Text = "Editar"
+        Me.ElButton2.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ElButton2.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnGuardar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnGuardar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnGuardar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnGuardar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnGuardar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnGuardar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnGuardar.Location = New System.Drawing.Point(31, 267)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(123, 34)
+        Me.btnGuardar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnGuardar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnGuardar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnGuardar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnGuardar.TabIndex = 139
+        Me.btnGuardar.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnGuardar.TextStyle.Text = "Guardar"
+        Me.btnGuardar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnGuardar.Visible = False
+        Me.btnGuardar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'lblCodigo
+        '
+        Me.lblCodigo.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodigo.ForeColor = System.Drawing.Color.White
+        Me.lblCodigo.Location = New System.Drawing.Point(201, 166)
+        Me.lblCodigo.Name = "lblCodigo"
+        Me.lblCodigo.Size = New System.Drawing.Size(51, 23)
+        Me.lblCodigo.TabIndex = 140
+        Me.lblCodigo.Text = "--"
+        Me.lblCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCodigo.Visible = False
+        '
         'frmPedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -522,6 +616,9 @@ Partial Class frmPedidos
         Me.ElContainer5.ResumeLayout(False)
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer4.ResumeLayout(False)
+        CType(Me.ElContainer8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ElButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -550,4 +647,8 @@ Partial Class frmPedidos
     Friend WithEvents txtCliente As PowerTextBox
     Friend WithEvents btnNuevo As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents btnRegistrar As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents ElContainer8 As Klik.Windows.Forms.v1.EntryLib.ELContainer
+    Friend WithEvents ElButton2 As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnGuardar As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents lblCodigo As Label
 End Class
