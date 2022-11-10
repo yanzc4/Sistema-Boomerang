@@ -11,6 +11,8 @@ Module conexion
     Public dscDetalle As String = ""
     Public totalDetalle As String = ""
     Public fechaTotalDetalle As String = ""
+    Public cvhoy As Integer
+    Public cvayer As Integer
 
     Sub abrir()
         Try
@@ -95,6 +97,19 @@ Module conexion
             respuesta.Close()
         Catch ex As Exception
             MsgBox("Error...Selecciona primero la venta")
+        End Try
+    End Sub
+    Public Sub graficoVenta()
+        Try
+            enunciado = New SqlCommand("execute _graficoventas1 '" & idEmpleado & "'", conexion)
+            respuesta = enunciado.ExecuteReader
+            If respuesta.Read Then
+                cvhoy = respuesta.Item("hoy")
+                cvayer = respuesta.Item("ayer")
+            End If
+            respuesta.Close()
+        Catch ex As Exception
+            MsgBox("Error al cargar Grafico")
         End Try
     End Sub
 

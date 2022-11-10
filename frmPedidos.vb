@@ -33,11 +33,23 @@ Public Class frmPedidos
         act.ExecuteNonQuery()
         MsgBox("venta Modificada")
     End Sub
+    Private Sub eliminarVenta()
+        Dim eli As New SqlCommand
+        eli.CommandType = CommandType.StoredProcedure
+        eli.CommandText = "_eliminarventa"
+        eli.Parameters.Add("@vcod", SqlDbType.Int).Value = TextBox1.Text.Trim
+        eli.Connection = cn
+        eli.ExecuteNonQuery()
+        MsgBox("Venta Borrada")
+    End Sub
     Private Sub frmPedidos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         fecha1()
         lblCod_user.Text = idEmpleado.ToString
         lblFecha.Text = fechaServidor.ToString
         listarVentas()
+        graficoVenta()
+        Me.gfcVentas.Series("venta_hoy_ayer").Points.AddXY("Ayer: " + cvayer.ToString, cvayer)
+        Me.gfcVentas.Series("venta_hoy_ayer").Points.AddXY("Hoy: " + cvhoy.ToString, cvhoy)
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -63,6 +75,7 @@ Public Class frmPedidos
             If Not IsDBNull(cn) Then cn.Close()
         End Try
         listarVentas()
+        graficoVenta()
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -81,6 +94,19 @@ Public Class frmPedidos
         lblCod_user.Text = idEmpleado.ToString
         lblFecha.Text = fechaServidor.ToString
         txtCliente.Clear()
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Try
+            cn.Open()
+            eliminarVenta()
+        Catch ex As Exception
+            MsgBox("Error: la venta tiene pedidos")
+        Finally
+            If Not IsDBNull(cn) Then cn.Close()
+        End Try
+        listarVentas()
+        graficoVenta()
     End Sub
 
     Private Sub dgvVentas_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVentas.CellEnter
