@@ -53,11 +53,13 @@ Partial Class frmVenta
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ElContainer8 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.txtDescuento = New Sistema_Boomerang.PowerTextBox()
         Me.ElContainer6 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.lblPrecio = New System.Windows.Forms.Label()
         Me.ElContainer5 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.lblPlatoid = New System.Windows.Forms.Label()
         Me.ElContainer4 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.txtCantidad = New Sistema_Boomerang.PowerTextBox()
         Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.lblID_venta = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -67,11 +69,9 @@ Partial Class frmVenta
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
         Me.btnBuscar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.ElContainer7 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.txtBuscar = New Sistema_Boomerang.PowerTextBox()
         Me.btnSalir = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtDescuento = New Sistema_Boomerang.PowerTextBox()
-        Me.txtCantidad = New Sistema_Boomerang.PowerTextBox()
-        Me.txtBuscar = New Sistema_Boomerang.PowerTextBox()
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer1.SuspendLayout()
         CType(Me.ElContainer11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -497,6 +497,18 @@ Partial Class frmVenta
         Me.ElContainer8.TabIndex = 140
         Me.ElContainer8.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
+        'txtDescuento
+        '
+        Me.txtDescuento.BackColor = System.Drawing.Color.Black
+        Me.txtDescuento.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtDescuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtDescuento.ForeColor = System.Drawing.Color.White
+        Me.txtDescuento.Location = New System.Drawing.Point(8, 7)
+        Me.txtDescuento.Name = "txtDescuento"
+        Me.txtDescuento.Size = New System.Drawing.Size(70, 20)
+        Me.txtDescuento.TabIndex = 1
+        Me.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'ElContainer6
         '
         Me.ElContainer6.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -568,6 +580,17 @@ Partial Class frmVenta
         Me.ElContainer4.TabIndex = 137
         Me.ElContainer4.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
+        'txtCantidad
+        '
+        Me.txtCantidad.BackColor = System.Drawing.Color.Black
+        Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtCantidad.ForeColor = System.Drawing.Color.White
+        Me.txtCantidad.Location = New System.Drawing.Point(7, 7)
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(81, 20)
+        Me.txtCantidad.TabIndex = 1
+        '
         'ElContainer3
         '
         Me.ElContainer3.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -596,7 +619,7 @@ Partial Class frmVenta
         Me.lblID_venta.ForeColor = System.Drawing.Color.White
         Me.lblID_venta.Location = New System.Drawing.Point(162, 7)
         Me.lblID_venta.Name = "lblID_venta"
-        Me.lblID_venta.Size = New System.Drawing.Size(26, 23)
+        Me.lblID_venta.Size = New System.Drawing.Size(45, 23)
         Me.lblID_venta.TabIndex = 126
         Me.lblID_venta.Text = "1"
         '
@@ -793,6 +816,17 @@ Partial Class frmVenta
         Me.ElContainer7.TabIndex = 120
         Me.ElContainer7.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
+        'txtBuscar
+        '
+        Me.txtBuscar.BackColor = System.Drawing.Color.Black
+        Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtBuscar.ForeColor = System.Drawing.Color.White
+        Me.txtBuscar.Location = New System.Drawing.Point(8, 7)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(259, 20)
+        Me.txtBuscar.TabIndex = 1
+        '
         'btnSalir
         '
         Me.btnSalir.AutoSize = True
@@ -817,40 +851,6 @@ Partial Class frmVenta
         Me.Label1.Size = New System.Drawing.Size(253, 29)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Registro de pedidos"
-        '
-        'txtDescuento
-        '
-        Me.txtDescuento.BackColor = System.Drawing.Color.Black
-        Me.txtDescuento.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtDescuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.txtDescuento.ForeColor = System.Drawing.Color.White
-        Me.txtDescuento.Location = New System.Drawing.Point(8, 7)
-        Me.txtDescuento.Name = "txtDescuento"
-        Me.txtDescuento.Size = New System.Drawing.Size(70, 20)
-        Me.txtDescuento.TabIndex = 1
-        Me.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtCantidad
-        '
-        Me.txtCantidad.BackColor = System.Drawing.Color.Black
-        Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.txtCantidad.ForeColor = System.Drawing.Color.White
-        Me.txtCantidad.Location = New System.Drawing.Point(7, 7)
-        Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(81, 20)
-        Me.txtCantidad.TabIndex = 1
-        '
-        'txtBuscar
-        '
-        Me.txtBuscar.BackColor = System.Drawing.Color.Black
-        Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.txtBuscar.ForeColor = System.Drawing.Color.White
-        Me.txtBuscar.Location = New System.Drawing.Point(8, 7)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(259, 20)
-        Me.txtBuscar.TabIndex = 1
         '
         'frmVenta
         '
