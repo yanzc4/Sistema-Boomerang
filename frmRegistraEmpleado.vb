@@ -9,7 +9,7 @@ Public Class frmRegistraEmpleado
     'Private Shared Function CreateRoundRectRgn(LR As Integer, TR As Integer, RR As Integer, BR As Integer, WE As Integer, HE As Integer) As IntPtr
     'End Function
 
-    Function nuevousuario()
+    Private Sub nuevousuario()
         Dim cmd As New SqlCommand
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "_agregarusuario"
@@ -23,15 +23,15 @@ Public Class frmRegistraEmpleado
         cmd.Connection = cn
         cmd.ExecuteNonQuery()
         MsgBox("Usuario Agregado")
-    End Function
-    Function listarusuario()
+    End Sub
+    Private Sub listarusuario()
         cn.Open()
         Dim da As New SqlDataAdapter("execute _listarusuarios", cn)
         Dim ds As New DataSet
         da.Fill(ds, "Empleado")
         dgvEmpleado.DataSource = ds.Tables("Empleado")
         cn.Close()
-    End Function
+    End Sub
 
     Private Sub frmRegistraEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarusuario()

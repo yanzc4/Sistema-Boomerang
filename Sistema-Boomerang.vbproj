@@ -354,6 +354,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="disenos\Klik.Windows.Forms.EntryLib.V2.2005.dll" />
+    <None Include="Resources\renew.png" />
     <None Include="Resources\buscar1.png" />
     <None Include="Resources\close-cross.png" />
     <None Include="Resources\buscar.png" />

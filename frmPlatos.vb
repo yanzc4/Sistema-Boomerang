@@ -91,4 +91,8 @@ Public Class frmPlatos
     Private Sub btnNcategoria_Click(sender As Object, e As EventArgs) Handles btnNcategoria.Click
         frmCategoria.ShowDialog()
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        cargarcombo()
+    End Sub
 End Class

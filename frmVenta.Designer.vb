@@ -72,6 +72,8 @@ Partial Class frmVenta
         Me.txtBuscar = New Sistema_Boomerang.PowerTextBox()
         Me.btnSalir = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCodigoplato = New System.Windows.Forms.Label()
+        Me.btnEliminar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer1.SuspendLayout()
         CType(Me.ElContainer11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,6 +109,7 @@ Partial Class frmVenta
         CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer7.SuspendLayout()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ElContainer1
@@ -141,6 +144,7 @@ Partial Class frmVenta
         Me.ElContainer11.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(129, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.ElContainer11.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.ElContainer11.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer11.Controls.Add(Me.lblCodigoplato)
         Me.ElContainer11.Controls.Add(Me.Label9)
         Me.ElContainer11.Controls.Add(Me.btnImprimir)
         Me.ElContainer11.Controls.Add(Me.Label10)
@@ -601,6 +605,7 @@ Partial Class frmVenta
         Me.ElContainer3.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(129, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.ElContainer3.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.ElContainer3.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer3.Controls.Add(Me.btnEliminar)
         Me.ElContainer3.Controls.Add(Me.lblID_venta)
         Me.ElContainer3.Controls.Add(Me.Label2)
         Me.ElContainer3.Controls.Add(Me.dgvDetalle)
@@ -619,7 +624,7 @@ Partial Class frmVenta
         Me.lblID_venta.ForeColor = System.Drawing.Color.White
         Me.lblID_venta.Location = New System.Drawing.Point(162, 7)
         Me.lblID_venta.Name = "lblID_venta"
-        Me.lblID_venta.Size = New System.Drawing.Size(45, 23)
+        Me.lblID_venta.Size = New System.Drawing.Size(83, 23)
         Me.lblID_venta.TabIndex = 126
         Me.lblID_venta.Text = "1"
         '
@@ -676,7 +681,7 @@ Partial Class frmVenta
         DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black
         Me.dgvDetalle.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.dgvDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDetalle.Size = New System.Drawing.Size(444, 268)
+        Me.dgvDetalle.Size = New System.Drawing.Size(444, 219)
         Me.dgvDetalle.TabIndex = 118
         '
         'ElContainer2
@@ -852,6 +857,41 @@ Partial Class frmVenta
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Registro de pedidos"
         '
+        'lblCodigoplato
+        '
+        Me.lblCodigoplato.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblCodigoplato.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodigoplato.ForeColor = System.Drawing.Color.White
+        Me.lblCodigoplato.Location = New System.Drawing.Point(348, 156)
+        Me.lblCodigoplato.Name = "lblCodigoplato"
+        Me.lblCodigoplato.Size = New System.Drawing.Size(83, 23)
+        Me.lblCodigoplato.TabIndex = 152
+        Me.lblCodigoplato.Visible = False
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnEliminar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnEliminar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnEliminar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnEliminar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnEliminar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnEliminar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnEliminar.Location = New System.Drawing.Point(175, 277)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(123, 34)
+        Me.btnEliminar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnEliminar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnEliminar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnEliminar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnEliminar.TabIndex = 148
+        Me.btnEliminar.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnEliminar.TextStyle.Text = "Eliminar"
+        Me.btnEliminar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnEliminar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
         'frmVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -905,6 +945,7 @@ Partial Class frmVenta
         CType(Me.ElContainer7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer7.ResumeLayout(False)
         Me.ElContainer7.PerformLayout()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -953,4 +994,6 @@ Partial Class frmVenta
     Friend WithEvents ElContainer15 As Klik.Windows.Forms.v1.EntryLib.ELContainer
     Friend WithEvents lblFecha As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents lblCodigoplato As Label
+    Friend WithEvents btnEliminar As Klik.Windows.Forms.v1.EntryLib.ELButton
 End Class

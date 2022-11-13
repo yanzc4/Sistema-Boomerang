@@ -29,13 +29,23 @@ Public Class frmVenta
         cmd.ExecuteNonQuery()
         MsgBox("Plato Agregado")
     End Sub
-    Sub listarDetalle()
+    Private Sub listarDetalle()
         cn.Open()
         Dim da As New SqlDataAdapter("execute _listardetalleventa '" & idVenta & "'", cn)
         Dim ds As New DataSet
         da.Fill(ds, "Ventas")
         dgvDetalle.DataSource = ds.Tables("Ventas")
         cn.Close()
+    End Sub
+    Private Sub eliminarDetale()
+        Dim eli As New SqlCommand
+        eli.CommandType = CommandType.StoredProcedure
+        eli.CommandText = "_eliminardetalleventa"
+        eli.Parameters.Add("@vcod", SqlDbType.Int).Value = lblID_venta.Text.Trim
+        eli.Parameters.Add("@pcod", SqlDbType.Int).Value = lblCodigoplato.Text.Trim
+        eli.Connection = cn
+        eli.ExecuteNonQuery()
+        MsgBox("Detalle Eliminado")
     End Sub
     Private Sub btnSalir_Click_1(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
@@ -88,5 +98,33 @@ Public Class frmVenta
         lblTotal.Text = totalDetalle.ToString
         lblFecha.Text = fechaTotalDetalle.ToString
         listarDetalle()
+    End Sub
+
+    Private Sub dgvDetalle_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDetalle.CellEnter
+        Try
+            lblCodigoplato.Text = dgvDetalle.Item(0, e.RowIndex).Value
+        Catch ex As Exception
+            MsgBox("Campo Vacio")
+        End Try
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        If MsgBox("¿Quieres Eliminar?", vbYesNo, "Información") = vbYes Then
+            Try
+                cn.Open()
+                eliminarDetale()
+            Catch ex As Exception
+                MsgBox("No se puede eliminar")
+            Finally
+                If Not IsDBNull(cn) Then cn.Close()
+            End Try
+            mostrarTotal(idVenta)
+            lbldsc.Text = dscDetalle.ToString
+            lblTotal.Text = totalDetalle.ToString
+            lblFecha.Text = fechaTotalDetalle.ToString
+            listarDetalle()
+        Else
+            MsgBox("Gracias")
+        End If
     End Sub
 End Class

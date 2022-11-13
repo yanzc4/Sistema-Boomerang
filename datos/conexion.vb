@@ -9,7 +9,7 @@ Module conexion
     Public fechaServidor As String = ""
     Public idVenta As String = ""
     Public dscDetalle As String = ""
-    Public totalDetalle As String = ""
+    Public totalDetalle As String = "---"
     Public fechaTotalDetalle As String = ""
     Public cvhoy As Integer
     Public cvayer As Integer

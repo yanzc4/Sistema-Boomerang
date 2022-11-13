@@ -4,6 +4,8 @@ Imports System.Runtime.InteropServices
 Public Class frmCategoria
 
     Dim cn As New SqlConnection(My.Settings.boomerang)
+    Dim nombrecate1 As String = ""
+    Dim idCategoria1 As String = ""
 
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
@@ -34,6 +36,16 @@ Public Class frmCategoria
         da.Fill(ds, "Categoria")
         dgvCategoria.DataSource = ds.Tables("Categoria")
         cn.Close()
+    End Sub
+    Private Sub modificarcategoria()
+        Dim modi As New SqlCommand
+        modi.CommandType = CommandType.StoredProcedure
+        modi.CommandText = "_modificarcategoria"
+        modi.Parameters.Add("@ccod", SqlDbType.Int).Value = lblIdCategoriar.Text.Trim
+        modi.Parameters.Add("@cnombre", SqlDbType.VarChar).Value = txtNombre.Text.Trim
+        modi.Connection = cn
+        modi.ExecuteNonQuery()
+        MsgBox("Categoria Agregada")
     End Sub
     Private Sub frmCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarcategoria()
@@ -67,4 +79,35 @@ Public Class frmCategoria
         listarcategoria()
     End Sub
 
+    Private Sub dgvCategoria_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCategoria.CellEnter
+        Try
+            idCategoria1 = dgvCategoria.Item(0, e.RowIndex).Value
+            nombrecate1 = dgvCategoria.Item(1, e.RowIndex).Value
+        Catch ex As Exception
+            MsgBox("Campo Vacio")
+        End Try
+    End Sub
+
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+        lblIdCategoriar.Text = idCategoria1.ToString
+        txtNombre.Text = nombrecate1.ToString
+        btnRegistrar.Visible = False
+        btnAceptar.Visible = True
+    End Sub
+
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        Try
+            cn.Open()
+            modificarcategoria()
+        Catch ex As Exception
+            MsgBox("Error..Intente denuevo")
+        Finally
+            If Not IsDBNull(cn) Then cn.Close()
+        End Try
+        btnAceptar.Visible = False
+        btnRegistrar.Visible = True
+        listarcategoria()
+        txtNombre.Clear()
+        lblIdCategoriar.Text = ""
+    End Sub
 End Class

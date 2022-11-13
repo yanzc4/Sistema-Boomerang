@@ -97,16 +97,20 @@ Public Class frmPedidos
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Try
-            cn.Open()
-            eliminarVenta()
-        Catch ex As Exception
-            MsgBox("Error: la venta tiene pedidos")
-        Finally
-            If Not IsDBNull(cn) Then cn.Close()
-        End Try
-        listarVentas()
-        graficoVenta()
+        If MsgBox("¿Quieres Eliminar?", vbYesNo, "Información") = vbYes Then
+            Try
+                cn.Open()
+                eliminarVenta()
+            Catch ex As Exception
+                MsgBox("Error: la venta tiene pedidos")
+            Finally
+                If Not IsDBNull(cn) Then cn.Close()
+            End Try
+            listarVentas()
+            graficoVenta()
+        Else
+            MsgBox("Gracias")
+        End If
     End Sub
 
     Private Sub ElContainer1_Click(sender As Object, e As EventArgs) Handles ElContainer1.Click
