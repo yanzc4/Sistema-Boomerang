@@ -59,4 +59,8 @@ Public Class frmPrincipal
     Private Sub btnAjustes_Click(sender As Object, e As EventArgs) Handles btnAjustes.Click
         AbrirFormEnPanel(New frmAjustes)
     End Sub
+
+    Private Sub panelCabecera_Paint(sender As Object, e As PaintEventArgs) Handles panelCabecera.Paint
+
+    End Sub
 End Class

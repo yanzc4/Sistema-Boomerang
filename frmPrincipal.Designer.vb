@@ -72,11 +72,11 @@ Partial Class frmPrincipal
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Inter Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(4, 11)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(237, 19)
+        Me.Label1.Size = New System.Drawing.Size(253, 20)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "SISTEMA DE RESTAURANTE"
         '
@@ -162,7 +162,7 @@ Partial Class frmPrincipal
         '
         Me.lblEmpleado.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblEmpleado.BackColor = System.Drawing.Color.Transparent
-        Me.lblEmpleado.Font = New System.Drawing.Font("Inter Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEmpleado.ForeColor = System.Drawing.Color.White
         Me.lblEmpleado.Location = New System.Drawing.Point(70, 627)
         Me.lblEmpleado.Name = "lblEmpleado"
@@ -176,11 +176,11 @@ Partial Class frmPrincipal
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(97, 608)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(47, 19)
+        Me.Label8.Size = New System.Drawing.Size(47, 20)
         Me.Label8.TabIndex = 50
         Me.Label8.Text = "User"
         '
@@ -256,7 +256,7 @@ Partial Class frmPrincipal
         Me.btnReportes.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
         Me.btnReportes.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
         Me.btnReportes.TabIndex = 47
-        Me.btnReportes.TextStyle.Font = New System.Drawing.Font("Inter Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReportes.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReportes.TextStyle.ForeColor = System.Drawing.Color.White
         Me.btnReportes.TextStyle.Text = "          Reportes"
         Me.btnReportes.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
@@ -289,7 +289,7 @@ Partial Class frmPrincipal
         Me.btnAjustes.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
         Me.btnAjustes.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
         Me.btnAjustes.TabIndex = 46
-        Me.btnAjustes.TextStyle.Font = New System.Drawing.Font("Inter Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAjustes.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAjustes.TextStyle.ForeColor = System.Drawing.Color.White
         Me.btnAjustes.TextStyle.Text = "          Ajustes"
         Me.btnAjustes.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
@@ -320,7 +320,7 @@ Partial Class frmPrincipal
         Me.btnDashboard.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
         Me.btnDashboard.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
         Me.btnDashboard.TabIndex = 45
-        Me.btnDashboard.TextStyle.Font = New System.Drawing.Font("Inter Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDashboard.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDashboard.TextStyle.ForeColor = System.Drawing.Color.White
         Me.btnDashboard.TextStyle.Text = "          Panel De Control"
         Me.btnDashboard.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
@@ -352,7 +352,7 @@ Partial Class frmPrincipal
         Me.btnInventario.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
         Me.btnInventario.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
         Me.btnInventario.TabIndex = 44
-        Me.btnInventario.TextStyle.Font = New System.Drawing.Font("Inter Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInventario.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnInventario.TextStyle.ForeColor = System.Drawing.Color.White
         Me.btnInventario.TextStyle.Text = "          Inventario"
         Me.btnInventario.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
@@ -383,7 +383,7 @@ Partial Class frmPrincipal
         Me.btnPedidos.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
         Me.btnPedidos.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
         Me.btnPedidos.TabIndex = 43
-        Me.btnPedidos.TextStyle.Font = New System.Drawing.Font("Inter Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPedidos.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPedidos.TextStyle.ForeColor = System.Drawing.Color.White
         Me.btnPedidos.TextStyle.Text = "          Pedidos"
         Me.btnPedidos.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
@@ -415,7 +415,7 @@ Partial Class frmPrincipal
         Me.btnVentas.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
         Me.btnVentas.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
         Me.btnVentas.TabIndex = 42
-        Me.btnVentas.TextStyle.Font = New System.Drawing.Font("Inter Black", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVentas.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVentas.TextStyle.ForeColor = System.Drawing.Color.White
         Me.btnVentas.TextStyle.Text = "          Ventas"
         Me.btnVentas.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
@@ -433,11 +433,11 @@ Partial Class frmPrincipal
         '
         Me.lblMenu.AutoSize = True
         Me.lblMenu.BackColor = System.Drawing.Color.Transparent
-        Me.lblMenu.Font = New System.Drawing.Font("Inter Black", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMenu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.lblMenu.Location = New System.Drawing.Point(73, 23)
         Me.lblMenu.Name = "lblMenu"
-        Me.lblMenu.Size = New System.Drawing.Size(98, 35)
+        Me.lblMenu.Size = New System.Drawing.Size(91, 33)
         Me.lblMenu.TabIndex = 3
         Me.lblMenu.Text = "Menu"
         '

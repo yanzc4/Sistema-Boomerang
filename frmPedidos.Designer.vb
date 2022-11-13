@@ -22,19 +22,21 @@ Partial Class frmPedidos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ElContainer1 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.ElContainer9 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.gfcVentas = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ElContainer8 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.btnEliminar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnEliminar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.ElButton2 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
-        Me.btnBuscar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.ElContainer7 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.txtBuscar = New Sistema_Boomerang.PowerTextBox()
         Me.ElButton1 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
@@ -57,18 +59,18 @@ Partial Class frmPedidos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.ElContainer9 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.gfcVentas = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.btnBuscar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer1.SuspendLayout()
+        CType(Me.ElContainer9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ElContainer9.SuspendLayout()
+        CType(Me.gfcVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer8.SuspendLayout()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer3.SuspendLayout()
         CType(Me.ElButton2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer7.SuspendLayout()
         CType(Me.ElButton1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,9 +86,7 @@ Partial Class frmPedidos
         Me.ElContainer5.SuspendLayout()
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer4.SuspendLayout()
-        CType(Me.ElContainer9, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ElContainer9.SuspendLayout()
-        CType(Me.gfcVentas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ElContainer1
@@ -111,6 +111,80 @@ Partial Class frmPedidos
         Me.ElContainer1.TabIndex = 1
         Me.ElContainer1.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
+        'ElContainer9
+        '
+        Me.ElContainer9.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ElContainer9.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(129, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.ElContainer9.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.ElContainer9.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.ElContainer9.BackgroundStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer9.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(129, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.ElContainer9.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.ElContainer9.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer9.Controls.Add(Me.gfcVentas)
+        Me.ElContainer9.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ElContainer9.Location = New System.Drawing.Point(653, 411)
+        Me.ElContainer9.Name = "ElContainer9"
+        Me.ElContainer9.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ElContainer9.Size = New System.Drawing.Size(311, 218)
+        Me.ElContainer9.TabIndex = 131
+        Me.ElContainer9.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'gfcVentas
+        '
+        Me.gfcVentas.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.gfcVentas.BackColor = System.Drawing.Color.Transparent
+        ChartArea1.AxisX.IsMarginVisible = False
+        ChartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White
+        ChartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        ChartArea1.AxisX.LineWidth = 0
+        ChartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White
+        ChartArea1.AxisX.MajorGrid.LineWidth = 0
+        ChartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
+        ChartArea1.AxisX.MajorTickMark.Size = 3.0!
+        ChartArea1.AxisX2.LineColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        ChartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White
+        ChartArea1.AxisY.LabelStyle.Format = "$(0)"
+        ChartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        ChartArea1.AxisY.LineWidth = 0
+        ChartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
+        ChartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
+        ChartArea1.AxisY2.LineColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        ChartArea1.BackColor = System.Drawing.Color.Transparent
+        ChartArea1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        ChartArea1.Name = "ChartArea1"
+        Me.gfcVentas.ChartAreas.Add(ChartArea1)
+        Legend1.Alignment = System.Drawing.StringAlignment.Center
+        Legend1.BackColor = System.Drawing.Color.Transparent
+        Legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Left
+        Legend1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Legend1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Legend1.IsTextAutoFit = False
+        Legend1.Name = "Legend1"
+        Legend1.TitleBackColor = System.Drawing.Color.Transparent
+        Legend1.TitleForeColor = System.Drawing.Color.Empty
+        Me.gfcVentas.Legends.Add(Legend1)
+        Me.gfcVentas.Location = New System.Drawing.Point(7, 10)
+        Me.gfcVentas.Name = "gfcVentas"
+        Me.gfcVentas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
+        Me.gfcVentas.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(127, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(205, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(255, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(254, Byte), Integer))}
+        Series1.BackSecondaryColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(255, Byte), Integer))
+        Series1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Series1.BorderWidth = 8
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
+        Series1.Color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Series1.Legend = "Legend1"
+        Series1.MarkerBorderColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Series1.MarkerColor = System.Drawing.Color.White
+        Series1.MarkerImageTransparentColor = System.Drawing.Color.White
+        Series1.MarkerSize = 6
+        Series1.Name = "venta_hoy_ayer"
+        Me.gfcVentas.Series.Add(Series1)
+        Me.gfcVentas.Size = New System.Drawing.Size(297, 202)
+        Me.gfcVentas.TabIndex = 142
+        Me.gfcVentas.Text = "Chart4"
+        '
         'ElContainer8
         '
         Me.ElContainer8.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -131,6 +205,25 @@ Partial Class frmPedidos
         Me.ElContainer8.Size = New System.Drawing.Size(617, 218)
         Me.ElContainer8.TabIndex = 129
         Me.ElContainer8.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(57, 18)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(391, 48)
+        Me.Label7.TabIndex = 136
+        Me.Label7.Text = "Seleccione venta a eliminar de la lista de ventas luego click en el boton elimina" &
+    "r"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(52, 159)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 127
         '
         'btnEliminar
         '
@@ -158,13 +251,6 @@ Partial Class frmPedidos
         Me.btnEliminar.TextStyle.Text = "Eliminar"
         Me.btnEliminar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnEliminar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(52, 159)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 127
         '
         'ElContainer3
         '
@@ -216,33 +302,6 @@ Partial Class frmPedidos
         Me.ElButton2.TextStyle.Text = "Editar"
         Me.ElButton2.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.ElButton2.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnBuscar.BackgroundImageStyle.FilterColor = System.Drawing.Color.Black
-        Me.btnBuscar.BackgroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.buscar1
-        Me.btnBuscar.BackgroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnBuscar.BackgroundImageStyle.ImageSize = New System.Drawing.Size(24, 24)
-        Me.btnBuscar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnBuscar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.btnBuscar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnBuscar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.btnBuscar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnBuscar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnBuscar.Location = New System.Drawing.Point(311, 12)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(43, 34)
-        Me.btnBuscar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnBuscar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnBuscar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.btnBuscar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
-        Me.btnBuscar.TabIndex = 130
-        Me.btnBuscar.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnBuscar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
         'ElContainer7
         '
@@ -601,7 +660,7 @@ Partial Class frmPedidos
         '
         Me.btnSalir.AutoSize = True
         Me.btnSalir.BackColor = System.Drawing.Color.Tomato
-        Me.btnSalir.Font = New System.Drawing.Font("Inter Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.ForeColor = System.Drawing.Color.White
         Me.btnSalir.Location = New System.Drawing.Point(16, 19)
         Me.btnSalir.Name = "btnSalir"
@@ -614,99 +673,40 @@ Partial Class frmPedidos
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(387, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(240, 29)
+        Me.Label1.Size = New System.Drawing.Size(231, 29)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Registro de ventas"
         '
-        'Label7
+        'btnBuscar
         '
-        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(57, 18)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(391, 48)
-        Me.Label7.TabIndex = 136
-        Me.Label7.Text = "Seleccione venta a eliminar de la lista de ventas luego click en el boton elimina" &
-    "r"
-        '
-        'ElContainer9
-        '
-        Me.ElContainer9.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ElContainer9.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(129, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(92, Byte), Integer))
-        Me.ElContainer9.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.ElContainer9.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElContainer9.BackgroundStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.ElContainer9.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(129, Byte), Integer), CType(CType(131, Byte), Integer), CType(CType(92, Byte), Integer))
-        Me.ElContainer9.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.ElContainer9.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.ElContainer9.Controls.Add(Me.gfcVentas)
-        Me.ElContainer9.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElContainer9.Location = New System.Drawing.Point(653, 411)
-        Me.ElContainer9.Name = "ElContainer9"
-        Me.ElContainer9.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ElContainer9.Size = New System.Drawing.Size(311, 218)
-        Me.ElContainer9.TabIndex = 131
-        Me.ElContainer9.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
-        '
-        'gfcVentas
-        '
-        Me.gfcVentas.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.gfcVentas.BackColor = System.Drawing.Color.Transparent
-        ChartArea1.AxisX.IsMarginVisible = False
-        ChartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White
-        ChartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        ChartArea1.AxisX.LineWidth = 0
-        ChartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White
-        ChartArea1.AxisX.MajorGrid.LineWidth = 0
-        ChartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
-        ChartArea1.AxisX.MajorTickMark.Size = 3.0!
-        ChartArea1.AxisX2.LineColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        ChartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White
-        ChartArea1.AxisY.LabelStyle.Format = "$(0)"
-        ChartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        ChartArea1.AxisY.LineWidth = 0
-        ChartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
-        ChartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(73, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer))
-        ChartArea1.AxisY2.LineColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        ChartArea1.BackColor = System.Drawing.Color.Transparent
-        ChartArea1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        ChartArea1.Name = "ChartArea1"
-        Me.gfcVentas.ChartAreas.Add(ChartArea1)
-        Legend1.Alignment = System.Drawing.StringAlignment.Center
-        Legend1.BackColor = System.Drawing.Color.Transparent
-        Legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Left
-        Legend1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Legend1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Legend1.IsTextAutoFit = False
-        Legend1.Name = "Legend1"
-        Legend1.TitleBackColor = System.Drawing.Color.Transparent
-        Legend1.TitleForeColor = System.Drawing.Color.Empty
-        Me.gfcVentas.Legends.Add(Legend1)
-        Me.gfcVentas.Location = New System.Drawing.Point(7, 10)
-        Me.gfcVentas.Name = "gfcVentas"
-        Me.gfcVentas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
-        Me.gfcVentas.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(127, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(205, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(255, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(254, Byte), Integer))}
-        Series1.BackSecondaryColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(255, Byte), Integer))
-        Series1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Series1.BorderWidth = 8
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
-        Series1.Color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Series1.Legend = "Legend1"
-        Series1.MarkerBorderColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Series1.MarkerColor = System.Drawing.Color.White
-        Series1.MarkerImageTransparentColor = System.Drawing.Color.White
-        Series1.MarkerSize = 6
-        Series1.Name = "venta_hoy_ayer"
-        Me.gfcVentas.Series.Add(Series1)
-        Me.gfcVentas.Size = New System.Drawing.Size(297, 202)
-        Me.gfcVentas.TabIndex = 142
-        Me.gfcVentas.Text = "Chart4"
+        Me.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnBuscar.BackgroundImageStyle.FilterColor = System.Drawing.Color.Black
+        Me.btnBuscar.BackgroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.buscar1
+        Me.btnBuscar.BackgroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnBuscar.BackgroundImageStyle.ImageSize = New System.Drawing.Size(24, 24)
+        Me.btnBuscar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnBuscar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnBuscar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnBuscar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnBuscar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnBuscar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnBuscar.Location = New System.Drawing.Point(311, 12)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(43, 34)
+        Me.btnBuscar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnBuscar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnBuscar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnBuscar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnBuscar.TabIndex = 130
+        Me.btnBuscar.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnBuscar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
         'frmPedidos
         '
@@ -722,6 +722,9 @@ Partial Class frmPedidos
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer1.ResumeLayout(False)
         Me.ElContainer1.PerformLayout()
+        CType(Me.ElContainer9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ElContainer9.ResumeLayout(False)
+        CType(Me.gfcVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElContainer8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer8.ResumeLayout(False)
         Me.ElContainer8.PerformLayout()
@@ -730,7 +733,6 @@ Partial Class frmPedidos
         Me.ElContainer3.ResumeLayout(False)
         Me.ElContainer3.PerformLayout()
         CType(Me.ElButton2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElContainer7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer7.ResumeLayout(False)
         Me.ElContainer7.PerformLayout()
@@ -749,9 +751,7 @@ Partial Class frmPedidos
         Me.ElContainer5.ResumeLayout(False)
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer4.ResumeLayout(False)
-        CType(Me.ElContainer9, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ElContainer9.ResumeLayout(False)
-        CType(Me.gfcVentas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

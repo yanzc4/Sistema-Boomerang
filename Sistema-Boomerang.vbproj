@@ -84,6 +84,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
@@ -111,6 +112,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetBoomerang.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetBoomerang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="datos\conexion.vb" />
     <Compile Include="disenos\PowerTextBox.vb">
       <SubType>Component</SubType>
@@ -207,6 +213,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="reportes\frmReporteVentas.Designer.vb">
+      <DependentUpon>frmReporteVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\frmReporteVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -252,9 +264,24 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\frmReporteVentas.resx">
+      <DependentUpon>frmReporteVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\ReporteVentas.rdlc" />
     <EmbeddedResource Include="reportes\repVentasMes.rdlc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSetBoomerang.xsc">
+      <DependentUpon>DataSetBoomerang.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetBoomerang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetBoomerang.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSetBoomerang.xss">
+      <DependentUpon>DataSetBoomerang.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

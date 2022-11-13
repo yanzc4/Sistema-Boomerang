@@ -109,6 +109,10 @@ Public Class frmPedidos
         graficoVenta()
     End Sub
 
+    Private Sub ElContainer1_Click(sender As Object, e As EventArgs) Handles ElContainer1.Click
+
+    End Sub
+
     Private Sub dgvVentas_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVentas.CellEnter
 
         Try
