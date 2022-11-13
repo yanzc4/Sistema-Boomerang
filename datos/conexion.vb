@@ -13,6 +13,9 @@ Module conexion
     Public fechaTotalDetalle As String = ""
     Public cvhoy As Integer
     Public cvayer As Integer
+    Public reportdia As String = ""
+    Public reportmes As String = ""
+    Public reportaño As String = ""
 
     Sub abrir()
         Try

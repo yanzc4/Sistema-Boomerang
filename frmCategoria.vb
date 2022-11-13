@@ -18,7 +18,7 @@ Public Class frmCategoria
     Private Shared Function CreateRoundRectRgn(LR As Integer, TR As Integer, RR As Integer, BR As Integer, WE As Integer, HE As Integer) As IntPtr
     End Function
 
-    Function crearcategoria()
+    Private Sub crearcategoria()
         Dim cmd As New SqlCommand
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "_agregarcategoria"
@@ -26,15 +26,15 @@ Public Class frmCategoria
         cmd.Connection = cn
         cmd.ExecuteNonQuery()
         MsgBox("Categoria Agregada")
-    End Function
-    Function listarcategoria()
+    End Sub
+    Private Sub listarcategoria()
         cn.Open()
         Dim da As New SqlDataAdapter("execute _listarcategoria", cn)
         Dim ds As New DataSet
         da.Fill(ds, "Categoria")
         dgvCategoria.DataSource = ds.Tables("Categoria")
         cn.Close()
-    End Function
+    End Sub
     Private Sub frmCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarcategoria()
         'para redondear

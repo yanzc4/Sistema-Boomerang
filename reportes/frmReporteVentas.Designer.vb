@@ -24,13 +24,23 @@ Partial Class frmReporteVentas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ventas1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSetBoomerang = New Sistema_Boomerang.DataSetBoomerang()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ventas1TableAdapter = New Sistema_Boomerang.DataSetBoomerangTableAdapters.ventas1TableAdapter()
         CType(Me.ventas1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetBoomerang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ventas1BindingSource
+        '
+        Me.ventas1BindingSource.DataMember = "ventas1"
+        Me.ventas1BindingSource.DataSource = Me.DataSetBoomerang
+        '
+        'DataSetBoomerang
+        '
+        Me.DataSetBoomerang.DataSetName = "DataSetBoomerang"
+        Me.DataSetBoomerang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +54,6 @@ Partial Class frmReporteVentas
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
         Me.ReportViewer1.Size = New System.Drawing.Size(800, 450)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'ventas1BindingSource
-        '
-        Me.ventas1BindingSource.DataMember = "ventas1"
-        Me.ventas1BindingSource.DataSource = Me.DataSetBoomerang
-        '
-        'DataSetBoomerang
-        '
-        Me.DataSetBoomerang.DataSetName = "DataSetBoomerang"
-        Me.DataSetBoomerang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ventas1TableAdapter
         '
