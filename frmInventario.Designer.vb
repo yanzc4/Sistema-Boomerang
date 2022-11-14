@@ -23,21 +23,23 @@ Partial Class frmInventario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ElContainer1 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnSalir = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnFiltrar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.panelContenedor = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtAño = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtMes = New System.Windows.Forms.TextBox()
-        Me.btnFiltrar = New System.Windows.Forms.Button()
         Me.txtDia = New System.Windows.Forms.TextBox()
+        Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnSalir = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer1.SuspendLayout()
+        CType(Me.btnFiltrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,12 +53,13 @@ Partial Class frmInventario
         Me.ElContainer1.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElContainer1.BackgroundStyle.SolidColor = System.Drawing.Color.Black
         Me.ElContainer1.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.ElContainer1.Controls.Add(Me.btnFiltrar)
+        Me.ElContainer1.Controls.Add(Me.panelContenedor)
         Me.ElContainer1.Controls.Add(Me.Label3)
         Me.ElContainer1.Controls.Add(Me.txtAño)
         Me.ElContainer1.Controls.Add(Me.Label4)
         Me.ElContainer1.Controls.Add(Me.Label5)
         Me.ElContainer1.Controls.Add(Me.txtMes)
-        Me.ElContainer1.Controls.Add(Me.btnFiltrar)
         Me.ElContainer1.Controls.Add(Me.txtDia)
         Me.ElContainer1.Controls.Add(Me.ElContainer3)
         Me.ElContainer1.Controls.Add(Me.Label2)
@@ -69,6 +72,89 @@ Partial Class frmInventario
         Me.ElContainer1.Size = New System.Drawing.Size(980, 646)
         Me.ElContainer1.TabIndex = 1
         Me.ElContainer1.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'btnFiltrar
+        '
+        Me.btnFiltrar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnFiltrar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnFiltrar.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnFiltrar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnFiltrar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnFiltrar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnFiltrar.Location = New System.Drawing.Point(486, 195)
+        Me.btnFiltrar.Name = "btnFiltrar"
+        Me.btnFiltrar.Size = New System.Drawing.Size(111, 28)
+        Me.btnFiltrar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnFiltrar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnFiltrar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnFiltrar.TabIndex = 56
+        Me.btnFiltrar.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFiltrar.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnFiltrar.TextStyle.Text = "Filtrar"
+        Me.btnFiltrar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnFiltrar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'panelContenedor
+        '
+        Me.panelContenedor.Location = New System.Drawing.Point(88, 239)
+        Me.panelContenedor.Name = "panelContenedor"
+        Me.panelContenedor.Size = New System.Drawing.Size(810, 391)
+        Me.panelContenedor.TabIndex = 55
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.White
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(55, 168)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(36, 16)
+        Me.Label3.TabIndex = 53
+        Me.Label3.Text = "Dia:"
+        '
+        'txtAño
+        '
+        Me.txtAño.Location = New System.Drawing.Point(353, 199)
+        Me.txtAño.Name = "txtAño"
+        Me.txtAño.Size = New System.Drawing.Size(100, 20)
+        Me.txtAño.TabIndex = 52
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.White
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(360, 168)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 16)
+        Me.Label4.TabIndex = 51
+        Me.Label4.Text = "Año:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.White
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(205, 168)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(41, 16)
+        Me.Label5.TabIndex = 50
+        Me.Label5.Text = "Mes:"
+        '
+        'txtMes
+        '
+        Me.txtMes.Location = New System.Drawing.Point(208, 199)
+        Me.txtMes.Name = "txtMes"
+        Me.txtMes.Size = New System.Drawing.Size(100, 20)
+        Me.txtMes.TabIndex = 49
+        '
+        'txtDia
+        '
+        Me.txtDia.Location = New System.Drawing.Point(58, 199)
+        Me.txtDia.Name = "txtDia"
+        Me.txtDia.Size = New System.Drawing.Size(100, 20)
+        Me.txtDia.TabIndex = 47
         '
         'ElContainer3
         '
@@ -87,6 +173,16 @@ Partial Class frmInventario
         Me.ElContainer3.Size = New System.Drawing.Size(289, 42)
         Me.ElContainer3.TabIndex = 45
         Me.ElContainer3.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Sistema_Boomerang.My.Resources.Resources.buscar
+        Me.PictureBox1.Location = New System.Drawing.Point(248, 8)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(28, 28)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 11
+        Me.PictureBox1.TabStop = False
         '
         'TextBox1
         '
@@ -136,79 +232,6 @@ Partial Class frmInventario
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "INVENTARIO"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Sistema_Boomerang.My.Resources.Resources.buscar
-        Me.PictureBox1.Location = New System.Drawing.Point(248, 8)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(28, 28)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 11
-        Me.PictureBox1.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(55, 168)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(36, 16)
-        Me.Label3.TabIndex = 53
-        Me.Label3.Text = "Dia:"
-        '
-        'txtAño
-        '
-        Me.txtAño.Location = New System.Drawing.Point(363, 196)
-        Me.txtAño.Name = "txtAño"
-        Me.txtAño.Size = New System.Drawing.Size(100, 20)
-        Me.txtAño.TabIndex = 52
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(360, 168)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 16)
-        Me.Label4.TabIndex = 51
-        Me.Label4.Text = "Año:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.White
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(205, 168)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 16)
-        Me.Label5.TabIndex = 50
-        Me.Label5.Text = "Mes:"
-        '
-        'txtMes
-        '
-        Me.txtMes.Location = New System.Drawing.Point(208, 199)
-        Me.txtMes.Name = "txtMes"
-        Me.txtMes.Size = New System.Drawing.Size(100, 20)
-        Me.txtMes.TabIndex = 49
-        '
-        'btnFiltrar
-        '
-        Me.btnFiltrar.Location = New System.Drawing.Point(529, 196)
-        Me.btnFiltrar.Name = "btnFiltrar"
-        Me.btnFiltrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnFiltrar.TabIndex = 48
-        Me.btnFiltrar.Text = "Filtrar"
-        Me.btnFiltrar.UseVisualStyleBackColor = True
-        '
-        'txtDia
-        '
-        Me.txtDia.Location = New System.Drawing.Point(58, 199)
-        Me.txtDia.Name = "txtDia"
-        Me.txtDia.Size = New System.Drawing.Size(100, 20)
-        Me.txtDia.TabIndex = 47
-        '
         'frmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -222,6 +245,7 @@ Partial Class frmInventario
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer1.ResumeLayout(False)
         Me.ElContainer1.PerformLayout()
+        CType(Me.btnFiltrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer3.ResumeLayout(False)
         Me.ElContainer3.PerformLayout()
@@ -242,6 +266,7 @@ Partial Class frmInventario
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents txtMes As TextBox
-    Friend WithEvents btnFiltrar As Button
     Friend WithEvents txtDia As TextBox
+    Friend WithEvents panelContenedor As Panel
+    Friend WithEvents btnFiltrar As Klik.Windows.Forms.v1.EntryLib.ELButton
 End Class

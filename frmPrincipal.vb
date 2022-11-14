@@ -52,15 +52,11 @@ Public Class frmPrincipal
         AbrirFormEnPanel(New frmDashboard)
     End Sub
 
-    Private Sub btnInventario_Click(sender As Object, e As EventArgs) Handles btnInventario.Click
-        AbrirFormEnPanel(New frmInventario)
-    End Sub
-
     Private Sub btnAjustes_Click(sender As Object, e As EventArgs) Handles btnAjustes.Click
         AbrirFormEnPanel(New frmAjustes)
     End Sub
 
-    Private Sub panelCabecera_Paint(sender As Object, e As PaintEventArgs) Handles panelCabecera.Paint
-
+    Private Sub btnReportes_Click(sender As Object, e As EventArgs) Handles btnReportes.Click
+        AbrirFormEnPanel(New frmInventario)
     End Sub
 End Class

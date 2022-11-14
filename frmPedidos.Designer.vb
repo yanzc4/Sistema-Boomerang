@@ -37,6 +37,7 @@ Partial Class frmPedidos
         Me.btnEliminar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.ElContainer3 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.ElButton2 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnBuscar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.ElContainer7 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.txtBuscar = New Sistema_Boomerang.PowerTextBox()
         Me.ElButton1 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
@@ -59,7 +60,6 @@ Partial Class frmPedidos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnBuscar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer1.SuspendLayout()
         CType(Me.ElContainer9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,6 +71,7 @@ Partial Class frmPedidos
         CType(Me.ElContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer3.SuspendLayout()
         CType(Me.ElButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElContainer7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer7.SuspendLayout()
         CType(Me.ElButton1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,7 +87,6 @@ Partial Class frmPedidos
         Me.ElContainer5.SuspendLayout()
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer4.SuspendLayout()
-        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ElContainer1
@@ -224,6 +224,7 @@ Partial Class frmPedidos
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 127
+        Me.TextBox1.Visible = False
         '
         'btnEliminar
         '
@@ -302,6 +303,33 @@ Partial Class frmPedidos
         Me.ElButton2.TextStyle.Text = "Editar"
         Me.ElButton2.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.ElButton2.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnBuscar.BackgroundImageStyle.FilterColor = System.Drawing.Color.Black
+        Me.btnBuscar.BackgroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.buscar1
+        Me.btnBuscar.BackgroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnBuscar.BackgroundImageStyle.ImageSize = New System.Drawing.Size(24, 24)
+        Me.btnBuscar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnBuscar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnBuscar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnBuscar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnBuscar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnBuscar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnBuscar.Location = New System.Drawing.Point(311, 12)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(43, 34)
+        Me.btnBuscar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnBuscar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnBuscar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnBuscar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnBuscar.TabIndex = 130
+        Me.btnBuscar.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnBuscar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
         'ElContainer7
         '
@@ -681,33 +709,6 @@ Partial Class frmPedidos
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Registro de ventas"
         '
-        'btnBuscar
-        '
-        Me.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnBuscar.BackgroundImageStyle.FilterColor = System.Drawing.Color.Black
-        Me.btnBuscar.BackgroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.buscar1
-        Me.btnBuscar.BackgroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnBuscar.BackgroundImageStyle.ImageSize = New System.Drawing.Size(24, 24)
-        Me.btnBuscar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnBuscar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.btnBuscar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnBuscar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.btnBuscar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnBuscar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnBuscar.Location = New System.Drawing.Point(311, 12)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(43, 34)
-        Me.btnBuscar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnBuscar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnBuscar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.btnBuscar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
-        Me.btnBuscar.TabIndex = 130
-        Me.btnBuscar.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnBuscar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
-        '
         'frmPedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -733,6 +734,7 @@ Partial Class frmPedidos
         Me.ElContainer3.ResumeLayout(False)
         Me.ElContainer3.PerformLayout()
         CType(Me.ElButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElContainer7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer7.ResumeLayout(False)
         Me.ElContainer7.PerformLayout()
@@ -751,7 +753,6 @@ Partial Class frmPedidos
         Me.ElContainer5.ResumeLayout(False)
         CType(Me.ElContainer4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer4.ResumeLayout(False)
-        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

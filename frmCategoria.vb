@@ -47,6 +47,15 @@ Public Class frmCategoria
         modi.ExecuteNonQuery()
         MsgBox("Categoria Agregada")
     End Sub
+    Private Sub eliminarCategoria()
+        Dim eli As New SqlCommand
+        eli.CommandType = CommandType.StoredProcedure
+        eli.CommandText = "_eliminarcategoria"
+        eli.Parameters.Add("@ccod", SqlDbType.Int).Value = idCategoria1.Trim
+        eli.Connection = cn
+        eli.ExecuteNonQuery()
+        MsgBox("Categoria Borrada")
+    End Sub
     Private Sub frmCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarcategoria()
         'para redondear
@@ -77,6 +86,7 @@ Public Class frmCategoria
             If Not IsDBNull(cn) Then cn.Close()
         End Try
         listarcategoria()
+        txtNombre.Clear()
     End Sub
 
     Private Sub dgvCategoria_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCategoria.CellEnter
@@ -109,5 +119,21 @@ Public Class frmCategoria
         listarcategoria()
         txtNombre.Clear()
         lblIdCategoriar.Text = ""
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        If MsgBox("¿Quieres Eliminar?", vbYesNo, "Información") = vbYes Then
+            Try
+                cn.Open()
+                eliminarCategoria()
+            Catch ex As Exception
+                MsgBox("Error: la categoria tiene productos")
+            Finally
+                If Not IsDBNull(cn) Then cn.Close()
+            End Try
+            listarcategoria()
+        Else
+            MsgBox("Gracias")
+        End If
     End Sub
 End Class

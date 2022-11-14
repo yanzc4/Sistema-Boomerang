@@ -2,6 +2,10 @@
 Imports System.IO
 Public Class frmPlatos
     Dim cn As New SqlConnection(My.Settings.boomerang)
+    Dim imagenp As Image
+    Dim idplato1 As String
+    Dim nombreplato1 As String
+    Dim precioplato2 As String
     Sub listarplatos()
         cn.Open()
         Dim da As New SqlDataAdapter("execute _listarplatos", cn)
@@ -34,7 +38,34 @@ Public Class frmPlatos
         cmd.Parameters.Add("@precio", SqlDbType.Decimal).Value = txtPrecio.Text.Trim
         cmd.Connection = cn
         cmd.ExecuteNonQuery()
-        MsgBox("Plato Agregad")
+        MsgBox("Plato Agregado")
+    End Sub
+    Private Sub modificarPlato()
+        Dim cmd As New SqlCommand
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "_modificarplato"
+        cmd.Parameters.Add("@pcod", SqlDbType.Int).Value = lblIdPlato.Text.Trim
+        cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = txtNombre.Text.Trim
+
+        'para guardar imagenes
+        Dim mss As New MemoryStream
+        Me.imgPlato.Image.Save(mss, Me.imgPlato.Image.RawFormat)
+        cmd.Parameters.Add("@f_plato", SqlDbType.Image).Value = mss.GetBuffer
+
+        cmd.Parameters.Add("@id_cate", SqlDbType.Int).Value = txtCategoria.Text.Trim
+        cmd.Parameters.Add("@precio", SqlDbType.Decimal).Value = txtPrecio.Text.Trim
+        cmd.Connection = cn
+        cmd.ExecuteNonQuery()
+        MsgBox("Plato Modificado")
+    End Sub
+    Private Sub eliminarPlato()
+        Dim eli As New SqlCommand
+        eli.CommandType = CommandType.StoredProcedure
+        eli.CommandText = "_eliminarplato"
+        eli.Parameters.Add("@pcod", SqlDbType.Int).Value = TextBox1.Text.Trim
+        eli.Connection = cn
+        eli.ExecuteNonQuery()
+        MsgBox("Plato Borrado")
     End Sub
     Private Sub frmPlatos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarplatos()
@@ -73,19 +104,20 @@ Public Class frmPlatos
         txtNombre.Clear()
         txtPrecio.Clear()
         imgPlato.Image = Nothing
+        lblIdPlato.Text = ""
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         Try
             cn.Open()
-            cargarcombo()
             agregarplato()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("Seleccione una categoria")
         Finally
             If Not IsDBNull(cn) Then cn.Close()
         End Try
         listarplatos()
+        cargarcombo()
     End Sub
 
     Private Sub btnNcategoria_Click(sender As Object, e As EventArgs) Handles btnNcategoria.Click
@@ -94,5 +126,54 @@ Public Class frmPlatos
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         cargarcombo()
+    End Sub
+
+    Private Sub ElButton1_Click(sender As Object, e As EventArgs) Handles ElButton1.Click
+        lblIdPlato.Text = idplato1.ToString
+        imgPlato.Image = imagenp
+        txtNombre.Text = nombreplato1.ToString
+        txtPrecio.Text = precioplato2.ToString
+        MsgBox("No olvides seleccionar la categoria")
+    End Sub
+
+    Private Sub dgvPlatos_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPlatos.CellEnter
+        Try
+            TextBox1.Text = dgvPlatos.Item(0, e.RowIndex).Value
+            imagenp = dgvPlatos.Item(1, e.RowIndex).FormattedValue
+            idplato1 = dgvPlatos.Item(0, e.RowIndex).Value
+            nombreplato1 = dgvPlatos.Item(2, e.RowIndex).Value
+            precioplato2 = dgvPlatos.Item(4, e.RowIndex).Value
+        Catch ex As Exception
+            MsgBox("Campo Vacio")
+        End Try
+    End Sub
+
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        Try
+            cn.Open()
+            modificarPlato()
+        Catch ex As Exception
+            MsgBox("Selecciona categoria")
+        Finally
+            If Not IsDBNull(cn) Then cn.Close()
+        End Try
+        listarplatos()
+        cargarcombo()
+    End Sub
+
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+        If MsgBox("¿Quieres Eliminar?", vbYesNo, "Información") = vbYes Then
+            Try
+                cn.Open()
+                eliminarPlato()
+            Catch ex As Exception
+                MsgBox("Error: el plato esta registrado en ventas")
+            Finally
+                If Not IsDBNull(cn) Then cn.Close()
+            End Try
+            listarplatos()
+        Else
+            MsgBox("Gracias")
+        End If
     End Sub
 End Class

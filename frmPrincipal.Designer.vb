@@ -36,7 +36,6 @@ Partial Class frmPrincipal
         Me.btnReportes = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnAjustes = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnDashboard = New Klik.Windows.Forms.v1.EntryLib.ELButton()
-        Me.btnInventario = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnPedidos = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnVentas = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.pbLogo = New System.Windows.Forms.PictureBox()
@@ -48,7 +47,6 @@ Partial Class frmPrincipal
         CType(Me.btnReportes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAjustes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnDashboard, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnPedidos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -147,7 +145,6 @@ Partial Class frmPrincipal
         Me.Panel1.Controls.Add(Me.btnReportes)
         Me.Panel1.Controls.Add(Me.btnAjustes)
         Me.Panel1.Controls.Add(Me.btnDashboard)
-        Me.Panel1.Controls.Add(Me.btnInventario)
         Me.Panel1.Controls.Add(Me.btnPedidos)
         Me.Panel1.Controls.Add(Me.btnVentas)
         Me.Panel1.Controls.Add(Me.pbLogo)
@@ -273,7 +270,7 @@ Partial Class frmPrincipal
         Me.btnAjustes.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.configuraciones
         Me.btnAjustes.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAjustes.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnAjustes.Location = New System.Drawing.Point(0, 392)
+        Me.btnAjustes.Location = New System.Drawing.Point(0, 384)
         Me.btnAjustes.Name = "btnAjustes"
         Me.btnAjustes.Size = New System.Drawing.Size(246, 37)
         Me.btnAjustes.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -306,7 +303,7 @@ Partial Class frmPrincipal
         Me.btnDashboard.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.speedometer
         Me.btnDashboard.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDashboard.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnDashboard.Location = New System.Drawing.Point(0, 339)
+        Me.btnDashboard.Location = New System.Drawing.Point(0, 320)
         Me.btnDashboard.Name = "btnDashboard"
         Me.btnDashboard.Size = New System.Drawing.Size(246, 37)
         Me.btnDashboard.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -325,38 +322,6 @@ Partial Class frmPrincipal
         Me.btnDashboard.TextStyle.Text = "          Panel De Control"
         Me.btnDashboard.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
-        'btnInventario
-        '
-        Me.btnInventario.BackgroundStyle.GradientEndColor = System.Drawing.Color.Black
-        Me.btnInventario.BackgroundStyle.GradientStartColor = System.Drawing.Color.Black
-        Me.btnInventario.BackgroundStyle.SolidColor = System.Drawing.Color.Black
-        Me.btnInventario.BorderStyle.SolidColor = System.Drawing.Color.Black
-        Me.btnInventario.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnInventario.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.btnInventario.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnInventario.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.caja
-        Me.btnInventario.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnInventario.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnInventario.Location = New System.Drawing.Point(0, 286)
-        Me.btnInventario.Name = "btnInventario"
-        Me.btnInventario.Size = New System.Drawing.Size(246, 37)
-        Me.btnInventario.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnInventario.StateStyles.FocusStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.btnInventario.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.Black
-        Me.btnInventario.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnInventario.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.btnInventario.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.btnInventario.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.btnInventario.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
-        Me.btnInventario.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
-        Me.btnInventario.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.btnInventario.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
-        Me.btnInventario.TabIndex = 44
-        Me.btnInventario.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInventario.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.btnInventario.TextStyle.Text = "          Inventario"
-        Me.btnInventario.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
-        '
         'btnPedidos
         '
         Me.btnPedidos.BackgroundStyle.GradientEndColor = System.Drawing.Color.Black
@@ -369,7 +334,7 @@ Partial Class frmPrincipal
         Me.btnPedidos.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.motorbike
         Me.btnPedidos.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPedidos.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnPedidos.Location = New System.Drawing.Point(0, 233)
+        Me.btnPedidos.Location = New System.Drawing.Point(0, 254)
         Me.btnPedidos.Name = "btnPedidos"
         Me.btnPedidos.Size = New System.Drawing.Size(246, 37)
         Me.btnPedidos.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -400,7 +365,7 @@ Partial Class frmPrincipal
         Me.btnVentas.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
         Me.btnVentas.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnVentas.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnVentas.Location = New System.Drawing.Point(0, 180)
+        Me.btnVentas.Location = New System.Drawing.Point(0, 188)
         Me.btnVentas.Name = "btnVentas"
         Me.btnVentas.Size = New System.Drawing.Size(246, 37)
         Me.btnVentas.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -470,7 +435,6 @@ Partial Class frmPrincipal
         CType(Me.btnReportes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnAjustes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnDashboard, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnInventario, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnPedidos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -492,7 +456,6 @@ Partial Class frmPrincipal
     Friend WithEvents btnReportes As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents btnAjustes As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents btnDashboard As Klik.Windows.Forms.v1.EntryLib.ELButton
-    Friend WithEvents btnInventario As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents btnPedidos As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar

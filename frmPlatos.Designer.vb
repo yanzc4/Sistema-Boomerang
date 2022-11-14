@@ -26,15 +26,18 @@ Partial Class frmPlatos
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ElContainer1 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnNcategoria = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.btnEliminar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnAgregar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.imgPlato = New System.Windows.Forms.PictureBox()
         Me.panelCabecera = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.ElDivider1 = New Klik.Windows.Forms.v1.EntryLib.ELDivider()
-        Me.ElButton3 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
-        Me.ElButton2 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.btnAceptar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnBorrar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.ElButton1 = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.dgvPlatos = New System.Windows.Forms.DataGridView()
         Me.btnNuevo = New Klik.Windows.Forms.v1.EntryLib.ELButton()
@@ -42,25 +45,26 @@ Partial Class frmPlatos
         Me.btnRegistrar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ElContainer2 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.txtPrecio = New Sistema_Boomerang.PowerTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ElContainer7 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.txtNombre = New Sistema_Boomerang.PowerTextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.imgPlato = New System.Windows.Forms.PictureBox()
-        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.lblIdPlato = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPrecio = New Sistema_Boomerang.PowerTextBox()
+        Me.txtNombre = New Sistema_Boomerang.PowerTextBox()
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnNcategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgPlato, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.panelCabecera, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelCabecera.SuspendLayout()
         CType(Me.ElDivider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ElButton3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ElButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnAceptar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnBorrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvPlatos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnNuevo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,8 +73,6 @@ Partial Class frmPlatos
         Me.ElContainer2.SuspendLayout()
         CType(Me.ElContainer7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ElContainer7.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.imgPlato, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ElContainer1
@@ -79,6 +81,8 @@ Partial Class frmPlatos
         Me.ElContainer1.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElContainer1.BackgroundStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.ElContainer1.BorderStyle.SolidColor = System.Drawing.Color.Black
+        Me.ElContainer1.Controls.Add(Me.TextBox1)
+        Me.ElContainer1.Controls.Add(Me.lblIdPlato)
         Me.ElContainer1.Controls.Add(Me.PictureBox1)
         Me.ElContainer1.Controls.Add(Me.btnNcategoria)
         Me.ElContainer1.Controls.Add(Me.Label2)
@@ -87,8 +91,8 @@ Partial Class frmPlatos
         Me.ElContainer1.Controls.Add(Me.btnAgregar)
         Me.ElContainer1.Controls.Add(Me.imgPlato)
         Me.ElContainer1.Controls.Add(Me.panelCabecera)
-        Me.ElContainer1.Controls.Add(Me.ElButton3)
-        Me.ElContainer1.Controls.Add(Me.ElButton2)
+        Me.ElContainer1.Controls.Add(Me.btnAceptar)
+        Me.ElContainer1.Controls.Add(Me.btnBorrar)
         Me.ElContainer1.Controls.Add(Me.ElButton1)
         Me.ElContainer1.Controls.Add(Me.dgvPlatos)
         Me.ElContainer1.Controls.Add(Me.btnNuevo)
@@ -105,6 +109,16 @@ Partial Class frmPlatos
         Me.ElContainer1.Size = New System.Drawing.Size(875, 493)
         Me.ElContainer1.TabIndex = 1
         Me.ElContainer1.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Sistema_Boomerang.My.Resources.Resources.renew
+        Me.PictureBox1.Location = New System.Drawing.Point(638, 94)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 130
+        Me.PictureBox1.TabStop = False
         '
         'btnNcategoria
         '
@@ -196,6 +210,16 @@ Partial Class frmPlatos
         Me.btnAgregar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnAgregar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
+        'imgPlato
+        '
+        Me.imgPlato.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.imgPlato.Location = New System.Drawing.Point(293, 116)
+        Me.imgPlato.Name = "imgPlato"
+        Me.imgPlato.Size = New System.Drawing.Size(80, 80)
+        Me.imgPlato.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imgPlato.TabIndex = 123
+        Me.imgPlato.TabStop = False
+        '
         'panelCabecera
         '
         Me.panelCabecera.BackgroundStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
@@ -221,53 +245,67 @@ Partial Class frmPlatos
         Me.ElDivider1.TransparentStyle.BackColor = System.Drawing.Color.Black
         Me.ElDivider1.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
-        'ElButton3
+        'btnCerrar
         '
-        Me.ElButton3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ElButton3.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton3.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElButton3.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.ElButton3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElButton3.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton3.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.ElButton3.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton3.Location = New System.Drawing.Point(693, 439)
-        Me.ElButton3.Name = "ElButton3"
-        Me.ElButton3.Size = New System.Drawing.Size(148, 34)
-        Me.ElButton3.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton3.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton3.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.ElButton3.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
-        Me.ElButton3.TabIndex = 120
-        Me.ElButton3.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ElButton3.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.ElButton3.TextStyle.Text = "Guardar"
-        Me.ElButton3.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton3.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Image = Global.Sistema_Boomerang.My.Resources.Resources.close_cross
+        Me.btnCerrar.Location = New System.Drawing.Point(822, 0)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(40, 40)
+        Me.btnCerrar.TabIndex = 1
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
-        'ElButton2
+        'btnAceptar
         '
-        Me.ElButton2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ElButton2.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton2.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.ElButton2.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.ElButton2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ElButton2.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
-        Me.ElButton2.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.ElButton2.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton2.Location = New System.Drawing.Point(193, 439)
-        Me.ElButton2.Name = "ElButton2"
-        Me.ElButton2.Size = New System.Drawing.Size(148, 34)
-        Me.ElButton2.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton2.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.ElButton2.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
-        Me.ElButton2.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
-        Me.ElButton2.TabIndex = 119
-        Me.ElButton2.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ElButton2.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.ElButton2.TextStyle.Text = "Eliminar"
-        Me.ElButton2.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton2.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        Me.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnAceptar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnAceptar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnAceptar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnAceptar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnAceptar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnAceptar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnAceptar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnAceptar.Location = New System.Drawing.Point(693, 447)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(148, 34)
+        Me.btnAceptar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnAceptar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnAceptar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnAceptar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnAceptar.TabIndex = 120
+        Me.btnAceptar.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAceptar.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnAceptar.TextStyle.Text = "Guardar"
+        Me.btnAceptar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnAceptar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'btnBorrar
+        '
+        Me.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnBorrar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnBorrar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnBorrar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnBorrar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnBorrar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnBorrar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnBorrar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnBorrar.Location = New System.Drawing.Point(193, 447)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(148, 34)
+        Me.btnBorrar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnBorrar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnBorrar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnBorrar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnBorrar.TabIndex = 119
+        Me.btnBorrar.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBorrar.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnBorrar.TextStyle.Text = "Eliminar"
+        Me.btnBorrar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnBorrar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
         'ElButton1
         '
@@ -279,7 +317,7 @@ Partial Class frmPlatos
         Me.ElButton1.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElButton1.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.ElButton1.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton1.Location = New System.Drawing.Point(39, 439)
+        Me.ElButton1.Location = New System.Drawing.Point(39, 447)
         Me.ElButton1.Name = "ElButton1"
         Me.ElButton1.Size = New System.Drawing.Size(148, 34)
         Me.ElButton1.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -313,7 +351,7 @@ Partial Class frmPlatos
         Me.dgvPlatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvPlatos.EnableHeadersVisualStyles = False
         Me.dgvPlatos.GridColor = System.Drawing.Color.Yellow
-        Me.dgvPlatos.Location = New System.Drawing.Point(67, 240)
+        Me.dgvPlatos.Location = New System.Drawing.Point(150, 222)
         Me.dgvPlatos.Name = "dgvPlatos"
         Me.dgvPlatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -324,6 +362,7 @@ Partial Class frmPlatos
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvPlatos.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvPlatos.RowHeadersVisible = False
         Me.dgvPlatos.RowHeadersWidth = 51
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
@@ -332,7 +371,8 @@ Partial Class frmPlatos
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
         Me.dgvPlatos.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvPlatos.Size = New System.Drawing.Size(740, 172)
+        Me.dgvPlatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvPlatos.Size = New System.Drawing.Size(588, 219)
         Me.dgvPlatos.TabIndex = 117
         '
         'btnNuevo
@@ -422,17 +462,6 @@ Partial Class frmPlatos
         Me.ElContainer2.TabIndex = 108
         Me.ElContainer2.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
-        'txtPrecio
-        '
-        Me.txtPrecio.BackColor = System.Drawing.Color.Black
-        Me.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPrecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.txtPrecio.ForeColor = System.Drawing.Color.White
-        Me.txtPrecio.Location = New System.Drawing.Point(8, 7)
-        Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(169, 20)
-        Me.txtPrecio.TabIndex = 1
-        '
         'Label3
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -476,6 +505,43 @@ Partial Class frmPlatos
         Me.ElContainer7.TabIndex = 100
         Me.ElContainer7.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'lblIdPlato
+        '
+        Me.lblIdPlato.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblIdPlato.BackColor = System.Drawing.Color.Transparent
+        Me.lblIdPlato.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblIdPlato.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIdPlato.ForeColor = System.Drawing.Color.White
+        Me.lblIdPlato.Location = New System.Drawing.Point(68, 56)
+        Me.lblIdPlato.Name = "lblIdPlato"
+        Me.lblIdPlato.Size = New System.Drawing.Size(92, 25)
+        Me.lblIdPlato.TabIndex = 132
+        Me.lblIdPlato.Visible = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox1.Location = New System.Drawing.Point(171, 84)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(122, 20)
+        Me.TextBox1.TabIndex = 133
+        Me.TextBox1.Visible = False
+        '
+        'txtPrecio
+        '
+        Me.txtPrecio.BackColor = System.Drawing.Color.Black
+        Me.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPrecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtPrecio.ForeColor = System.Drawing.Color.White
+        Me.txtPrecio.Location = New System.Drawing.Point(8, 7)
+        Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.Size = New System.Drawing.Size(169, 20)
+        Me.txtPrecio.TabIndex = 1
+        '
         'txtNombre
         '
         Me.txtNombre.BackColor = System.Drawing.Color.Black
@@ -486,44 +552,6 @@ Partial Class frmPlatos
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(226, 20)
         Me.txtNombre.TabIndex = 1
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Sistema_Boomerang.My.Resources.Resources.renew
-        Me.PictureBox1.Location = New System.Drawing.Point(638, 94)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(20, 20)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 130
-        Me.PictureBox1.TabStop = False
-        '
-        'imgPlato
-        '
-        Me.imgPlato.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.imgPlato.Location = New System.Drawing.Point(293, 116)
-        Me.imgPlato.Name = "imgPlato"
-        Me.imgPlato.Size = New System.Drawing.Size(80, 80)
-        Me.imgPlato.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.imgPlato.TabIndex = 123
-        Me.imgPlato.TabStop = False
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Image = Global.Sistema_Boomerang.My.Resources.Resources.close_cross
-        Me.btnCerrar.Location = New System.Drawing.Point(822, 0)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(40, 40)
-        Me.btnCerrar.TabIndex = 1
-        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'frmPlatos
         '
@@ -538,14 +566,16 @@ Partial Class frmPlatos
         CType(Me.ElContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer1.ResumeLayout(False)
         Me.ElContainer1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnNcategoria, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgPlato, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.panelCabecera, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelCabecera.ResumeLayout(False)
         CType(Me.ElDivider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ElButton3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ElButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnAceptar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnBorrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvPlatos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnNuevo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -556,8 +586,6 @@ Partial Class frmPlatos
         CType(Me.ElContainer7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ElContainer7.ResumeLayout(False)
         Me.ElContainer7.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.imgPlato, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -566,8 +594,8 @@ Partial Class frmPlatos
     Friend WithEvents panelCabecera As Klik.Windows.Forms.v1.EntryLib.ELContainer
     Friend WithEvents ElDivider1 As Klik.Windows.Forms.v1.EntryLib.ELDivider
     Friend WithEvents btnCerrar As Button
-    Friend WithEvents ElButton3 As Klik.Windows.Forms.v1.EntryLib.ELButton
-    Friend WithEvents ElButton2 As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnAceptar As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnBorrar As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents ElButton1 As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents dgvPlatos As DataGridView
     Friend WithEvents btnNuevo As Klik.Windows.Forms.v1.EntryLib.ELButton
@@ -588,4 +616,6 @@ Partial Class frmPlatos
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents btnNcategoria As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblIdPlato As Label
+    Friend WithEvents TextBox1 As TextBox
 End Class

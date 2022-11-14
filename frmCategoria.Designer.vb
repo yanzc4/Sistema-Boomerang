@@ -35,10 +35,11 @@ Partial Class frmCategoria
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ElContainer5 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
-        Me.txtNombre = New Sistema_Boomerang.PowerTextBox()
         Me.lblIdCategoriar = New System.Windows.Forms.Label()
         Me.btnModificar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnAceptar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.btnEliminar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
+        Me.txtNombre = New Sistema_Boomerang.PowerTextBox()
         Me.panelCabecera.SuspendLayout()
         CType(Me.ElDivider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,6 +49,7 @@ Partial Class frmCategoria
         Me.ElContainer5.SuspendLayout()
         CType(Me.btnModificar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAceptar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelCabecera
@@ -108,7 +110,7 @@ Partial Class frmCategoria
         Me.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvCategoria.EnableHeadersVisualStyles = False
         Me.dgvCategoria.GridColor = System.Drawing.Color.Yellow
-        Me.dgvCategoria.Location = New System.Drawing.Point(72, 210)
+        Me.dgvCategoria.Location = New System.Drawing.Point(94, 208)
         Me.dgvCategoria.Name = "dgvCategoria"
         Me.dgvCategoria.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -119,6 +121,7 @@ Partial Class frmCategoria
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvCategoria.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvCategoria.RowHeadersVisible = False
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -126,7 +129,8 @@ Partial Class frmCategoria
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
         Me.dgvCategoria.RowsDefaultCellStyle = DataGridViewCellStyle6
-        Me.dgvCategoria.Size = New System.Drawing.Size(247, 202)
+        Me.dgvCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvCategoria.Size = New System.Drawing.Size(201, 202)
         Me.dgvCategoria.TabIndex = 94
         '
         'btnNuevo
@@ -216,27 +220,17 @@ Partial Class frmCategoria
         Me.ElContainer5.TabIndex = 110
         Me.ElContainer5.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
-        'txtNombre
-        '
-        Me.txtNombre.BackColor = System.Drawing.Color.Black
-        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.txtNombre.ForeColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(8, 7)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(182, 20)
-        Me.txtNombre.TabIndex = 1
-        '
         'lblIdCategoriar
         '
         Me.lblIdCategoriar.BackColor = System.Drawing.Color.Transparent
         Me.lblIdCategoriar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblIdCategoriar.Font = New System.Drawing.Font("Roboto Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIdCategoriar.ForeColor = System.Drawing.Color.White
-        Me.lblIdCategoriar.Location = New System.Drawing.Point(7, 210)
+        Me.lblIdCategoriar.Location = New System.Drawing.Point(6, 211)
         Me.lblIdCategoriar.Name = "lblIdCategoriar"
         Me.lblIdCategoriar.Size = New System.Drawing.Size(59, 22)
         Me.lblIdCategoriar.TabIndex = 119
+        Me.lblIdCategoriar.Visible = False
         '
         'btnModificar
         '
@@ -247,7 +241,7 @@ Partial Class frmCategoria
         Me.btnModificar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.btnModificar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnModificar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnModificar.Location = New System.Drawing.Point(133, 423)
+        Me.btnModificar.Location = New System.Drawing.Point(204, 423)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(131, 34)
         Me.btnModificar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -285,12 +279,47 @@ Partial Class frmCategoria
         Me.btnAceptar.Visible = False
         Me.btnAceptar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '
+        'btnEliminar
+        '
+        Me.btnEliminar.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnEliminar.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnEliminar.BorderStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnEliminar.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
+        Me.btnEliminar.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnEliminar.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnEliminar.Location = New System.Drawing.Point(53, 423)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(131, 34)
+        Me.btnEliminar.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnEliminar.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnEliminar.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
+        Me.btnEliminar.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnEliminar.TabIndex = 122
+        Me.btnEliminar.TextStyle.Font = New System.Drawing.Font("Inter", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.TextStyle.ForeColor = System.Drawing.Color.White
+        Me.btnEliminar.TextStyle.Text = "Eliminar"
+        Me.btnEliminar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnEliminar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
+        '
+        'txtNombre
+        '
+        Me.txtNombre.BackColor = System.Drawing.Color.Black
+        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtNombre.ForeColor = System.Drawing.Color.White
+        Me.txtNombre.Location = New System.Drawing.Point(8, 7)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(182, 20)
+        Me.txtNombre.TabIndex = 1
+        '
         'frmCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(393, 469)
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.lblIdCategoriar)
@@ -315,6 +344,7 @@ Partial Class frmCategoria
         Me.ElContainer5.PerformLayout()
         CType(Me.btnModificar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnAceptar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -334,4 +364,5 @@ Partial Class frmCategoria
     Friend WithEvents lblIdCategoriar As Label
     Friend WithEvents btnModificar As Klik.Windows.Forms.v1.EntryLib.ELButton
     Friend WithEvents btnAceptar As Klik.Windows.Forms.v1.EntryLib.ELButton
+    Friend WithEvents btnEliminar As Klik.Windows.Forms.v1.EntryLib.ELButton
 End Class
