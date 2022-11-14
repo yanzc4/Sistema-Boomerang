@@ -19,4 +19,8 @@
         reportaño = txtAño.Text
         AbrirFormEnPanel(New frmReporteVentas)
     End Sub
+
+    Private Sub frmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AbrirFormEnPanel(New frmReporteVentas)
+    End Sub
 End Class

@@ -41,6 +41,11 @@ Partial Class frmPrincipal
         Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.lblMenu = New System.Windows.Forms.Label()
         Me.panelContenedor = New System.Windows.Forms.Panel()
+        Me.pVentas = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.pPedidos = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.pDashboard = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.pAjustes = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.pReporte = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
         Me.panelCabecera.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +55,11 @@ Partial Class frmPrincipal
         CType(Me.btnPedidos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pVentas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pPedidos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pDashboard, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pAjustes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pReporte, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelCabecera
@@ -138,6 +148,11 @@ Partial Class frmPrincipal
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
+        Me.Panel1.Controls.Add(Me.pReporte)
+        Me.Panel1.Controls.Add(Me.pAjustes)
+        Me.Panel1.Controls.Add(Me.pDashboard)
+        Me.Panel1.Controls.Add(Me.pPedidos)
+        Me.Panel1.Controls.Add(Me.pVentas)
         Me.Panel1.Controls.Add(Me.lblEmpleado)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.PictureBox2)
@@ -237,11 +252,9 @@ Partial Class frmPrincipal
         Me.btnReportes.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
         Me.btnReportes.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnReportes.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnReportes.Location = New System.Drawing.Point(0, 445)
+        Me.btnReportes.Location = New System.Drawing.Point(11, 446)
         Me.btnReportes.Name = "btnReportes"
-        Me.btnReportes.Size = New System.Drawing.Size(246, 37)
-        Me.btnReportes.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnReportes.StateStyles.FocusStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnReportes.Size = New System.Drawing.Size(235, 37)
         Me.btnReportes.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
         Me.btnReportes.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
         Me.btnReportes.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -270,13 +283,11 @@ Partial Class frmPrincipal
         Me.btnAjustes.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.configuraciones
         Me.btnAjustes.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAjustes.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnAjustes.Location = New System.Drawing.Point(0, 384)
+        Me.btnAjustes.Location = New System.Drawing.Point(11, 384)
         Me.btnAjustes.Name = "btnAjustes"
-        Me.btnAjustes.Size = New System.Drawing.Size(246, 37)
-        Me.btnAjustes.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnAjustes.StateStyles.FocusStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnAjustes.Size = New System.Drawing.Size(235, 37)
         Me.btnAjustes.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.btnAjustes.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnAjustes.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
         Me.btnAjustes.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btnAjustes.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.btnAjustes.StateStyles.HoverStyle.BackgroundSolidColor = System.Drawing.Color.Red
@@ -303,12 +314,10 @@ Partial Class frmPrincipal
         Me.btnDashboard.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.speedometer
         Me.btnDashboard.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDashboard.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnDashboard.Location = New System.Drawing.Point(0, 320)
+        Me.btnDashboard.Location = New System.Drawing.Point(11, 320)
         Me.btnDashboard.Name = "btnDashboard"
-        Me.btnDashboard.Size = New System.Drawing.Size(246, 37)
-        Me.btnDashboard.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnDashboard.StateStyles.FocusStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.btnDashboard.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnDashboard.Size = New System.Drawing.Size(235, 37)
+        Me.btnDashboard.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
         Me.btnDashboard.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btnDashboard.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.btnDashboard.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
@@ -334,12 +343,10 @@ Partial Class frmPrincipal
         Me.btnPedidos.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.motorbike
         Me.btnPedidos.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPedidos.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnPedidos.Location = New System.Drawing.Point(0, 254)
+        Me.btnPedidos.Location = New System.Drawing.Point(11, 254)
         Me.btnPedidos.Name = "btnPedidos"
-        Me.btnPedidos.Size = New System.Drawing.Size(246, 37)
-        Me.btnPedidos.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnPedidos.StateStyles.FocusStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.btnPedidos.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnPedidos.Size = New System.Drawing.Size(235, 37)
+        Me.btnPedidos.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
         Me.btnPedidos.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btnPedidos.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.btnPedidos.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
@@ -365,18 +372,20 @@ Partial Class frmPrincipal
         Me.btnVentas.ForegroundImageStyle.Image = Global.Sistema_Boomerang.My.Resources.Resources.papas_fritas
         Me.btnVentas.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnVentas.ForegroundImageStyle.ImageIndent = New System.Drawing.Point(10, 0)
-        Me.btnVentas.Location = New System.Drawing.Point(0, 188)
+        Me.btnVentas.Location = New System.Drawing.Point(11, 188)
         Me.btnVentas.Name = "btnVentas"
-        Me.btnVentas.Size = New System.Drawing.Size(246, 37)
-        Me.btnVentas.StateStyles.FocusStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
-        Me.btnVentas.StateStyles.FocusStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.btnVentas.Size = New System.Drawing.Size(235, 37)
+        Me.btnVentas.StateStyles.DisabledStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnVentas.StateStyles.DisabledStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.btnVentas.StateStyles.FocusStyle.BackgroundSolidColor = System.Drawing.Color.Red
-        Me.btnVentas.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnVentas.StateStyles.FocusStyle.TextForeColor = System.Drawing.Color.White
         Me.btnVentas.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Me.btnVentas.StateStyles.HoverStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.btnVentas.StateStyles.HoverStyle.BorderGradientStartColor = System.Drawing.Color.Black
         Me.btnVentas.StateStyles.HoverStyle.BorderSolidColor = System.Drawing.Color.Black
         Me.btnVentas.StateStyles.HoverStyle.TextForeColor = System.Drawing.Color.Black
+        Me.btnVentas.StateStyles.PressedStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.btnVentas.StateStyles.PressedStyle.BackgroundGradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.btnVentas.StateStyles.PressedStyle.BackgroundSolidColor = System.Drawing.Color.Red
         Me.btnVentas.StateStyles.PressedStyle.TextForeColor = System.Drawing.Color.White
         Me.btnVentas.TabIndex = 42
@@ -414,6 +423,106 @@ Partial Class frmPrincipal
         Me.panelContenedor.Size = New System.Drawing.Size(1004, 670)
         Me.panelContenedor.TabIndex = 3
         '
+        'pVentas
+        '
+        Me.pVentas.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.pVentas.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.pVentas.BorderStyle.BorderShape.BottomLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pVentas.BorderStyle.BorderShape.BottomRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pVentas.BorderStyle.BorderShape.TopLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pVentas.BorderStyle.BorderShape.TopRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pVentas.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.pVentas.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.pVentas.BorderStyle.PaintType = Klik.Windows.Forms.v1.Common.BorderPaintTypes.LinearGradient
+        Me.pVentas.Cursor = System.Windows.Forms.Cursors.Default
+        Me.pVentas.Location = New System.Drawing.Point(7, 189)
+        Me.pVentas.Name = "pVentas"
+        Me.pVentas.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.pVentas.Size = New System.Drawing.Size(8, 35)
+        Me.pVentas.TabIndex = 53
+        Me.pVentas.Visible = False
+        Me.pVentas.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'pPedidos
+        '
+        Me.pPedidos.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.pPedidos.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.pPedidos.BorderStyle.BorderShape.BottomLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pPedidos.BorderStyle.BorderShape.BottomRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pPedidos.BorderStyle.BorderShape.TopLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pPedidos.BorderStyle.BorderShape.TopRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pPedidos.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.pPedidos.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.pPedidos.BorderStyle.PaintType = Klik.Windows.Forms.v1.Common.BorderPaintTypes.LinearGradient
+        Me.pPedidos.Cursor = System.Windows.Forms.Cursors.Default
+        Me.pPedidos.Location = New System.Drawing.Point(7, 255)
+        Me.pPedidos.Name = "pPedidos"
+        Me.pPedidos.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.pPedidos.Size = New System.Drawing.Size(8, 35)
+        Me.pPedidos.TabIndex = 54
+        Me.pPedidos.Visible = False
+        Me.pPedidos.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'pDashboard
+        '
+        Me.pDashboard.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.pDashboard.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.pDashboard.BorderStyle.BorderShape.BottomLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pDashboard.BorderStyle.BorderShape.BottomRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pDashboard.BorderStyle.BorderShape.TopLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pDashboard.BorderStyle.BorderShape.TopRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pDashboard.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.pDashboard.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.pDashboard.BorderStyle.PaintType = Klik.Windows.Forms.v1.Common.BorderPaintTypes.LinearGradient
+        Me.pDashboard.Cursor = System.Windows.Forms.Cursors.Default
+        Me.pDashboard.Location = New System.Drawing.Point(7, 321)
+        Me.pDashboard.Name = "pDashboard"
+        Me.pDashboard.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.pDashboard.Size = New System.Drawing.Size(8, 35)
+        Me.pDashboard.TabIndex = 55
+        Me.pDashboard.Visible = False
+        Me.pDashboard.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'pAjustes
+        '
+        Me.pAjustes.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.pAjustes.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.pAjustes.BorderStyle.BorderShape.BottomLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pAjustes.BorderStyle.BorderShape.BottomRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pAjustes.BorderStyle.BorderShape.TopLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pAjustes.BorderStyle.BorderShape.TopRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pAjustes.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.pAjustes.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.pAjustes.BorderStyle.PaintType = Klik.Windows.Forms.v1.Common.BorderPaintTypes.LinearGradient
+        Me.pAjustes.Cursor = System.Windows.Forms.Cursors.Default
+        Me.pAjustes.Location = New System.Drawing.Point(7, 385)
+        Me.pAjustes.Name = "pAjustes"
+        Me.pAjustes.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.pAjustes.Size = New System.Drawing.Size(8, 35)
+        Me.pAjustes.TabIndex = 56
+        Me.pAjustes.Visible = False
+        Me.pAjustes.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
+        'pReporte
+        '
+        Me.pReporte.BackgroundStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.pReporte.BackgroundStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.pReporte.BorderStyle.BorderShape.BottomLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pReporte.BorderStyle.BorderShape.BottomRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pReporte.BorderStyle.BorderShape.TopLeft = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pReporte.BorderStyle.BorderShape.TopRight = Klik.Windows.Forms.v1.Common.BorderShapes.Rectangle
+        Me.pReporte.BorderStyle.GradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
+        Me.pReporte.BorderStyle.GradientStartColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.pReporte.BorderStyle.PaintType = Klik.Windows.Forms.v1.Common.BorderPaintTypes.LinearGradient
+        Me.pReporte.Cursor = System.Windows.Forms.Cursors.Default
+        Me.pReporte.Location = New System.Drawing.Point(7, 447)
+        Me.pReporte.Name = "pReporte"
+        Me.pReporte.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.pReporte.Size = New System.Drawing.Size(8, 35)
+        Me.pReporte.TabIndex = 57
+        Me.pReporte.Visible = False
+        Me.pReporte.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -438,6 +547,11 @@ Partial Class frmPrincipal
         CType(Me.btnPedidos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pVentas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pPedidos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pDashboard, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pAjustes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pReporte, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -461,4 +575,9 @@ Partial Class frmPrincipal
     Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar
     Friend WithEvents lblEmpleado As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents pReporte As Klik.Windows.Forms.v1.EntryLib.ELContainer
+    Friend WithEvents pAjustes As Klik.Windows.Forms.v1.EntryLib.ELContainer
+    Friend WithEvents pDashboard As Klik.Windows.Forms.v1.EntryLib.ELContainer
+    Friend WithEvents pPedidos As Klik.Windows.Forms.v1.EntryLib.ELContainer
+    Friend WithEvents pVentas As Klik.Windows.Forms.v1.EntryLib.ELContainer
 End Class
