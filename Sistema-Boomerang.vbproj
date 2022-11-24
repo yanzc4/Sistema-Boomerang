@@ -283,6 +283,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\ReporteVentas.rdlc" />
     <EmbeddedResource Include="reportes\repVentasMes.rdlc" />
+    <EmbeddedResource Include="reportes\vaucher.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="boomerangDataSet.xsc">
