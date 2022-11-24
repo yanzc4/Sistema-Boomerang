@@ -174,6 +174,7 @@ Partial Class frmPedidos
         Series1.ChartArea = "ChartArea1"
         Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
         Series1.Color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Series1.LabelForeColor = System.Drawing.Color.Transparent
         Series1.Legend = "Legend1"
         Series1.MarkerBorderColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
         Series1.MarkerColor = System.Drawing.Color.White

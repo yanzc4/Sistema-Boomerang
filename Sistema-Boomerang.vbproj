@@ -112,6 +112,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="boomerangDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>boomerangDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetBoomerang.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +196,12 @@
     <Compile Include="frmRegistraEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmVaucher.Designer.vb">
+      <DependentUpon>frmVaucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVaucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmVenta.Designer.vb">
       <DependentUpon>frmVenta.vb</DependentUpon>
     </Compile>
@@ -254,6 +265,9 @@
     <EmbeddedResource Include="frmRegistraEmpleado.resx">
       <DependentUpon>frmRegistraEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVaucher.resx">
+      <DependentUpon>frmVaucher.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVenta.resx">
       <DependentUpon>frmVenta.vb</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +285,17 @@
     <EmbeddedResource Include="reportes\repVentasMes.rdlc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="boomerangDataSet.xsc">
+      <DependentUpon>boomerangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="boomerangDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>boomerangDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="boomerangDataSet.xss">
+      <DependentUpon>boomerangDataSet.xsd</DependentUpon>
+    </None>
     <None Include="DataSetBoomerang.xsc">
       <DependentUpon>DataSetBoomerang.xsd</DependentUpon>
     </None>

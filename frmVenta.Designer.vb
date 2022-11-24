@@ -204,7 +204,7 @@ Partial Class frmVenta
         Me.btnImprimir.TabIndex = 147
         Me.btnImprimir.TextStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnImprimir.TextStyle.ForeColor = System.Drawing.Color.White
-        Me.btnImprimir.TextStyle.Text = "Imprimir"
+        Me.btnImprimir.TextStyle.Text = "Pagar Cuenta"
         Me.btnImprimir.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnImprimir.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
         '

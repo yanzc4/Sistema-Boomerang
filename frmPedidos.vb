@@ -15,7 +15,7 @@ Public Class frmPedidos
     End Sub
     Sub listarVentas()
         cn.Open()
-        Dim da As New SqlDataAdapter("execute _listarventas '" & idEmpleado & "'", cn)
+        Dim da As New SqlDataAdapter("select * from ventas where cod_user='" & idEmpleado & "' and cliente like '%" & txtBuscar.Text & "%' order by fecha desc", cn)
         Dim ds As New DataSet
         da.Fill(ds, "Ventas")
         dgvVentas.DataSource = ds.Tables("Ventas")
@@ -115,6 +115,10 @@ Public Class frmPedidos
 
     Private Sub ElContainer1_Click(sender As Object, e As EventArgs) Handles ElContainer1.Click
 
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        listarVentas()
     End Sub
 
     Private Sub dgvVentas_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVentas.CellEnter

@@ -127,4 +127,8 @@ Public Class frmVenta
             MsgBox("Gracias")
         End If
     End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        frmVaucher.ShowDialog()
+    End Sub
 End Class

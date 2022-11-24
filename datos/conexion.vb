@@ -17,6 +17,9 @@ Module conexion
     Public reportmes As String = ""
     Public reportaño As String = ""
 
+    Public totalgeneral As String
+    Public cantventg As String
+    Public totaldecg As String
     Sub abrir()
         Try
             conexion = New SqlConnection(My.Settings.boomerang)
@@ -113,6 +116,32 @@ Module conexion
             respuesta.Close()
         Catch ex As Exception
             MsgBox("Error al cargar Grafico")
+        End Try
+    End Sub
+    Public Sub datosVentasG()
+        Try
+            enunciado = New SqlCommand("execute _infoventas", conexion)
+            respuesta = enunciado.ExecuteReader
+            If respuesta.Read Then
+                totalgeneral = respuesta.Item("total")
+                cantventg = respuesta.Item("ventas")
+                totaldecg = respuesta.Item("descuento")
+            End If
+            respuesta.Close()
+        Catch ex As Exception
+            MsgBox("Error al cargar Grafico")
+        End Try
+    End Sub
+    Public Sub gVentasxmes()
+        Try
+            enunciado = New SqlCommand("execute _ventasmes", conexion)
+            respuesta = enunciado.ExecuteReader
+            While respuesta.Read
+                frmDashboard.Chart1.Series("ventas_mes").Points.AddXY(respuesta.GetInt32(0), respuesta.GetDecimal(1))
+            End While
+            respuesta.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
     End Sub
 
