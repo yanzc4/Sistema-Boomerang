@@ -15,7 +15,7 @@ Public Class frmPedidos
     End Sub
     Sub listarVentas()
         cn.Open()
-        Dim da As New SqlDataAdapter("select * from ventas where cod_user='" & idEmpleado & "' and cliente like '%" & txtBuscar.Text & "%' order by fecha desc", cn)
+        Dim da As New SqlDataAdapter("select * from ventas where cod_user='" & idEmpleado & "' and fecha=cast(getdate()as date) and cliente like '%" & txtBuscar.Text & "%' order by fecha desc", cn)
         Dim ds As New DataSet
         da.Fill(ds, "Ventas")
         dgvVentas.DataSource = ds.Tables("Ventas")

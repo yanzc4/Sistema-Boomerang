@@ -291,7 +291,7 @@ Partial Class frmPedidos
         Me.ElButton2.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElButton2.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.ElButton2.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton2.Location = New System.Drawing.Point(483, 148)
+        Me.ElButton2.Location = New System.Drawing.Point(488, 148)
         Me.ElButton2.Name = "ElButton2"
         Me.ElButton2.Size = New System.Drawing.Size(116, 34)
         Me.ElButton2.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -373,7 +373,7 @@ Partial Class frmPedidos
         Me.ElButton1.FlashStyle.PaintType = Klik.Windows.Forms.v1.Common.PaintTypes.Solid
         Me.ElButton1.FlashStyle.SolidColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.ElButton1.ForegroundImageStyle.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ElButton1.Location = New System.Drawing.Point(483, 98)
+        Me.ElButton1.Location = New System.Drawing.Point(488, 98)
         Me.ElButton1.Name = "ElButton1"
         Me.ElButton1.Size = New System.Drawing.Size(116, 34)
         Me.ElButton1.StateStyles.HoverStyle.BackgroundGradientEndColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(3, Byte), Integer))
@@ -428,7 +428,7 @@ Partial Class frmPedidos
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
         Me.dgvVentas.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvVentas.Size = New System.Drawing.Size(436, 215)
+        Me.dgvVentas.Size = New System.Drawing.Size(456, 215)
         Me.dgvVentas.TabIndex = 127
         '
         'Label2
