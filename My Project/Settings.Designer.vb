@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=boomerang.mssql.somee.com;Initial Catalog=boomerang;Persist Security "& _ 
-            "Info=True;User ID=yanzc_SQLLogin_1;Password=imursqu4lm")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-I5KGECP\SQLEXPRESS;Initial Catalog=boomerang;Integrated Secur"& _ 
+            "ity=True")>  _
         Public ReadOnly Property boomerang() As String
             Get
                 Return CType(Me("boomerang"),String)

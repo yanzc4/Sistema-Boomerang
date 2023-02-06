@@ -22,9 +22,9 @@ Partial Class frmCategoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panelCabecera = New System.Windows.Forms.Panel()
         Me.ElDivider1 = New Klik.Windows.Forms.v1.EntryLib.ELDivider()
         Me.btnCerrar = New System.Windows.Forms.Button()
@@ -35,11 +35,11 @@ Partial Class frmCategoria
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ElContainer5 = New Klik.Windows.Forms.v1.EntryLib.ELContainer()
+        Me.txtNombre = New Sistema_Boomerang.PowerTextBox()
         Me.lblIdCategoriar = New System.Windows.Forms.Label()
         Me.btnModificar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnAceptar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
         Me.btnEliminar = New Klik.Windows.Forms.v1.EntryLib.ELButton()
-        Me.txtNombre = New Sistema_Boomerang.PowerTextBox()
         Me.panelCabecera.SuspendLayout()
         CType(Me.ElDivider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,39 +98,39 @@ Partial Class frmCategoria
         Me.dgvCategoria.BackgroundColor = System.Drawing.Color.Black
         Me.dgvCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvCategoria.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCategoria.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Roboto", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCategoria.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvCategoria.ColumnHeadersHeight = 30
         Me.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvCategoria.EnableHeadersVisualStyles = False
         Me.dgvCategoria.GridColor = System.Drawing.Color.Yellow
-        Me.dgvCategoria.Location = New System.Drawing.Point(94, 208)
+        Me.dgvCategoria.Location = New System.Drawing.Point(78, 208)
         Me.dgvCategoria.Name = "dgvCategoria"
         Me.dgvCategoria.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Yellow
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCategoria.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCategoria.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvCategoria.RowHeadersVisible = False
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgvCategoria.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvCategoria.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCategoria.Size = New System.Drawing.Size(201, 202)
+        Me.dgvCategoria.Size = New System.Drawing.Size(233, 202)
         Me.dgvCategoria.TabIndex = 94
         '
         'btnNuevo
@@ -220,6 +220,17 @@ Partial Class frmCategoria
         Me.ElContainer5.TabIndex = 110
         Me.ElContainer5.VisualStyle = Klik.Windows.Forms.v1.Common.ControlVisualStyles.Custom
         '
+        'txtNombre
+        '
+        Me.txtNombre.BackColor = System.Drawing.Color.Black
+        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
+        Me.txtNombre.ForeColor = System.Drawing.Color.White
+        Me.txtNombre.Location = New System.Drawing.Point(8, 7)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(182, 20)
+        Me.txtNombre.TabIndex = 1
+        '
         'lblIdCategoriar
         '
         Me.lblIdCategoriar.BackColor = System.Drawing.Color.Transparent
@@ -301,17 +312,6 @@ Partial Class frmCategoria
         Me.btnEliminar.TextStyle.Text = "Eliminar"
         Me.btnEliminar.TextStyle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnEliminar.VisualStyle = Klik.Windows.Forms.v1.EntryLib.ButtonVisualStyles.Custom
-        '
-        'txtNombre
-        '
-        Me.txtNombre.BackColor = System.Drawing.Color.Black
-        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!)
-        Me.txtNombre.ForeColor = System.Drawing.Color.White
-        Me.txtNombre.Location = New System.Drawing.Point(8, 7)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(182, 20)
-        Me.txtNombre.TabIndex = 1
         '
         'frmCategoria
         '

@@ -130,6 +130,9 @@ Module conexion
             respuesta.Close()
         Catch ex As Exception
             MsgBox("Error al cargar Grafico")
+            totalgeneral = "0.00"
+            cantventg = "0"
+            totaldecg = "0.00"
         End Try
     End Sub
     Public Sub gVentasxmes()
