@@ -129,10 +129,12 @@ Module conexion
             End If
             respuesta.Close()
         Catch ex As Exception
-            MsgBox("Error al cargar Grafico")
+            MsgBox("Error al cargar Grafico No ingreso ventas")
             totalgeneral = "0.00"
             cantventg = "0"
             totaldecg = "0.00"
+        Finally
+            respuesta.Close()
         End Try
     End Sub
     Public Sub gVentasxmes()

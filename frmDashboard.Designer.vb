@@ -474,7 +474,7 @@ Partial Class frmDashboard
         Me.lblDescuento.Name = "lblDescuento"
         Me.lblDescuento.Size = New System.Drawing.Size(90, 25)
         Me.lblDescuento.TabIndex = 7
-        Me.lblDescuento.Text = "1700.00"
+        Me.lblDescuento.Text = "0.00"
         Me.lblDescuento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label9
@@ -536,7 +536,7 @@ Partial Class frmDashboard
         Me.lblTotalVentas.Name = "lblTotalVentas"
         Me.lblTotalVentas.Size = New System.Drawing.Size(90, 25)
         Me.lblTotalVentas.TabIndex = 7
-        Me.lblTotalVentas.Text = "1700.00"
+        Me.lblTotalVentas.Text = "0.00"
         Me.lblTotalVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label6
@@ -597,7 +597,7 @@ Partial Class frmDashboard
         Me.lblCantidadVentas.Name = "lblCantidadVentas"
         Me.lblCantidadVentas.Size = New System.Drawing.Size(116, 25)
         Me.lblCantidadVentas.TabIndex = 7
-        Me.lblCantidadVentas.Text = "1700.00"
+        Me.lblCantidadVentas.Text = "0"
         Me.lblCantidadVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
